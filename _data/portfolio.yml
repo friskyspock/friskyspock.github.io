@@ -1,0 +1,21 @@
+#-------------
+# my projects here
+- title: Stock Market Forecasting
+  thumb: 01.jpg
+  tags: [Machine Learning, Django]
+  link: "https://github.com/friskyspock/StockMarketForecast"
+  weblink: "http://friskyspock.pythonanywhere.com/"
+  describe: Using ensemble model of LSTM and Holts-Winter Exponential Smoothing to obtain future stock price prediction.
+
+- title: Image Captioning
+  thumb: 02.jpg
+  tags: [AI]
+  link: "https://github.com/friskyspock/sample-image-captioning"
+  weblink: "https://friskyspock-sample-image-captioning-app-ns116q.streamlit.app/"
+  describe: Caption creator using AI.
+
+# - title: Sentiment Analysis on tweets
+#   thumb: 03.jpg
+#   tags: [NLP]
+#   link: ""
+#   describe: "just"

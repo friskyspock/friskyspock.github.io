@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div id="toprint" class="resume-container">
+    <div class="left-side">
+        <h1>{{site.data.resume.name}}</h1>
+        <caption>{{site.data.resume.subtitle}}</caption>
+        <h5><span class="badge">Summary</span></h5>
+            <p>{{site.data.resume.summary}}</p>
+            <hr class="border border-2 border-black"></hr>
+        <div data-html2canvas-ignore="true">
+            <button type="button" class="btn btn-light" onclick="makepdf()">PDF</button>
+        </div>
+        <h5>Work Experience</h5>
+            <hr>
+            {% for item in site.data.resume.workexperience %}
+            <p class="bold-text">{{item.position}}</p>
+            <p class="sub-text">{{item.org}}</p>
+            <p class="norm-text">{{item.details}}</p>
+            {% endfor %}
+        <h5>Projects</h5>
+            <hr>
+            {% for item in site.data.resume.projects %}
+            <p class="bold-text">{{item.title}}</p>
+            <p class="sub-text">{{item.org}}</p>
+            <ul>{% for point in item.work %}<li>{{point}}</li>{% endfor %}</ul>
+            {% endfor %}
+    </div>
+
+    <div class="right-side">
+        <ul class="contact">
+        {% for item in site.data.resume.contact %}
+        <li><a href="{{item.link}}">{{item.title}} </a><i class="{{item.icon}}"></i></li>
+        {% endfor %}
+        </ul>
+
+        <h5>Education</h5>
+            <hr>
+            {% for item in site.data.resume.education %}
+            <p class="norm-text">{{item.name}}</p>
+            <p class="sub-text">{{item.passed}}</p>
+            {% endfor %}
+
+        <h5>Skills</h5>
+            <hr>
+            {% for item in site.data.resume.skills %}
+            <p class="bold-text">{{item.category}}</p>
+            <p>{% for cat in item.skill %}<span class="badge">{{cat}}</span>{% endfor %}</p>
+            {% endfor %}
+    </div>
+</div>

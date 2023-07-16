@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="portfolio-container">
+    <h1>Collection of my Projects</h1>
+    <p>Welcome to my portfolio. Here you'll find a selection of my work.
+        Explore my projects to learn more about what I do.</p>
+    
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for item in site.data.portfolio %}
+        <div class="col">
+            <div class="card h-100" style="width: 18rem;">
+                <img src="/assets/images/thumbs/{{item.thumb}}" class="card-img-top" alt={{item.title}}>
+                <div class="card-body">
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <p class="card-text">{{item.describe}}</p>
+                    <a href="{{item.link}}" class="btn btn-primary">GitHub</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

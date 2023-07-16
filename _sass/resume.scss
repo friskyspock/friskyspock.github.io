@@ -1,0 +1,61 @@
+.resume-container {
+    display: flex;
+    padding: 5%;
+}
+
+.left-side {
+    flex: 75%;
+    padding-right: 3%;
+}
+.right-side {
+    flex: 25%;
+}
+
+.badge {
+    color: gray;
+    font-weight: normal;
+    border: 1px solid gray;
+    margin-right: 1px;
+}
+
+.contact {
+    text-align: right;
+}
+
+ul.contact {
+    list-style: none;
+}
+
+.resume-container h5 {
+    margin-bottom: 0;
+    margin-top: 1em;
+}
+
+.bold-text {
+    margin-bottom: 0;
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+.sub-text {
+    margin-bottom: 0;
+}
+
+.norm-text {
+    margin-bottom: 0;
+    line-height : 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+.resume-container hr {
+    margin-top: 0;
+    margin-bottom: 1px;
+}

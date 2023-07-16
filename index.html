@@ -1,0 +1,73 @@
+---
+layout: default
+---
+<div class="home-container">
+    <section id="intro">
+        <h1>Hi there</h1>
+        <h5>Welcome to my personal website.</h5>
+        <h5>I'm Aniket, an aspiring data scientist passionate about creating meaningful and engaging data science experience.</h5>
+    </section>
+    <hr>
+    <section id="current-work">
+        <h1>Currently working on</h1>
+        <div class="card">
+            <div class="card-header">
+              NLP
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Resume Categorizer using NLP</h5>
+              <p class="card-text">I am trying to sort resumes into different categories using NLP</p>
+              <a href="#" class="btn btn-primary">Visit GitHub</a>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="contact">
+        <h1>Open to work</h1>
+        <h5>I am available for the position of data science</h5>
+        <h6>If you like my work you can simply put a message here or contact me on other platforms given in sidebar.</h6>
+        <div class="form-to-contact">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" id="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>    
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input type="email" id="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-floating mb-3">
+                            <input type="text" id="subject" class="form-control">
+                            <label for="subject">Subject</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-floating mb-3">
+                            <textarea type="text" id="message" rows="2" class="form-control md-textarea" style="height: 100px;"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+                    </div>
+                </div>    
+            </form>
+
+            <div class="text-center text-md-left">
+                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+            </div>
+
+            <div class="status"></div>
+        </div>
+    </section>
+</div>

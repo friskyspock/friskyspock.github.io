@@ -1,0 +1,113 @@
+#---------------
+# My resume
+name: Aniket Masaye
+subtitle: Data Science Enthusiast and Physics/Mathematics Graduate
+summary: "As a physics and mathematics graduate with a strong interest in data science, I have completed a variety of online and offline courses to develop my skills in statistical analysis, programming languages such as Python and R, and data visualization tools such as Tableau and Power BI. I am eager to apply my skills to a data science role and continue learning and growing in the field."
+
+contact:
+- title: MyWebsite
+  link: "https://friskyspock.github.io"
+  icon: "fa-solid fa-globe"
+- title: LinkedIn
+  link: "https://www.linkedin.com/in/aniket-masaye-90b1851b9/"
+  icon: "fa-brands fa-linkedin"
+- title: GitHub
+  link: "https://github.com/friskyspock"
+  icon: "fa-brands fa-github"
+
+education:
+- name: ExcelR Solutions
+  passed: 2023
+  course: Data Science and Data Analytics
+- name: Indian Institute of Science Education and Research, Thiruvananthapuram
+  passed: 2022
+  course: Integrated BS-MS
+- name: Jawahar Navodaya Vidyalaya, Ratnagiri
+  passed: 2016
+  course: Class XII and X
+
+workexperience:
+- position: Data Science Intern
+  org: AI Variants
+  period: Apri-July 2023
+  details: Stock Market Predictions
+
+projects:
+- title: Food Delivery App Data Analysis
+  org: Hicounselor.com
+  work: 
+  - Worked on real world dataset of Zomato app.
+  - Pre-processed data using Python & SQL.
+  - Used SQL to retrieve useful information from data.
+  - Performed Statistical Analysis to identify patterns.
+- title: Digit Recognizer - Learn computer vision fundamentals with the famous MNIST data
+  org: Kaggle.com
+  work:
+  - Preprocessed the data by normalizing and reshaping the images.
+  - Optimized the model by adjusting hyperparameters and using techniques such as regularization and early stopping.
+  - Achieved a score of 96% accuracy on competition leaderboard.
+- title: Store Sales - Time Series Forecasting
+  org: Kaggle.com
+  work: 
+  - Developed a time series forecasting model using ARIMA
+  - Used cross-validation techniques to optimize the model and improve accuracy
+
+skills:
+- category: Machine Learning
+  skill:
+  - Classification
+  - Regression
+  - Clustering
+  - Ensemble Methods
+  - Time Series Forecasting
+  - Neural Networks
+- category: Statistical Analysis
+  skill: 
+  - Hypothesis testing
+- category: Data Cleaning & Preprocessing
+  skill:
+  - Data Cleaning
+- category: Data Visualization
+  skill: 
+  - Seaborn & Matplotlib
+- category: Data Analysis Tools
+  skill: 
+  - Jupyter Notebooks
+  - Pandas & NumPy
+  - Scikit-Learn
+# - category: Natural Language Processing
+# - category: Programming Languages
+#   skill: 
+#   - Python
+#   - R
+#   - SQL
+# - category: Version Control System (Git)
+# - category: soft skills
+#   skill: 
+#   - Problem Solving 
+#   - Critical Thinking
+#   - Presentation Skills
+#   - Communication & Collaboration
+
+certifications:
+- org: 365datascience
+  titles: 
+  - Deep Learning with TensorFlow2
+  - Machine Learning in Python
+  - Probability & Statistics
+- org: CodeAcademy
+  titles: 
+  - Basics of Machine Learning
+  - Learn R
+  - Learn SQL
+  - Learn Java
+
+achievements:
+- title: CSIR-NET JRF 
+  year: 2023
+- title: GATE 
+  year: 2022
+- title: CSIR-NET LS
+  year: 2022
+- title: IIT-JEE Advance 
+  year: 2017
