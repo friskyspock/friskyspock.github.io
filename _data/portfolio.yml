@@ -1,21 +1,27 @@
 #-------------
 # my projects here
 - title: Stock Market Forecasting
-  thumb: 01.jpg
-  tags: [Machine Learning, Django]
+  thumb: stockmarketforecast.jpg
+  tags: [Machine Learning, Django, Chart.js, LSTM, HWES]
   link: "https://github.com/friskyspock/StockMarketForecast"
   weblink: "http://friskyspock.pythonanywhere.com/"
   describe: Using ensemble model of LSTM and Holts-Winter Exponential Smoothing to obtain future stock price prediction.
 
 - title: Image Captioning
-  thumb: 02.jpg
+  thumb: imagecaptioning.jpg
   tags: [AI]
   link: "https://github.com/friskyspock/sample-image-captioning"
   weblink: "https://friskyspock-sample-image-captioning-app-ns116q.streamlit.app/"
   describe: Caption creator using AI.
 
-# - title: Sentiment Analysis on tweets
-#   thumb: 03.jpg
-#   tags: [NLP]
-#   link: ""
-#   describe: "just"
+- title: Sentiment Analysis on tweets
+  thumb: sentimenttweets.jpg
+  tags: [NLP, Naive Bayes]
+  link: "https://github.com/friskyspock/elon-musk-tweets-excelr"
+  describe: "Sentiment analysis on tweets and replies related to Elon Musk. Also predictive model is made using Naive Bayes"
+
+- title: Forest Fires
+  thumb: forestfires.jpg
+  tags: []
+  link: ""
+  describe: "just"

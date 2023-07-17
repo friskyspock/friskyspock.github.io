@@ -14,3 +14,7 @@ function makepdf() {
   };
   html2pdf().set(opt).from(element).save();
 };
+
+// function makejson() {
+//   console.log({{ site.data.resume | jsonify }});
+// };
