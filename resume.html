@@ -15,9 +15,13 @@ layout: default
         <h5>Work Experience</h5>
             <hr>
             {% for item in site.data.resume.workexperience %}
-            <p class="bold-text">{{item.position}}</p>
+            <p class="bold-text">{{item.position}} <span><i class="right-align">{{item.period}}</i></span></p>
             <p class="sub-text">{{item.org}}</p>
-            <p class="norm-text">{{item.details}}</p>
+            <ul>
+                {% for subitem in item.details %}
+                <li class="norm-text">{{subitem.point}}: {{subitem.subpoint}}</li>
+                {% endfor %}
+            </ul>
             {% endfor %}
         <h5>Projects</h5>
             <hr>

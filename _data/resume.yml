@@ -30,7 +30,15 @@ workexperience:
 - position: Data Science Intern
   org: AI Variants
   period: Apri-July 2023
-  details: Stock Market Predictions
+  details:
+  - point: Developed an Ensemble Model
+    subpoint: Created a machine learning ensemble model by combining LSTM (Long Short-Term Memory) neural network and Holt-Winters exponential smoothing model. This approach allows for accurate predictions of future stock market prices.
+  - point: Django Web Application
+    subpoint: Built a web application using the Django framework to deploy and showcase the ensemble model. The web application provides an interactive platform for users to explore and interact with the stock market price predictions.
+  - point: Website Availability
+    subpoint: Hosted the Django web application on PythonAnywhere and made it publicly accessible. The website allows users to access the predictions and interact with the features provided.
+  - point: Continuous Learning
+    subpoint: Acquired knowledge in machine learning techniques, time series forecasting, web development, and deployment through this project. Demonstrated a commitment to continuous learning and the ability to apply new skills effectively.
 
 projects:
 - title: Food Delivery App Data Analysis
