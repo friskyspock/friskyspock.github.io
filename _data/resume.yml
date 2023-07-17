@@ -18,7 +18,7 @@ contact:
 education:
 - name: ExcelR Solutions
   passed: 2023
-  course: Data Science and Data Analytics
+  course: Data Science
 - name: Indian Institute of Science Education and Research, Thiruvananthapuram
   passed: 2022
   course: Integrated BS-MS
@@ -41,61 +41,59 @@ workexperience:
     subpoint: Acquired knowledge in machine learning techniques, time series forecasting, web development, and deployment through this project. Demonstrated a commitment to continuous learning and the ability to apply new skills effectively.
 
 projects:
+- title: Sentiment Analysis on tweets
+  org:
+  period: March 2023
+  details: I conducted sentiment analysis on tweets and replies related to Elon Musk. By mining data from Twitter, I developed a Naive Bayes model to predict the sentiment of future tweets.
+- title: Image Caption Generator
+  org:
+  period: Feb 2023
+  details: I developed an image caption generator using a pre-trained model from Transformers. This application generates multiple captions for any given image, providing descriptive and contextual information. The app has been deployed on Streamlit, allowing users to easily utilize this image captioning functionality.
 - title: Food Delivery App Data Analysis
   org: Hicounselor.com
-  work: 
-  - Worked on real world dataset of Zomato app.
-  - Pre-processed data using Python & SQL.
-  - Used SQL to retrieve useful information from data.
-  - Performed Statistical Analysis to identify patterns.
-- title: Digit Recognizer - Learn computer vision fundamentals with the famous MNIST data
-  org: Kaggle.com
-  work:
-  - Preprocessed the data by normalizing and reshaping the images.
-  - Optimized the model by adjusting hyperparameters and using techniques such as regularization and early stopping.
-  - Achieved a score of 96% accuracy on competition leaderboard.
-- title: Store Sales - Time Series Forecasting
-  org: Kaggle.com
-  work: 
-  - Developed a time series forecasting model using ARIMA
-  - Used cross-validation techniques to optimize the model and improve accuracy
+  period: Jan 2023
+  details: I worked on real world dataset of Zomato app. I used Python & SQL for preprocessing & Statistical Analysis and derived useful insights.
 
 skills:
 - category: Machine Learning
-  skill:
-  - Classification
-  - Regression
-  - Clustering
-  - Ensemble Methods
-  - Time Series Forecasting
-  - Neural Networks
-- category: Statistical Analysis
-  skill: 
-  - Hypothesis testing
-- category: Data Cleaning & Preprocessing
-  skill:
-  - Data Cleaning
-- category: Data Visualization
-  skill: 
-  - Seaborn & Matplotlib
-- category: Data Analysis Tools
-  skill: 
-  - Jupyter Notebooks
-  - Pandas & NumPy
-  - Scikit-Learn
-# - category: Natural Language Processing
-# - category: Programming Languages
-#   skill: 
-#   - Python
-#   - R
-#   - SQL
-# - category: Version Control System (Git)
-# - category: soft skills
-#   skill: 
-#   - Problem Solving 
-#   - Critical Thinking
-#   - Presentation Skills
-#   - Communication & Collaboration
+  subcategories:
+  - subcategory: Algorithms
+    skill:
+    - Classification
+    - Regression
+    - Clustering
+    - Ensemble Methods
+    - Time Series Forecasting
+    - Naive Bayes
+    - Natural Language Processing
+  - subcategory: Neural Networks
+    skill:
+    - CNN
+    - LSTM
+  - subcategory: Tools & Libraries
+    skill:
+    - TensorFlow
+    - Keras
+    - Scikit-learn
+    - Pandas
+    - NumPy
+  - subcategory: Programming Languages
+    skill: 
+    - Python
+    - R
+    - SQL
+- category: Data Analysis
+  subcategories:
+  - subcategory: Statistical Analysis
+    skill: 
+    - Hypothesis testing
+  - subcategory: Data Visualization
+    skill: 
+    - chart.js
+    - seaborn & matplotlib
+    - plotly
+  - subcategory: Exploratory Data Analysis
+  - subcategory: Data Cleaning
 
 certifications:
 - org: 365datascience

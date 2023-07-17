@@ -8,8 +8,9 @@ function makepdf() {
     filename:     'myfile.pdf',
     image:        { type: 'jpeg', quality: 0.98 },
     enableLinks:  true,
+    pagebreak: { mode: 'avoid-all' },
     html2canvas:  { scale: 2 },
-    jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    jsPDF:        { unit: 'in', format: 'legal', orientation: 'portrait' }
   };
   html2pdf().set(opt).from(element).save();
 };

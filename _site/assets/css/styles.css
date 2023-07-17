@@ -113,6 +113,8 @@ ul.contact {
 .resume-container h5 {
   margin-bottom: 0;
   margin-top: 1em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: large;
 }
 
 .right-align {
