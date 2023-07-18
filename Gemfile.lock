@@ -9,9 +9,12 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
+    execjs (2.8.1)
     ffi (1.15.5)
     forwardable-extended (2.6.0)
     google-protobuf (3.23.4-x64-mingw-ucrt)
+    htmlbeautifier (1.4.2)
+    htmlcompressor (0.4.0)
     http_parser.rb (0.8.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -31,12 +34,25 @@ GEM
       safe_yaml (~> 1.0)
       terminal-table (>= 1.8, < 4.0)
       webrick (~> 1.7)
+    jekyll-feed (0.17.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-sass-converter (3.0.0)
       sass-embedded (~> 1.54)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-tidy (0.2.2)
+      htmlbeautifier
+      htmlcompressor
+      jekyll
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    katex (0.10.0)
+      execjs (~> 2.8)
     kramdown (2.4.0)
       rexml
+    kramdown-math-katex (1.0.1)
+      katex (~> 0.4)
+      kramdown (~> 2.0)
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     liquid (4.0.4)
@@ -66,6 +82,10 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.3)
+  jekyll-feed
+  jekyll-sitemap
+  jekyll-tidy
+  kramdown-math-katex
   wdm (~> 0.1.1)
   webrick (~> 1.8)
 
