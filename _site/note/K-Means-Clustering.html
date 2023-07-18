@@ -3,59 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aniket's Website</title>
+    <title>Aniket's Notes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    <!--sidebar-->
-    <div class="sidebar text-center text-white">
-      <header>
-        <img class="avatar" src="assets/images/avatar.jpg" alt="" />
-        <h2><strong>Aniket Masaye</strong></h2>
-        <h3>Data Scientist</h3>
-      </header>
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="resume.html">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a href="portfolio.html">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a>Notes</a>
-        </li>
-      </ul>
-      <footer>
-        <ul class="icons">
-          <li><span style="color: white;"></span><i href=https://www.linkedin.com/in/aniket-masaye-90b1851b9/ class="fa-brands fa-linkedin"></i></li>
-          <li><span style="color: white;"></span><i href=https://medium.com/@aniketms42 class="fa-brands fa-medium"></i></li>
-          <li><span style="color: white;"></span><i href=https://www.kaggle.com/aniketmasaye class="fa-brands fa-kaggle"></i></li>
-          <li><span style="color: white;"></span><i href=https://github.com/friskyspock class="fa-brands fa-github"></i></li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; 2023 by Aniket Masaye</li>
-        </li>
-      </ul>
-    </footer>
-  </div>
-  <!--main body-->
-  <main>
-    <div class="language-python highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+    <header>
+      <h1>Aniket's Notes</h1>
+    </header>
+    <main>
+      <div class="language-python highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
 <span class="n">kmeans</span> <span class="o">=</span> <span class="nc">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="sh">'</span><span class="s">k-means++</span><span class="sh">'</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">kmeans</span><span class="p">.</span><span class="nf">fit_predict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </code></pre>
+        </div>
       </div>
-    </div>
-    <p>Elbow method to find correct number of clusters</p>
-    <div class="language-python highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="n">wcss</span> <span class="o">=</span> <span class="p">[]</span>
+      <p>Elbow method to find correct number of clusters</p>
+      <div class="language-python highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="n">wcss</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
 	<span class="n">kmeans</span> <span class="o">=</span> <span class="nc">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="sh">'</span><span class="s">k-means++</span><span class="sh">'</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="sh">'</span><span class="s">auto</span><span class="sh">'</span><span class="p">)</span>
 	<span class="n">kmeans</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -66,51 +33,42 @@
 <span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">'</span><span class="s">Number of clusters</span><span class="sh">'</span><span class="p">)</span>
 <span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">'</span><span class="s">WCSS</span><span class="sh">'</span><span class="p">)</span>
 </code></pre>
+        </div>
       </div>
-    </div>
-    <h4 id="k-means-algorithm">K-Means Algorithm</h4>
-    <ul>
-      <li>Assigning each data point to the closest cluster center,</li>
-      <li>and then setting each cluster center as the mean of the data points that are assigned to it.</li>
-      <li>The algorithm is finished when the assignment of instances to clusters no longer changes.</li>
-      <li>The steps are
-        <ol>
-          <li>Choose k=3</li>
-          <li>Compute centroid for each point</li>
-          <li>Compute distance between each point to each centroid</li>
-          <li>Move/ Shift data points to nearest centroid</li>
-          <li>Repeat step 3 &amp; 4 for all data points</li>
-          <li>Recompute centroids</li>
-          <li>Repeat steps from 2 to 6 multiple times till you don't have to move any data points</li>
-        </ol>
-      </li>
-    </ul>
-    <h4 id="drawbacks-of-k-means">Drawbacks of K-Means</h4>
-    <ul>
-      <li>Even if you know the "right" number of clusters for a given dataset, k-means might not always be able to recover them.</li>
-      <li>It relies on a random initialization, which means the outcome of the algorithm depends ona random seed.</li>
-      <li>Each cluster is defined solely by its center, which means that each cluster is a convex shape. As a result of this , k-means can only capture relatively simple shapes.</li>
-      <li>k-means also assumes that all clusters have the same "diameter" in some sense, it always draws the boundary between clusters to be exactly in the middle between the cluster centers.</li>
-      <li>k-means also assumes that all directions are equally important for each cluster.</li>
-    </ul>
-    <h4 id="k-means-as-decompositionvector-quantization">K-Means as decomposition/Vector quantization</h4>
-    <ul>
-      <li>There are interesting parallels between k-means and the decomposition methods like PCA and NMF.</li>
-      <li>PCA tries to find directions of maximum variance in the data.</li>
-      <li>NMF tries to find additive components, which often correspond to "extremes" or "parts" of the data.</li>
-      <li>Both methods tried to express the data points as a sum over some components.</li>
-      <li><b>k-means</b> tries to represent each data point using cluster center.</li>
-      <li>The view of k-means as a decomposition method, where each point is represented using a single point, is called <em>vector quantization</em>.</li>
-      <li>An interesting aspect of vector quantization using k-means is that we can use many more clusters than input dimensions to encode our data.</li>
-    </ul>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/2a2129b4ed.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script type="module">
-    import Highway from https://cdn.jsdelivr.net/npm/Highway@0.2.1/+esm
-  </script>
-  <script src="/assets/js/main.js"></script>
-</body>
-</html>
+      <h4 id="k-means-algorithm">K-Means Algorithm</h4>
+      <ul>
+        <li>Assigning each data point to the closest cluster center,</li>
+        <li>and then setting each cluster center as the mean of the data points that are assigned to it.</li>
+        <li>The algorithm is finished when the assignment of instances to clusters no longer changes.</li>
+        <li>The steps are
+          <ol>
+            <li>Choose k=3</li>
+            <li>Compute centroid for each point</li>
+            <li>Compute distance between each point to each centroid</li>
+            <li>Move/ Shift data points to nearest centroid</li>
+            <li>Repeat step 3 &amp; 4 for all data points</li>
+            <li>Recompute centroids</li>
+            <li>Repeat steps from 2 to 6 multiple times till you don't have to move any data points</li>
+          </ol>
+        </li>
+      </ul>
+      <h4 id="drawbacks-of-k-means">Drawbacks of K-Means</h4>
+      <ul>
+        <li>Even if you know the "right" number of clusters for a given dataset, k-means might not always be able to recover them.</li>
+        <li>It relies on a random initialization, which means the outcome of the algorithm depends ona random seed.</li>
+        <li>Each cluster is defined solely by its center, which means that each cluster is a convex shape. As a result of this , k-means can only capture relatively simple shapes.</li>
+        <li>k-means also assumes that all clusters have the same "diameter" in some sense, it always draws the boundary between clusters to be exactly in the middle between the cluster centers.</li>
+        <li>k-means also assumes that all directions are equally important for each cluster.</li>
+      </ul>
+      <h4 id="k-means-as-decompositionvector-quantization">K-Means as decomposition/Vector quantization</h4>
+      <ul>
+        <li>There are interesting parallels between k-means and the decomposition methods like PCA and NMF.</li>
+        <li>PCA tries to find directions of maximum variance in the data.</li>
+        <li>NMF tries to find additive components, which often correspond to "extremes" or "parts" of the data.</li>
+        <li>Both methods tried to express the data points as a sum over some components.</li>
+        <li><b>k-means</b> tries to represent each data point using cluster center.</li>
+        <li>The view of k-means as a decomposition method, where each point is represented using a single point, is called <em>vector quantization</em>.</li>
+        <li>An interesting aspect of vector quantization using k-means is that we can use many more clusters than input dimensions to encode our data.</li>
+      </ul>
+    </main>
+  </body>

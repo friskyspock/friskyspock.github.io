@@ -3,101 +3,59 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aniket's Website</title>
+    <title>Aniket's Notes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    <!--sidebar-->
-    <div class="sidebar text-center text-white">
-      <header>
-        <img class="avatar" src="assets/images/avatar.jpg" alt="" />
-        <h2><strong>Aniket Masaye</strong></h2>
-        <h3>Data Scientist</h3>
-      </header>
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="resume.html">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a href="portfolio.html">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a>Notes</a>
-        </li>
-      </ul>
-      <footer>
-        <ul class="icons">
-          <li><span style="color: white;"></span><i href=https://www.linkedin.com/in/aniket-masaye-90b1851b9/ class="fa-brands fa-linkedin"></i></li>
-          <li><span style="color: white;"></span><i href=https://medium.com/@aniketms42 class="fa-brands fa-medium"></i></li>
-          <li><span style="color: white;"></span><i href=https://www.kaggle.com/aniketmasaye class="fa-brands fa-kaggle"></i></li>
-          <li><span style="color: white;"></span><i href=https://github.com/friskyspock class="fa-brands fa-github"></i></li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; 2023 by Aniket Masaye</li>
-        </li>
-      </ul>
-    </footer>
-  </div>
-  <!--main body-->
-  <main>
-    <h4 id="scaling">Scaling</h4>
-    <p>MinMaxScaler</p>
-    <div class="language-python highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>  
+    <header>
+      <h1>Aniket's Notes</h1>
+    </header>
+    <main>
+      <h4 id="scaling">Scaling</h4>
+      <p>MinMaxScaler</p>
+      <div class="language-python highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>  
 
 <span class="n">scaler</span> <span class="o">=</span> <span class="nc">MinMaxScaler</span><span class="p">(</span><span class="n">feature_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>  
 <span class="n">rescaledX</span> <span class="o">=</span> <span class="n">scaler</span><span class="p">.</span><span class="nf">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </code></pre>
+        </div>
       </div>
-    </div>
-    <h4 id="normalization">Normalization</h4>
-    <div class="language-python highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">Normalizer</span>  
+      <h4 id="normalization">Normalization</h4>
+      <div class="language-python highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">Normalizer</span>  
 
 <span class="n">scaler</span> <span class="o">=</span> <span class="nc">Normalizer</span><span class="p">().</span><span class="nf">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>  
 <span class="n">normalizedX</span> <span class="o">=</span> <span class="n">scaler</span><span class="p">.</span><span class="nf">transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </code></pre>
+        </div>
       </div>
-    </div>
-    <h4 id="standardization">Standardization</h4>
-    <div class="language-python highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>  
+      <h4 id="standardization">Standardization</h4>
+      <div class="language-python highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>  
 
 <span class="n">scaler</span> <span class="o">=</span> <span class="nc">StandardScaler</span><span class="p">().</span><span class="nf">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>  
 <span class="n">rescaledX</span> <span class="o">=</span> <span class="n">scaler</span><span class="p">.</span><span class="nf">transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </code></pre>
+        </div>
       </div>
-    </div>
-    <p>Do not confuse <strong>Normalizer</strong> with <strong>MinMaxScaler</strong>. The <strong>Normalizer</strong> class from <em>Sklearn</em> normalizes samples individually to unit norm. It is not column based but a row-based normalization technique. In other words, the range will be determined either by rows or columns.</p>
-    <ul>
-      <li><em>StandardScaler</em>
-        It ensures that for each feature the mean is 0 and the variance is 1, bringing all features to the same magnitude.
-        This scaling does not ensure any particular minimum and maximum values for the features.</li>
-      <li><em>RobustScaler</em>
-        It ensures statistical properties for each feature that guarantee that they are on the same scale. 
-        It uses the median and quartiles that makes ignore data points that are very different from the rest (measurement errors/outliers).</li>
-      <li><em>MinMaxScaler</em>
-        It shifts the data such that all features are exactly between 0 and 1.</li>
-      <li><em>Normalizer</em>
-        It scales each data point such that the feature vector has a Euclidean length of 1.
-        It projects a data point on the circle (or sphere, in the case of higher dimensions) with a radius 1. This means every data point is scaled by a different number (by the inverse of its length). 
-        This normalization is often used when only the direction (or angle) of the data matters, not the length of the feature vector.</li>
-    </ul>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/2a2129b4ed.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script type="module">
-    import Highway from https://cdn.jsdelivr.net/npm/Highway@0.2.1/+esm
-  </script>
-  <script src="/assets/js/main.js"></script>
-</body>
-</html>
+      <p>Do not confuse <strong>Normalizer</strong> with <strong>MinMaxScaler</strong>. The <strong>Normalizer</strong> class from <em>Sklearn</em> normalizes samples individually to unit norm. It is not column based but a row-based normalization technique. In other words, the range will be determined either by rows or columns.</p>
+      <ul>
+        <li><em>StandardScaler</em>
+          It ensures that for each feature the mean is 0 and the variance is 1, bringing all features to the same magnitude.
+          This scaling does not ensure any particular minimum and maximum values for the features.</li>
+        <li><em>RobustScaler</em>
+          It ensures statistical properties for each feature that guarantee that they are on the same scale. 
+          It uses the median and quartiles that makes ignore data points that are very different from the rest (measurement errors/outliers).</li>
+        <li><em>MinMaxScaler</em>
+          It shifts the data such that all features are exactly between 0 and 1.</li>
+        <li><em>Normalizer</em>
+          It scales each data point such that the feature vector has a Euclidean length of 1.
+          It projects a data point on the circle (or sphere, in the case of higher dimensions) with a radius 1. This means every data point is scaled by a different number (by the inverse of its length). 
+          This normalization is often used when only the direction (or angle) of the data matters, not the length of the feature vector.</li>
+      </ul>
+    </main>
+  </body>

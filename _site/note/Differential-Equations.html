@@ -3,128 +3,86 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aniket's Website</title>
+    <title>Aniket's Notes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    <!--sidebar-->
-    <div class="sidebar text-center text-white">
-      <header>
-        <img class="avatar" src="assets/images/avatar.jpg" alt="" />
-        <h2><strong>Aniket Masaye</strong></h2>
-        <h3>Data Scientist</h3>
-      </header>
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="resume.html">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a href="portfolio.html">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a>Notes</a>
-        </li>
-      </ul>
-      <footer>
-        <ul class="icons">
-          <li><span style="color: white;"></span><i href=https://www.linkedin.com/in/aniket-masaye-90b1851b9/ class="fa-brands fa-linkedin"></i></li>
-          <li><span style="color: white;"></span><i href=https://medium.com/@aniketms42 class="fa-brands fa-medium"></i></li>
-          <li><span style="color: white;"></span><i href=https://www.kaggle.com/aniketmasaye class="fa-brands fa-kaggle"></i></li>
-          <li><span style="color: white;"></span><i href=https://github.com/friskyspock class="fa-brands fa-github"></i></li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; 2023 by Aniket Masaye</li>
-        </li>
-      </ul>
-    </footer>
-  </div>
-  <!--main body-->
-  <main>
-    <h1 id="ordinary-differential-equations">Ordinary Differential Equations</h1>
-    <h2 id="methods-for-solving-odes">Methods for solving ODEs</h2>
-    <h3 id="separation-of-variables">Separation of variables</h3>
-    <h3 id="first-order-linear">First Order Linear</h3>
-    <p>If the equation looks like
-      $$</p>
-    <p>\frac{dy}{dx}+P(x)y=Q(x)</p>
-    <span class="katex-error" title="ParseError: KaTeX parse error: Can&#x27;t use function &#x27;$&#x27; in math mode at position 24: …grating factor $̲IF=e^{\int P(x)…" style="color:#cc0000">Use integrating factor $IF=e^{\int P(x)dx}$
-      ### Homogeneous equation</span>
-    <p>\frac{dy}{dx}=F\left( \frac{x}{y} \right)</p>
-    <span class="katex-error" title="ParseError: KaTeX parse error: Can&#x27;t use function &#x27;$&#x27; in math mode at position 5: put $̲v=y/x$, and the…" style="color:#cc0000">put $v=y/x$, and then solve like variable separable method
-      ### Bernoulli equation</span>
-    <p>\frac{dy}{dx}+P(x)y=Q(x)y^n</p>
-    <span class="katex-error" title="ParseError: KaTeX parse error: Can&#x27;t use function &#x27;$&#x27; in math mode at position 5: put $̲u=y^{1-n}$ and …" style="color:#cc0000">put $u=y^{1-n}$ and solve using integrating factor\
-      ## Partial Differential Equations
-      If PDE can write in following form,</span>
-    <p>M(x,y)dx+N(x,y)dy=0</p>
-    <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>T</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi>D</mi><mi>E</mi><mi>i</mi><mi>s</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi><mi>e</mi><mi>d</mi><mo>∗</mo><mo>∗</mo><mi>e</mi><mi>x</mi><mi>a</mi><mi>c</mi><mi>t</mi><mo>∗</mo><mo>∗</mo><mi>i</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">This DE is called **exact** if</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord mathnormal">hi</span><span class="mord mathnormal" style="margin-right:0.02778em;">sD</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord mathnormal">i</span><span class="mord mathnormal">sc</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.01968em;">ll</span><span class="mord mathnormal">e</span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord">∗</span><span class="mord mathnormal">e</span><span class="mord mathnormal">x</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">∗</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span></span>
-    <p>\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}</p>
-    <span class="katex-error" title="ParseError: KaTeX parse error: Can&#x27;t use function &#x27;$&#x27; in math mode at position 7: Obtain$̲\int Mdx+g(y)$ …" style="color:#cc0000">Obtain$\int Mdx+g(y)$  **OR**  $\int Ndy + h(x)$ which is a solution.
-      To obtain $g(y)$, solve the following equation</span>
-    <p>\frac{d}{dy}[\int Mdx+g(y)] = N</p>
-    <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>F</mi><mi>o</mi><mi>r</mi><mo>∗</mo><mo>∗</mo><mi>n</mi><mi>o</mi><mi>n</mi><mo>−</mo><mi>e</mi><mi>x</mi><mi>a</mi><mi>c</mi><mi>t</mi><mo>∗</mo><mo>∗</mo><mi>D</mi><mi>E</mi><mi>s</mi><mo separator="true">,</mo><mi>u</mi><mi>s</mi><mi>e</mi><mi>i</mi><mi>n</mi><mi>t</mi><mi>e</mi><mi>g</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>f</mi><mi>a</mi><mi>c</mi><mi>t</mi><mi>o</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">For **non-exact** DEs, use integrating factor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord mathnormal" style="margin-right:0.02778em;">or</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">∗</span><span class="mord mathnormal">n</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">e</span><span class="mord mathnormal">x</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">∗</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord mathnormal">s</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">u</span><span class="mord mathnormal">se</span><span class="mord mathnormal">in</span><span class="mord mathnormal">t</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">in</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">or</span></span></span></span></span>
-    <p>IF = \exp\left(\int \frac{\frac{\partial N}{\partial x}-\frac{\partial N}{\partial y}}{M}dy\right)</p>
-    <span class="katex-error" title="ParseError: KaTeX parse error: Expected &#x27;EOF&#x27;, got &#x27;#&#x27; at position 10: ---
+    <header>
+      <h1>Aniket's Notes</h1>
+    </header>
+    <main>
+      <h1 id="ordinary-differential-equations">Ordinary Differential Equations</h1>
+      <h2 id="methods-for-solving-odes">Methods for solving ODEs</h2>
+      <h3 id="separation-of-variables">Separation of variables</h3>
+      <h3 id="first-order-linear">First Order Linear</h3>
+      <p>If the equation looks like
+        $$</p>
+      <p>\frac{dy}{dx}+P(x)y=Q(x)</p>
+      <span class="katex-error" title="ParseError: KaTeX parse error: Can&#x27;t use function &#x27;$&#x27; in math mode at position 24: …grating factor $̲IF=e^{\int P(x)…" style="color:#cc0000">Use integrating factor $IF=e^{\int P(x)dx}$
+        ### Homogeneous equation</span>
+      <p>\frac{dy}{dx}=F\left( \frac{x}{y} \right)</p>
+      <span class="katex-error" title="ParseError: KaTeX parse error: Can&#x27;t use function &#x27;$&#x27; in math mode at position 5: put $̲v=y/x$, and the…" style="color:#cc0000">put $v=y/x$, and then solve like variable separable method
+        ### Bernoulli equation</span>
+      <p>\frac{dy}{dx}+P(x)y=Q(x)y^n</p>
+      <span class="katex-error" title="ParseError: KaTeX parse error: Can&#x27;t use function &#x27;$&#x27; in math mode at position 5: put $̲u=y^{1-n}$ and …" style="color:#cc0000">put $u=y^{1-n}$ and solve using integrating factor\
+        ## Partial Differential Equations
+        If PDE can write in following form,</span>
+      <p>M(x,y)dx+N(x,y)dy=0</p>
+      <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>T</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi>D</mi><mi>E</mi><mi>i</mi><mi>s</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi><mi>e</mi><mi>d</mi><mo>∗</mo><mo>∗</mo><mi>e</mi><mi>x</mi><mi>a</mi><mi>c</mi><mi>t</mi><mo>∗</mo><mo>∗</mo><mi>i</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">This DE is called **exact** if</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord mathnormal">hi</span><span class="mord mathnormal" style="margin-right:0.02778em;">sD</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord mathnormal">i</span><span class="mord mathnormal">sc</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.01968em;">ll</span><span class="mord mathnormal">e</span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord">∗</span><span class="mord mathnormal">e</span><span class="mord mathnormal">x</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">∗</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span></span>
+      <p>\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}</p>
+      <span class="katex-error" title="ParseError: KaTeX parse error: Can&#x27;t use function &#x27;$&#x27; in math mode at position 7: Obtain$̲\int Mdx+g(y)$ …" style="color:#cc0000">Obtain$\int Mdx+g(y)$  **OR**  $\int Ndy + h(x)$ which is a solution.
+        To obtain $g(y)$, solve the following equation</span>
+      <p>\frac{d}{dy}[\int Mdx+g(y)] = N</p>
+      <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>F</mi><mi>o</mi><mi>r</mi><mo>∗</mo><mo>∗</mo><mi>n</mi><mi>o</mi><mi>n</mi><mo>−</mo><mi>e</mi><mi>x</mi><mi>a</mi><mi>c</mi><mi>t</mi><mo>∗</mo><mo>∗</mo><mi>D</mi><mi>E</mi><mi>s</mi><mo separator="true">,</mo><mi>u</mi><mi>s</mi><mi>e</mi><mi>i</mi><mi>n</mi><mi>t</mi><mi>e</mi><mi>g</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>f</mi><mi>a</mi><mi>c</mi><mi>t</mi><mi>o</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">For **non-exact** DEs, use integrating factor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord mathnormal" style="margin-right:0.02778em;">or</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">∗</span><span class="mord mathnormal">n</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">e</span><span class="mord mathnormal">x</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">∗</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord mathnormal">s</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">u</span><span class="mord mathnormal">se</span><span class="mord mathnormal">in</span><span class="mord mathnormal">t</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">in</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">or</span></span></span></span></span>
+      <p>IF = \exp\left(\int \frac{\frac{\partial N}{\partial x}-\frac{\partial N}{\partial y}}{M}dy\right)</p>
+      <span class="katex-error" title="ParseError: KaTeX parse error: Expected &#x27;EOF&#x27;, got &#x27;#&#x27; at position 10: ---
 
   
 
 #̲ Second order D…" style="color:#cc0000">---
-      # Second order Differential Equations
-      ## Homogenous SO DE
-      The form is</span>
-    <p>⁍</p>
-    <span class="katex-error" title="ParseError: KaTeX parse error: Can&#x27;t use function &#x27;$&#x27; in math mode at position 21: …ume a solution $̲y=e^{kx}$
+        # Second order Differential Equations
+        ## Homogenous SO DE
+        The form is</span>
+      <p>⁍</p>
+      <span class="katex-error" title="ParseError: KaTeX parse error: Can&#x27;t use function &#x27;$&#x27; in math mode at position 21: …ume a solution $̲y=e^{kx}$
 
 - Di…" style="color:#cc0000">- Assume a solution $y=e^{kx}$
-      - Differentiate the assumed solution   </span>
-    <p>    y=e^{kx},\hspace{5mm}y'=ke^{kx},\hspace{5mm}y''=k^2e^{kx}</p>
-    <p>    $$</p>
-    <ul>
-      <li>Substitute derivatives in given DE, we will get    $$</li>
-    </ul>
-    <p>    k^2+kp+q=0</p>
-    <p>    $$    which is called auxiliary equation or characteristic equation.</p>
-    <ul>
-      <li>Solve the auxiliary equation and find its root $k_1$ and $k_2$
-            - If $k_1$ and $k_2$  are real and distinct roots then general solution is $y=Ae^{k_1x}+Be^{k_2x}$
-            - If $k_1=k_2=k$ then general solution is $y=Ae^{kx}+Bxe^{kx}$
-            - If $k_1=a+ib$ and $k_2=a-ib$ are complex roots then general solution is $y=e^{ax}(A\sin{bx}+B\cos{bx})$</li>
-    </ul>
-    <h2 id="non-homogenous-so-de">Non homogenous SO DE</h2>
-    <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>y</mi><mrow><mo mathvariant="normal">′</mo><mo mathvariant="normal">′</mo></mrow></msup><mo>+</mo><mi>p</mi><msup><mi>y</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>+</mo><mi>q</mi><mi>y</mi><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y&#x27;&#x27;+py&#x27;+qy=f(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9963em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8019em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9963em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8019em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span>
-    <p>The general solution is given in form $y=y_c+y_p$, where $y_c$ is complementary solution of homogeneous equation $y''+py'+qy=0$ and $y_p$ is particular solution of non homogenous DE.</p>
-    <table>
-      <thead>
-        <tr>
-          <th>$f(x)$</th>
-          <th>$y_p$</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>$be^{ax}$+ lower order powers of x</td>
-          <td>$C_nx^n+C_{n-1}x^{n-1}+…+C_0$</td>
-        </tr>
-        <tr>
-          <td>$P\cos{ax}$ or $Q\sin{ax}$</td>
-          <td>$A\cos{ax}+B\sin{ax}$</td>
-        </tr>
-      </tbody>
-    </table>
-    <h1 id="special-functions">Special functions</h1>
-    <h3 id="bessel-function">Bessel function</h3>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/2a2129b4ed.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script type="module">
-    import Highway from https://cdn.jsdelivr.net/npm/Highway@0.2.1/+esm
-  </script>
-  <script src="/assets/js/main.js"></script>
-</body>
-</html>
+        - Differentiate the assumed solution   </span>
+      <p>    y=e^{kx},\hspace{5mm}y'=ke^{kx},\hspace{5mm}y''=k^2e^{kx}</p>
+      <p>    $$</p>
+      <ul>
+        <li>Substitute derivatives in given DE, we will get    $$</li>
+      </ul>
+      <p>    k^2+kp+q=0</p>
+      <p>    $$    which is called auxiliary equation or characteristic equation.</p>
+      <ul>
+        <li>Solve the auxiliary equation and find its root $k_1$ and $k_2$
+              - If $k_1$ and $k_2$  are real and distinct roots then general solution is $y=Ae^{k_1x}+Be^{k_2x}$
+              - If $k_1=k_2=k$ then general solution is $y=Ae^{kx}+Bxe^{kx}$
+              - If $k_1=a+ib$ and $k_2=a-ib$ are complex roots then general solution is $y=e^{ax}(A\sin{bx}+B\cos{bx})$</li>
+      </ul>
+      <h2 id="non-homogenous-so-de">Non homogenous SO DE</h2>
+      <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>y</mi><mrow><mo mathvariant="normal">′</mo><mo mathvariant="normal">′</mo></mrow></msup><mo>+</mo><mi>p</mi><msup><mi>y</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>+</mo><mi>q</mi><mi>y</mi><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y&#x27;&#x27;+py&#x27;+qy=f(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9963em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8019em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9963em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8019em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span>
+      <p>The general solution is given in form $y=y_c+y_p$, where $y_c$ is complementary solution of homogeneous equation $y''+py'+qy=0$ and $y_p$ is particular solution of non homogenous DE.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>$f(x)$</th>
+            <th>$y_p$</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$be^{ax}$+ lower order powers of x</td>
+            <td>$C_nx^n+C_{n-1}x^{n-1}+…+C_0$</td>
+          </tr>
+          <tr>
+            <td>$P\cos{ax}$ or $Q\sin{ax}$</td>
+            <td>$A\cos{ax}+B\sin{ax}$</td>
+          </tr>
+        </tbody>
+      </table>
+      <h1 id="special-functions">Special functions</h1>
+      <h3 id="bessel-function">Bessel function</h3>
+    </main>
+  </body>

@@ -24,9 +24,13 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://friskyspock.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: friskyspock
 
+exclude: ['_includes/notes_graph.json']
+
 copyright: 
   year: 2023
   msg: Aniket Masaye # This is a mandatory attribute for copyright to be displayed
+
+relative_permalinks: false
 
 preferences:
   search:
@@ -64,11 +68,11 @@ kramdown:
 
 defaults:
   - scope:
-      path: ""
+      path: "**/*"
     values:
       layout: "default"
   - scope:
-      path: "_notes/*.md"
+      path: "_notes/**/*.md"
       type: notes
     values:
       layout: "note"

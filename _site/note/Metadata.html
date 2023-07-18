@@ -3,155 +3,113 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aniket's Website</title>
+    <title>Aniket's Notes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    <!--sidebar-->
-    <div class="sidebar text-center text-white">
-      <header>
-        <img class="avatar" src="assets/images/avatar.jpg" alt="" />
-        <h2><strong>Aniket Masaye</strong></h2>
-        <h3>Data Scientist</h3>
-      </header>
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="resume.html">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a href="portfolio.html">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a>Notes</a>
-        </li>
-      </ul>
-      <footer>
-        <ul class="icons">
-          <li><span style="color: white;"></span><i href=https://www.linkedin.com/in/aniket-masaye-90b1851b9/ class="fa-brands fa-linkedin"></i></li>
-          <li><span style="color: white;"></span><i href=https://medium.com/@aniketms42 class="fa-brands fa-medium"></i></li>
-          <li><span style="color: white;"></span><i href=https://www.kaggle.com/aniketmasaye class="fa-brands fa-kaggle"></i></li>
-          <li><span style="color: white;"></span><i href=https://github.com/friskyspock class="fa-brands fa-github"></i></li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; 2023 by Aniket Masaye</li>
-        </li>
-      </ul>
-    </footer>
-  </div>
-  <!--main body-->
-  <main>
-    <p>Data about data. Metadata is used in database management to help data analyst interpret the contents of the data within the database. Metadata creates a single source of truth by keeping things consistent and uniform. Metadata also makes data more reliable by making sure it’s accurate, precise, relevant, and timely.</p>
-    <p>3 common types of metadata:</p>
-    <pre><code class="language-mermaid">graph TD
+    <header>
+      <h1>Aniket's Notes</h1>
+    </header>
+    <main>
+      <p>Data about data. Metadata is used in database management to help data analyst interpret the contents of the data within the database. Metadata creates a single source of truth by keeping things consistent and uniform. Metadata also makes data more reliable by making sure it’s accurate, precise, relevant, and timely.</p>
+      <p>3 common types of metadata:</p>
+      <pre><code class="language-mermaid">graph TD
 A[Metadata] --&gt; B(&lt;strong&gt;Descriptive&lt;/strong&gt; &lt;br/&gt;describes a piece of data&lt;br/&gt;and can be used to identify&lt;br/&gt;it at a later point in time.&lt;br/&gt;)
 A --&gt; C(&lt;strong&gt;Structural&lt;/strong&gt; &lt;br/&gt;includes how a piece of &lt;br/&gt;data is organized and&lt;br/&gt;whether it is part of one,&lt;br/&gt;or more than one,&lt;br/&gt;data collection.)
 A --&gt; D(&lt;strong&gt;Administrative&lt;/strong&gt; &lt;br/&gt;dicates the technical &lt;br/&gt;source of a digital&lt;br/&gt;asset.)
 </code></pre>
-    <p>Metadata repository: 
-      A database specifically created to store metadata. Metadata repositories make it easier and faster to bring together multiple sources for data analysis.
-      Metadata repositories:</p>
-    <ol>
-      <li>Describe the state and location of the metadata.</li>
-      <li>Describe the structures of the tables inside.</li>
-      <li>Describe how the data flows through the repository.</li>
-      <li>Keep track of who accesses the metadata and when.
-        Metadata is stored in a single, central location, and gives the company standardized information about all of it’s data.
-        —
-        Data Governance : A process to ensure the formal management of a company’s  data assets.</li>
-    </ol>
-    <p>Primary key : An identifier that references a column in which each value is  unique.</p>
-    <ol>
-      <li>Used to ensure data in a specific column is unique.</li>
-      <li>Uniquely identifies a record in a relational database table.</li>
-      <li>Only one primary key is allowed in a table.</li>
-      <li>Cannot contain null or blank values.</li>
-    </ol>
-    <p>A primary key may also be constructed using multiple columns of a table. This type of primary key is called a composite key.</p>
-    <p>Foreign key : A field within a table that is a primary key in another table.</p>
-    <ol>
-      <li>A column or group of columns in a relational database table that provides a link between the data in two tables.</li>
-      <li>Refers to a field in a table that’s the primary key of another table.</li>
-      <li>More than one foreign key is allowed to exist in a table.</li>
-    </ol>
-    <p>Databases use a special language to communicate called a query language. Structured Query Language (SQL) is a type of query language that lets data analysts communicate with a database</p>
-    <p>Two basic types of data used by data analyst:</p>
-    <ol>
-      <li>Internal data : Data that lives within a company’s own systems.</li>
-      <li>External data : Data that lives and is generated outside an organization.</li>
-    </ol>
-    <p>Openness (or open data) : Free access, usage, and sharing of data.</p>
-    <p>Importing data from other spreadsheet:</p>
-    <ol>
-      <li>Google Sheets:
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code> =IMPORTRANGE("spreadsheet_url, range_string")
+      <p>Metadata repository: 
+        A database specifically created to store metadata. Metadata repositories make it easier and faster to bring together multiple sources for data analysis.
+        Metadata repositories:</p>
+      <ol>
+        <li>Describe the state and location of the metadata.</li>
+        <li>Describe the structures of the tables inside.</li>
+        <li>Describe how the data flows through the repository.</li>
+        <li>Keep track of who accesses the metadata and when.
+          Metadata is stored in a single, central location, and gives the company standardized information about all of it’s data.
+          —
+          Data Governance : A process to ensure the formal management of a company’s  data assets.</li>
+      </ol>
+      <p>Primary key : An identifier that references a column in which each value is  unique.</p>
+      <ol>
+        <li>Used to ensure data in a specific column is unique.</li>
+        <li>Uniquely identifies a record in a relational database table.</li>
+        <li>Only one primary key is allowed in a table.</li>
+        <li>Cannot contain null or blank values.</li>
+      </ol>
+      <p>A primary key may also be constructed using multiple columns of a table. This type of primary key is called a composite key.</p>
+      <p>Foreign key : A field within a table that is a primary key in another table.</p>
+      <ol>
+        <li>A column or group of columns in a relational database table that provides a link between the data in two tables.</li>
+        <li>Refers to a field in a table that’s the primary key of another table.</li>
+        <li>More than one foreign key is allowed to exist in a table.</li>
+      </ol>
+      <p>Databases use a special language to communicate called a query language. Structured Query Language (SQL) is a type of query language that lets data analysts communicate with a database</p>
+      <p>Two basic types of data used by data analyst:</p>
+      <ol>
+        <li>Internal data : Data that lives within a company’s own systems.</li>
+        <li>External data : Data that lives and is generated outside an organization.</li>
+      </ol>
+      <p>Openness (or open data) : Free access, usage, and sharing of data.</p>
+      <p>Importing data from other spreadsheet:</p>
+      <ol>
+        <li>Google Sheets:
+          <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code> =IMPORTRANGE("spreadsheet_url, range_string")
 </code></pre>
-          </div>
+            </div>
     </div>
-      </li>
-    </ol>
-    <p>Benefits of organizing Data :</p>
-    <ol>
-      <li>Makes it easier to find and use.</li>
-      <li>Helps you avoid making mistakes during your analysis.</li>
-      <li>Helps to protect your data.</li>
-    </ol>
-    <p>Best practices when organising data:\</p>
-    <ol>
-      <li>Naming Conventions : Consistent guidelines that describe the content, date, or version of a file in it's name. Use logical and descriptive names for your files to make them easier to find and use.</li>
-      <li>Foldering : Organise your files into folders. Break folders down into sub-folders.</li>
-      <li>Archieving older files : Move old projects to a separate location to create an archive and cut down on clutter.</li>
-      <li>Align your naming and storage practices with your team.</li>
-      <li>Develop metadata practices.</li>
-    </ol>
-    <p>Think about how often you're making copies of data and storing it in different places because if data is stored in lots of different databases and spreadsheets, it can contradict itself and lead to mistakes later on. Also storing data in multiple places takes up a lot of space. Relational databases can help you avoid data duplication and store your data more efficiently.</p>
-    <p>File naming Do's :</p>
-    <ol>
-      <li>Work out your conventions early.</li>
-      <li>Align file naming with your team.</li>
-      <li>Make sure file names are meaningful.</li>
-      <li>Keep file names short and sweet.</li>
-      <li>Format dates yyyymmdd: SalesReport20201125</li>
-      <li>Lead revision numbers with 0: SalesReport20201125v02</li>
-      <li>Use hyphens, underscores, or capitalized letters: SalesReport_2020_11_25_v02.</li>
-    </ol>
-    <p>Data Security: Protecting data from unauthorized access or corruption by adopting safety measures.
-      Encryption uses a unique algorithm to alter data and make it unusable by users and applications that don’t know the algorithm.
-      Tokenization replaces the data elements you want to protect with randomly generated data referred to as a “token.” The original data is stored in a separate location and mapped to the tokens.</p>
-    <p>A professional online presence can :</p>
-    <ol>
-      <li>Help potential employers find you.</li>
-      <li>Make connections with other analysts.</li>
-      <li>learn and share data findings.</li>
-      <li>Participate in community events.</li>
-    </ol>
-    <p>Networking : Professional relationship building.</p>
-    <ol>
-      <li>Search for public meetups in your area.</li>
-      <li>Follow interesting companies or taught leaders on Linkdln, Twitter, Facebook, or Instagram.</li>
-      <li>podcast: Partially Derivative, O'Reilly Data Show</li>
-      <li>Online community: O'Reilly, Kaggle, KDnuggets, GitHub, Medium</li>
-    </ol>
-    <p>Mentors: A professional who shares their knowledge, skills, and experience to help you develop and grow. A mentor helps you skill up.</p>
-    <ol>
-      <li>SCORE.org</li>
-      <li>MicroMentor.org</li>
-      <li>Mentorship</li>
-    </ol>
-    <p>Sponsor: A professional advocate who's committed to moving a sponsee's career forward within an organization. A sponsor helps you move up.</p>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/2a2129b4ed.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script type="module">
-    import Highway from https://cdn.jsdelivr.net/npm/Highway@0.2.1/+esm
-  </script>
-  <script src="/assets/js/main.js"></script>
-</body>
-</html>
+        </li>
+      </ol>
+      <p>Benefits of organizing Data :</p>
+      <ol>
+        <li>Makes it easier to find and use.</li>
+        <li>Helps you avoid making mistakes during your analysis.</li>
+        <li>Helps to protect your data.</li>
+      </ol>
+      <p>Best practices when organising data:\</p>
+      <ol>
+        <li>Naming Conventions : Consistent guidelines that describe the content, date, or version of a file in it's name. Use logical and descriptive names for your files to make them easier to find and use.</li>
+        <li>Foldering : Organise your files into folders. Break folders down into sub-folders.</li>
+        <li>Archieving older files : Move old projects to a separate location to create an archive and cut down on clutter.</li>
+        <li>Align your naming and storage practices with your team.</li>
+        <li>Develop metadata practices.</li>
+      </ol>
+      <p>Think about how often you're making copies of data and storing it in different places because if data is stored in lots of different databases and spreadsheets, it can contradict itself and lead to mistakes later on. Also storing data in multiple places takes up a lot of space. Relational databases can help you avoid data duplication and store your data more efficiently.</p>
+      <p>File naming Do's :</p>
+      <ol>
+        <li>Work out your conventions early.</li>
+        <li>Align file naming with your team.</li>
+        <li>Make sure file names are meaningful.</li>
+        <li>Keep file names short and sweet.</li>
+        <li>Format dates yyyymmdd: SalesReport20201125</li>
+        <li>Lead revision numbers with 0: SalesReport20201125v02</li>
+        <li>Use hyphens, underscores, or capitalized letters: SalesReport_2020_11_25_v02.</li>
+      </ol>
+      <p>Data Security: Protecting data from unauthorized access or corruption by adopting safety measures.
+        Encryption uses a unique algorithm to alter data and make it unusable by users and applications that don’t know the algorithm.
+        Tokenization replaces the data elements you want to protect with randomly generated data referred to as a “token.” The original data is stored in a separate location and mapped to the tokens.</p>
+      <p>A professional online presence can :</p>
+      <ol>
+        <li>Help potential employers find you.</li>
+        <li>Make connections with other analysts.</li>
+        <li>learn and share data findings.</li>
+        <li>Participate in community events.</li>
+      </ol>
+      <p>Networking : Professional relationship building.</p>
+      <ol>
+        <li>Search for public meetups in your area.</li>
+        <li>Follow interesting companies or taught leaders on Linkdln, Twitter, Facebook, or Instagram.</li>
+        <li>podcast: Partially Derivative, O'Reilly Data Show</li>
+        <li>Online community: O'Reilly, Kaggle, KDnuggets, GitHub, Medium</li>
+      </ol>
+      <p>Mentors: A professional who shares their knowledge, skills, and experience to help you develop and grow. A mentor helps you skill up.</p>
+      <ol>
+        <li>SCORE.org</li>
+        <li>MicroMentor.org</li>
+        <li>Mentorship</li>
+      </ol>
+      <p>Sponsor: A professional advocate who's committed to moving a sponsee's career forward within an organization. A sponsor helps you move up.</p>
+    </main>
+  </body>
