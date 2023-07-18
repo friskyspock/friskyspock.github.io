@@ -11,42 +11,44 @@
       <h1>Aniket's Notes</h1>
     </header>
     <main>
-      <p>Data Visualization: Scatter Plot
-        Correlation Matrix
-        We compare p value with alpha value
-        if pvalue is greater than alpha value then that coefficient is not significant for analysis or not important for predicting y value
-        value of alphs is 0.05</p>
-      <p>There should not be high dependency in dependent variable</p>
-      <p>Collinearity:
-        When two or more than two independent variable have high or perfect correlation between them
-        VIF : Method used to solve multi collinearity problem
-        If VIF&gt;20 it will create problem</p>
-      <p>choose one significant variable and discard other using R^2 and AIC value
-        R^2should increase and AIC decrease : we will choose that variable
-        For low AIC value ..less no. of column and more record are required.</p>
-      <p>Multile Linear Regression Model
-        Ordinary Least Square
-        Interpretation of Coefficients estimates
-        Basic tests
-        Assumptions
-        dataset –&gt; EDA – &gt;Model building (Regression Equation)–&gt; model Validation –&gt; Model deletion diagnostic – &gt;final model
-        dataset
-        Model validation
-        P-value
-        R^2 valus
-        collinearity
-        residual analysis
-        Q-Q plot
-        error vs yi hat
-        error vs xi</p>
-      <p>model deletion diagnostic
-        Influencial points or outlier detection
-        cook's distance
-        leverage</p>
-      <p>We do model validation and model deletion dianostic and go back to data set by removing outliers and influencers then repeat again.</p>
-      <pre><code class="language-mermaid">graph TD
+      <article>
+        <p>Data Visualization: Scatter Plot
+          Correlation Matrix
+          We compare p value with alpha value
+          if pvalue is greater than alpha value then that coefficient is not significant for analysis or not important for predicting y value
+          value of alphs is 0.05</p>
+        <p>There should not be high dependency in dependent variable</p>
+        <p>Collinearity:
+          When two or more than two independent variable have high or perfect correlation between them
+          VIF : Method used to solve multi collinearity problem
+          If VIF&gt;20 it will create problem</p>
+        <p>choose one significant variable and discard other using R^2 and AIC value
+          R^2should increase and AIC decrease : we will choose that variable
+          For low AIC value ..less no. of column and more record are required.</p>
+        <p>Multile Linear Regression Model
+          Ordinary Least Square
+          Interpretation of Coefficients estimates
+          Basic tests
+          Assumptions
+          dataset –&gt; EDA – &gt;Model building (Regression Equation)–&gt; model Validation –&gt; Model deletion diagnostic – &gt;final model
+          dataset
+          Model validation
+          P-value
+          R^2 valus
+          collinearity
+          residual analysis
+          Q-Q plot
+          error vs yi hat
+          error vs xi</p>
+        <p>model deletion diagnostic
+          Influencial points or outlier detection
+          cook's distance
+          leverage</p>
+        <p>We do model validation and model deletion dianostic and go back to data set by removing outliers and influencers then repeat again.</p>
+        <pre><code class="language-mermaid">graph TD
 A[Dataset]--&gt;B[EDA]--&gt;C[Model Building]--&gt;D[Model Validation]--&gt;E[Model Deletion Diagnostics]--&gt;F[Final Model]
 </code></pre>
-      <h3 id="variation-inflation-factor-vif">Variation Inflation Factor (VIF):</h3>
+        <h3 id="variation-inflation-factor-vif">Variation Inflation Factor (VIF):</h3>
+      </article>
     </main>
   </body>

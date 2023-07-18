@@ -11,19 +11,21 @@
       <h1>Aniket's Notes</h1>
     </header>
     <main>
-      <p>Basic code is given below</p>
-      <div class="language-python highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="kn">from</span> <span class="n">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
+      <article>
+        <p>Basic code is given below</p>
+        <div class="language-python highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kn">from</span> <span class="n">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
 
 <span class="n">xgb</span> <span class="o">=</span> <span class="nc">XGBClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">xgb</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">eval_set</span><span class="o">=</span><span class="p">[(</span><span class="n">x_val</span><span class="p">,</span><span class="n">y_val</span><span class="p">)])</span>
 
 <span class="n">result</span> <span class="o">=</span> <span class="n">xgb</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
 </code></pre>
+          </div>
         </div>
-      </div>
-      <p><em>n_esimators</em> will decide how many cycles will algorithm run
-        <em>early_stopping_rounds</em> after how many cycles of degrading score will algorithm stops</p>
+        <p><em>n_esimators</em> will decide how many cycles will algorithm run
+          <em>early_stopping_rounds</em> after how many cycles of degrading score will algorithm stops</p>
+      </article>
     </main>
   </body>

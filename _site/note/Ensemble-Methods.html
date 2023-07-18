@@ -11,44 +11,46 @@
       <h1>Aniket's Notes</h1>
     </header>
     <main>
-      <h4 id="bagging">Bagging</h4>
-      <p>that often considers homogeneous weak learners, learns them independently from each
-        other in parallel and combines them following some kind of deterministic averaging process</p>
-      <h4 id="boosting">Boosting</h4>
-      <p>that often considers homogeneous weak learners, learns them sequentially in a very
-        adaptative way (a base model depends on the previous ones) and combines them following a
-        deterministic strategy</p>
-      <h4 id="stacking">Stacking</h4>
-      <p>that often considers heterogeneous weak learners, learns them in parallel and combines
-        them by training a meta-model to output a prediction based on the different weak models predictions</p>
-      <h3 id="2-kinds-of-bootstrap-sampling">2 kinds of bootstrap sampling</h3>
-      <p>Sampling with replacement
-        Sampling without replacement</p>
-      <h2 id="random-forest"><a class="internal-link" href="/note/Random-Forest">Random Forest</a></h2>
-      <ol>
-        <li>Random sampling of training data points when building trees</li>
-        <li>Random subsets of features considered when splitting nodes
-          training data is sampling is done with replacement</li>
-      </ol>
-      <p>Random Forest Pseudocode</p>
-      <ol>
-        <li>Randomly select 'k' features from total 'm' features</li>
-        <li>Among 'k' calculate node 'd' using best split point</li>
-        <li>Split node into <em>daughter nodes</em> using best split</li>
-        <li>Repeat <strong>1 to 3</strong> steps until 'i' numbers of nodes are reached</li>
-        <li>Build the forest by repeating steps <strong>1 to 4</strong> for 'n' times to create n trees</li>
-      </ol>
-      <p>Advantages of Random Forest algorithm</p>
-      <ul>
-        <li>can be used for both regression and classification</li>
-        <li>will handle missing values internally</li>
-        <li>overfitting problem will never come in any classification problem</li>
-        <li>can be used for feature engineering</li>
-      </ul>
-      <h2 id="boosting-1">Boosting</h2>
-      <p>Adaptive Boosting</p>
-      <ul>
-        <li>done by building model from training data then creating second</li>
-      </ul>
+      <article>
+        <h4 id="bagging">Bagging</h4>
+        <p>that often considers homogeneous weak learners, learns them independently from each
+          other in parallel and combines them following some kind of deterministic averaging process</p>
+        <h4 id="boosting">Boosting</h4>
+        <p>that often considers homogeneous weak learners, learns them sequentially in a very
+          adaptative way (a base model depends on the previous ones) and combines them following a
+          deterministic strategy</p>
+        <h4 id="stacking">Stacking</h4>
+        <p>that often considers heterogeneous weak learners, learns them in parallel and combines
+          them by training a meta-model to output a prediction based on the different weak models predictions</p>
+        <h3 id="2-kinds-of-bootstrap-sampling">2 kinds of bootstrap sampling</h3>
+        <p>Sampling with replacement
+          Sampling without replacement</p>
+        <h2 id="random-forest"><a class="internal-link" href="/note/Random-Forest">Random Forest</a></h2>
+        <ol>
+          <li>Random sampling of training data points when building trees</li>
+          <li>Random subsets of features considered when splitting nodes
+            training data is sampling is done with replacement</li>
+        </ol>
+        <p>Random Forest Pseudocode</p>
+        <ol>
+          <li>Randomly select 'k' features from total 'm' features</li>
+          <li>Among 'k' calculate node 'd' using best split point</li>
+          <li>Split node into <em>daughter nodes</em> using best split</li>
+          <li>Repeat <strong>1 to 3</strong> steps until 'i' numbers of nodes are reached</li>
+          <li>Build the forest by repeating steps <strong>1 to 4</strong> for 'n' times to create n trees</li>
+        </ol>
+        <p>Advantages of Random Forest algorithm</p>
+        <ul>
+          <li>can be used for both regression and classification</li>
+          <li>will handle missing values internally</li>
+          <li>overfitting problem will never come in any classification problem</li>
+          <li>can be used for feature engineering</li>
+        </ul>
+        <h2 id="boosting-1">Boosting</h2>
+        <p>Adaptive Boosting</p>
+        <ul>
+          <li>done by building model from training data then creating second</li>
+        </ul>
+      </article>
     </main>
   </body>

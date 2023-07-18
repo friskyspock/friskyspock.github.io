@@ -11,79 +11,80 @@
       <h1>Aniket's Notes</h1>
     </header>
     <main>
-      <h3 id="evaluation-metrics-for-linear-regression">Evaluation Metrics for linear regression</h3>
-      <ol>
-        <li>Mean Absolute Error</li>
-        <li>Mean Squared Error (MSE)</li>
-        <li>Root mean squared error (RMSE)</li>
-      </ol>
-      <h3 id="evaluation-metrics-for-lr-models">Evaluation metrics for LR models</h3>
-      <ol>
-        <li>R-squared</li>
-        <li>Adjusted R-squared</li>
-      </ol>
-      <p>###</p>
-      <h1 id="multiple-linear-regression">Multiple Linear Regression</h1>
-      <h2 id="linear-regression-assumptions">Linear Regression Assumptions</h2>
-      <ol>
-        <li>Linearity</li>
-        <li>Endogeneity</li>
-        <li>Normality and Homoscedasticity</li>
-        <li>No autocorrelation</li>
-        <li>No multicollinearity</li>
-      </ol>
-      <h4 id="linearity">Linearity</h4>
-      <p>The following equation shows linearity
-        <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><mi>x</mi><mo>+</mo><msub><mi>β</mi><mn>2</mn></msub><mi>x</mi><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>+</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\gamma =\beta_0 + \beta_1x + \beta_2x + ... + \epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0528em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0528em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0528em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">...</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">ϵ</span></span></span></span>
-        Fixes if linearity isn't followed:</p>
-      <ul>
-        <li>Run non-linear algorithm</li>
-        <li>Exponential transformation</li>
-        <li>Log transformation</li>
-      </ul>
-      <h4 id="endogeneity">Endogeneity</h4>
-      <p>occurs when predictor variable (x) is correlated with error term (e)
-        <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mrow><mi>x</mi><mi>ϵ</mi></mrow></msub><mo>=</mo><mn>0</mn><mspace width="2.8453em"/><mi mathvariant="normal">∀</mi><mi>x</mi><mo separator="true">,</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\sigma_{x\epsilon} =0 \hspace{1cm}\forall x,\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mord mathnormal mtight">ϵ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:2.8453em;"></span><span class="mord">∀</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ϵ</span></span></span></span>
-        Omitted variable bias</p>
-      <h4 id="normality-and-homoscedasticity">Normality and Homoscedasticity</h4>
-      <ul>
-        <li>Normality: $\epsilon \sim N(0,\sigma^2)$ error form normal distribution, fix: CLT</li>
-        <li>Zero mean: fix: intercept</li>
-        <li>Homoscedasticity: to have equal variance $\sigma_{\epsilon_1}^2 = \sigma_{\epsilon_2}^2 = … =\sigma^2$</li>
-      </ul>
-      <p>heteroscedastic data will look like this:
-        !<span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Homoscedasticity.png  <span class="invalid-link-brackets">]]</span></span>
-        Prevention:</p>
-      <ul>
-        <li>Look for omitted variable bias</li>
-        <li>Look for outlier</li>
-        <li>Semi log transformation</li>
-      </ul>
-      <h4 id="no-autocorrelation">No autocorrelation</h4>
-      <ul>
-        <li>Autocorrelation is the Correlation of a series with a lagged copy of itself We need it while working with time series.</li>
-      </ul>
-      <h4 id="no-multicollinearity">No multicollinearity</h4>
-      <ul>
-        <li>One variable is correlated to other variables.</li>
-      </ul>
-      <p><em>Error should not be dependent on any variable</em></p>
-      <p><a class="internal-link" href="/note/Flow-for-Data">Flow for Data</a></p>
-      <h3 id="sklearn-linearregression">SkLearn LinearRegression</h3>
-      <p>A sample code</p>
-      <div class="language-python highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+      <article>
+        <h3 id="evaluation-metrics-for-linear-regression">Evaluation Metrics for linear regression</h3>
+        <ol>
+          <li>Mean Absolute Error</li>
+          <li>Mean Squared Error (MSE)</li>
+          <li>Root mean squared error (RMSE)</li>
+        </ol>
+        <h3 id="evaluation-metrics-for-lr-models">Evaluation metrics for LR models</h3>
+        <ol>
+          <li>R-squared</li>
+          <li>Adjusted R-squared</li>
+        </ol>
+        <p>###</p>
+        <h1 id="multiple-linear-regression">Multiple Linear Regression</h1>
+        <h2 id="linear-regression-assumptions">Linear Regression Assumptions</h2>
+        <ol>
+          <li>Linearity</li>
+          <li>Endogeneity</li>
+          <li>Normality and Homoscedasticity</li>
+          <li>No autocorrelation</li>
+          <li>No multicollinearity</li>
+        </ol>
+        <h4 id="linearity">Linearity</h4>
+        <p>The following equation shows linearity
+          <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><mi>x</mi><mo>+</mo><msub><mi>β</mi><mn>2</mn></msub><mi>x</mi><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>+</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\gamma =\beta_0 + \beta_1x + \beta_2x + ... + \epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0528em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0528em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0528em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">...</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">ϵ</span></span></span></span>
+          Fixes if linearity isn't followed:</p>
+        <ul>
+          <li>Run non-linear algorithm</li>
+          <li>Exponential transformation</li>
+          <li>Log transformation</li>
+        </ul>
+        <h4 id="endogeneity">Endogeneity</h4>
+        <p>occurs when predictor variable (x) is correlated with error term (e)
+          <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mrow><mi>x</mi><mi>ϵ</mi></mrow></msub><mo>=</mo><mn>0</mn><mspace width="2.8453em"/><mi mathvariant="normal">∀</mi><mi>x</mi><mo separator="true">,</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\sigma_{x\epsilon} =0 \hspace{1cm}\forall x,\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mord mathnormal mtight">ϵ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:2.8453em;"></span><span class="mord">∀</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ϵ</span></span></span></span>
+          Omitted variable bias</p>
+        <h4 id="normality-and-homoscedasticity">Normality and Homoscedasticity</h4>
+        <ul>
+          <li>Normality: $\epsilon \sim N(0,\sigma^2)$ error form normal distribution, fix: CLT</li>
+          <li>Zero mean: fix: intercept</li>
+          <li>Homoscedasticity: to have equal variance $\sigma_{\epsilon_1}^2 = \sigma_{\epsilon_2}^2 = … =\sigma^2$</li>
+        </ul>
+        <p>heteroscedastic data will look like this:
+          !<span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Homoscedasticity.png  <span class="invalid-link-brackets">]]</span></span>
+          Prevention:</p>
+        <ul>
+          <li>Look for omitted variable bias</li>
+          <li>Look for outlier</li>
+          <li>Semi log transformation</li>
+        </ul>
+        <h4 id="no-autocorrelation">No autocorrelation</h4>
+        <ul>
+          <li>Autocorrelation is the Correlation of a series with a lagged copy of itself We need it while working with time series.</li>
+        </ul>
+        <h4 id="no-multicollinearity">No multicollinearity</h4>
+        <ul>
+          <li>One variable is correlated to other variables.</li>
+        </ul>
+        <p><em>Error should not be dependent on any variable</em></p>
+        <p><a class="internal-link" href="/note/Flow-for-Data">Flow for Data</a></p>
+        <h3 id="sklearn-linearregression">SkLearn LinearRegression</h3>
+        <p>A sample code</p>
+        <div class="language-python highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="c1">#x is dependent
 </span><span class="n">reg</span> <span class="o">=</span> <span class="n">LinearRegression</span>
 <span class="n">reg</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 </code></pre>
+          </div>
         </div>
-      </div>
-      <p>A multiple regression case</p>
-      <div class="language-python highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+        <p>A multiple regression case</p>
+        <div class="language-python highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 
 <span class="n">reg</span> <span class="o">=</span> <span class="n">LinearRegression</span>
 <span class="n">reg</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
@@ -101,13 +102,14 @@
 <span class="n">p_values</span> <span class="o">=</span> <span class="nf">f_regression</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
 
 </code></pre>
+          </div>
         </div>
-      </div>
-      <p>Some steps to follow while doing linear regression</p>
-      <ol>
-        <li>Checking categorical and numerical columns</li>
-        <li>Resolving with NA values</li>
-        <li>Dividing categorical columns into dummy columns</li>
-      </ol>
+        <p>Some steps to follow while doing linear regression</p>
+        <ol>
+          <li>Checking categorical and numerical columns</li>
+          <li>Resolving with NA values</li>
+          <li>Dividing categorical columns into dummy columns</li>
+        </ol>
+      </article>
     </main>
   </body>

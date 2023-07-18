@@ -11,60 +11,61 @@
       <h1>Aniket's Notes</h1>
     </header>
     <main>
-      <p>Science of data.</p>
-      <h4 id="----descriptive-statistics--"><span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Descriptive Statistics  <span class="invalid-link-brackets">]]</span></span></h4>
-      <ul>
-        <li>Organizes and makes sense of data</li>
-        <li>Uses Numerical and Graphical Methods</li>
-        <li>Identifies patterns in data</li>
-        <li>Isolates and summarizes key information</li>
-        <li>Simplifies the information focusing on the items of interest</li>
-        <li>Eliminates undesired information to avoid information overload</li>
-        <li>understand and communicate aspects of data</li>
-      </ul>
-      <h4 id="inferential-statistics"><a class="internal-link" href="/note/Inferential-Statistics">Inferential Statistics</a></h4>
-      <ul>
-        <li>Draws conclusion about population from given information about a representative sample</li>
-        <li>And uses this information in good decision making</li>
-      </ul>
-      <h4 id="----probability--"><span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Probability  <span class="invalid-link-brackets">]]</span></span></h4>
-      <h2 id="random-variable--probability">Random Variable &amp; Probability</h2>
-      <h4 id="random-variable">Random Variable</h4>
-      <p>A random variable describes the probabilities for an uncertain future numerical outcome of random process.
-        - Discrete Random Variable
-        - Continuous Random Variable</p>
-      <h3 id="z-scores">Z-Scores</h3>
-      <p>z-score makes use of the mean and standard deviation of the data set in order to specify the relative location of the measurements.</p>
-      <p>It represents the distance between a given data point and the mean</p>
-      <ul>
-        <li>Large z scores tells us that measurement is larger than almost all other measurements in the dataset</li>
-        <li>Similarly, a small tells us</li>
-      </ul>
-      <h3 id="probability-distributions"><a class="internal-link" href="/note/Probability-distributions">Probability distributions</a></h3>
-      <ul>
-        <li>
-          <p>Continuous Probability distributions</p>
-        </li>
-        <li>
-          <p>Discrete Probability distributions</p>
-        </li>
-      </ul>
-      <h3 id="central-limit-theorem">Central Limit Theorem</h3>
-      <p>Distribution of data in population is normal.</p>
-      <h3 id="confidence-interval">Confidence Interval</h3>
-      <p>As range/interval increases, confidence increases</p>
-      <h3 id="interval-estimate">Interval Estimate</h3>
-      <p>$\bar{x}\pm z_{1-\alpha} \frac{\sigma}{\sqrt{n}}$ where $z_{1-\alpha}$ satisfies $P$
-        interval estimate = point estimate $\pm$ Margin of error</p>
-      <h3 id="variants-of-t-test">Variants of t-test</h3>
-      <pre><code class="language-mermaid">graph LR
+      <article>
+        <p>Science of data.</p>
+        <h4 id="----descriptive-statistics--"><span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Descriptive Statistics  <span class="invalid-link-brackets">]]</span></span></h4>
+        <ul>
+          <li>Organizes and makes sense of data</li>
+          <li>Uses Numerical and Graphical Methods</li>
+          <li>Identifies patterns in data</li>
+          <li>Isolates and summarizes key information</li>
+          <li>Simplifies the information focusing on the items of interest</li>
+          <li>Eliminates undesired information to avoid information overload</li>
+          <li>understand and communicate aspects of data</li>
+        </ul>
+        <h4 id="inferential-statistics"><a class="internal-link" href="/note/Inferential-Statistics">Inferential Statistics</a></h4>
+        <ul>
+          <li>Draws conclusion about population from given information about a representative sample</li>
+          <li>And uses this information in good decision making</li>
+        </ul>
+        <h4 id="----probability--"><span title="There is no note that matches this link." class="invalid-link">  <span class="invalid-link-brackets">[[</span>  Probability  <span class="invalid-link-brackets">]]</span></span></h4>
+        <h2 id="random-variable--probability">Random Variable &amp; Probability</h2>
+        <h4 id="random-variable">Random Variable</h4>
+        <p>A random variable describes the probabilities for an uncertain future numerical outcome of random process.
+          - Discrete Random Variable
+          - Continuous Random Variable</p>
+        <h3 id="z-scores">Z-Scores</h3>
+        <p>z-score makes use of the mean and standard deviation of the data set in order to specify the relative location of the measurements.</p>
+        <p>It represents the distance between a given data point and the mean</p>
+        <ul>
+          <li>Large z scores tells us that measurement is larger than almost all other measurements in the dataset</li>
+          <li>Similarly, a small tells us</li>
+        </ul>
+        <h3 id="probability-distributions"><a class="internal-link" href="/note/Probability-distributions">Probability distributions</a></h3>
+        <ul>
+          <li>
+            <p>Continuous Probability distributions</p>
+          </li>
+          <li>
+            <p>Discrete Probability distributions</p>
+          </li>
+        </ul>
+        <h3 id="central-limit-theorem">Central Limit Theorem</h3>
+        <p>Distribution of data in population is normal.</p>
+        <h3 id="confidence-interval">Confidence Interval</h3>
+        <p>As range/interval increases, confidence increases</p>
+        <h3 id="interval-estimate">Interval Estimate</h3>
+        <p>$\bar{x}\pm z_{1-\alpha} \frac{\sigma}{\sqrt{n}}$ where $z_{1-\alpha}$ satisfies $P$
+          interval estimate = point estimate $\pm$ Margin of error</p>
+        <h3 id="variants-of-t-test">Variants of t-test</h3>
+        <pre><code class="language-mermaid">graph LR
 A('1 Sample')--&gt;B('1 tail')
 C('2 Sample')--&gt;D('2 tail')
 A--&gt;D
 C--&gt;B
 </code></pre>
-      <p>If sample variance is given, not the population variance then use t-test
-        <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><mover accent="true"><mi>x</mi><mo>ˉ</mo></mover><mo>−</mo><mi>μ</mi></mrow><mrow><mi>s</mi><mi mathvariant="normal">/</mi><msqrt><mi>n</mi></msqrt></mrow></mfrac></mrow><annotation encoding="application/x-tex">t=\frac{\bar{x}-\mu}{s/\sqrt{n}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.4036em;vertical-align:-0.5491em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8544em;"><span style="top:-2.6259em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="mord mtight">/</span><span class="mord sqrt mtight"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8059em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mtight" style="padding-left:0.833em;"><span class="mord mathnormal mtight">n</span></span></span><span style="top:-2.7659em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail mtight" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+        <p>If sample variance is given, not the population variance then use t-test
+          <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><mover accent="true"><mi>x</mi><mo>ˉ</mo></mover><mo>−</mo><mi>μ</mi></mrow><mrow><mi>s</mi><mi mathvariant="normal">/</mi><msqrt><mi>n</mi></msqrt></mrow></mfrac></mrow><annotation encoding="application/x-tex">t=\frac{\bar{x}-\mu}{s/\sqrt{n}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.4036em;vertical-align:-0.5491em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8544em;"><span style="top:-2.6259em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="mord mtight">/</span><span class="mord sqrt mtight"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8059em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mtight" style="padding-left:0.833em;"><span class="mord mathnormal mtight">n</span></span></span><span style="top:-2.7659em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail mtight" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
 c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
 c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
 c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
@@ -76,19 +77,20 @@ H400000v40H845.2724
 s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
 c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
 M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2341em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4461em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord accent mtight"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5678em;"><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord mathnormal mtight">x</span></span><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord mtight">ˉ</span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5491em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>
-        for 1 tail, p-value is:</p>
-      <div class="language-python highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="mi">1</span><span class="o">-</span><span class="n">stats</span><span class="p">.</span><span class="n">t</span><span class="p">.</span><span class="nf">cdf</span><span class="p">(</span><span class="n">t_value</span><span class="p">,</span><span class="n">degrees_of_freedom</span><span class="p">)</span>
+          for 1 tail, p-value is:</p>
+        <div class="language-python highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="mi">1</span><span class="o">-</span><span class="n">stats</span><span class="p">.</span><span class="n">t</span><span class="p">.</span><span class="nf">cdf</span><span class="p">(</span><span class="n">t_value</span><span class="p">,</span><span class="n">degrees_of_freedom</span><span class="p">)</span>
 </code></pre>
+          </div>
         </div>
-      </div>
-      <p>for 2 tails, p-value is:</p>
-      <div class="language-python highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="n">stats</span><span class="p">.</span><span class="n">t</span><span class="p">.</span><span class="nf">cdf</span><span class="p">(</span><span class="o">-</span><span class="n">t_value</span><span class="p">,</span><span class="n">degrees_of_freedom</span><span class="p">)</span>
+        <p>for 2 tails, p-value is:</p>
+        <div class="language-python highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">stats</span><span class="p">.</span><span class="n">t</span><span class="p">.</span><span class="nf">cdf</span><span class="p">(</span><span class="o">-</span><span class="n">t_value</span><span class="p">,</span><span class="n">degrees_of_freedom</span><span class="p">)</span>
 </code></pre>
+          </div>
         </div>
-      </div>
+      </article>
     </main>
   </body>

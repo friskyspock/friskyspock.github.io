@@ -11,75 +11,77 @@
       <h1>Aniket's Notes</h1>
     </header>
     <main>
-      <p>Discovering people opinions, emotions and feelings about a product or service</p>
-      <p>Transforming text into data structures</p>
-      <pre><code class="language-mermaid">graph LR
+      <article>
+        <p>Discovering people opinions, emotions and feelings about a product or service</p>
+        <p>Transforming text into data structures</p>
+        <pre><code class="language-mermaid">graph LR
 A("text data")--&gt;B("Cleaning")--&gt;C("Apply feature extraction techniques")--&gt;D("TDM")
 </code></pre>
-      <p>Tokenization</p>
-      <ul>
-        <li>Breaking the documents or sentences into chunks called tokens.</li>
-      </ul>
-      <p>VSM (Vector Space Model): Text Preprocessing</p>
-      <ul>
-        <li>Before TDM, documents from corpus need to be preprocessed</li>
-        <li>Objective: to reduce set of words to those are expected to be most relevant</li>
-        <li>Preprocessing includes
-          <ul>
-            <li>Normalizing text</li>
-            <li>Removing high and low frequency terms</li>
-            <li>Removing stop words</li>
-            <li>Removing root/stem (lemmatization)</li>
-          </ul>
-        </li>
-      </ul>
-      <h5 id="normalizing-the-text">Normalizing the text</h5>
-      <ul>
-        <li>Objective: transform various forms of same word to common, normalized form</li>
-        <li>E.g. Apple, APPLE, apple –&gt; apple</li>
-        <li>How it is done?
-          <ul>
-            <li>Remove punctuation marks (dots, dashes, commas…)</li>
-            <li>Transform all words to lower case</li>
-            <li>Using online dictionary replace synonyms</li>
-          </ul>
-        </li>
-      </ul>
-      <h5 id="removing-high-and-low-frequency-terms">Removing high and low frequency terms</h5>
-      <h5 id="removing-stop-word">Removing stop word</h5>
-      <ul>
-        <li>Stop words are words which do not bear any information/meaning</li>
-        <li>E.g. "this is not a good option" –&gt; "option"
-          "to be or not to be" –&gt; null</li>
-      </ul>
-      <h5 id="lemmatization">Lemmatization</h5>
-      <h3 id="feature-extraction">Feature Extraction</h3>
-      <ul>
-        <li>Binary Extraction</li>
-        <li>Exploring the bags of words</li>
-        <li>TF-IDF vectors</li>
-        <li>N-grams</li>
-      </ul>
-      <h5 id="vector-space-model">Vector Space Model</h5>
-      <ul>
-        <li>Generalization of Bag of Space Model</li>
-        <li>Each document from corpus is represented as multi-dimensional vector</li>
-      </ul>
-      <h5 id="binary-weights">Binary weights</h5>
-      <p>weights take value 0 or 1 to reflect the presence or absence of term in document</p>
-      <h5 id="bag-of-words">Bag of Words</h5>
-      <ul>
-        <li>Consider text as simple set of words</li>
-        <li>Based on following (unrealistic) assumptions
-          <ul>
-            <li>words are mutually independent</li>
-            <li>word order in text is irrelevant</li>
-          </ul>
-        </li>
-      </ul>
-      <h5 id="tf-idf">TF-IDF</h5>
-      <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mo stretchy="false">(</mo><mi>w</mi><mo separator="true">,</mo><mi>d</mi><mo stretchy="false">)</mo><mo>=</mo><mi>T</mi><mi>F</mi><mo stretchy="false">(</mo><mi>w</mi><mo separator="true">,</mo><mi>d</mi><mo stretchy="false">)</mo><mo>×</mo><mi>I</mi><mi>D</mi><mi>F</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">weight(w,d) = TF(w,d)\times IDF(w)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal">e</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">TF</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mclose">)</span></span></span></span></p>
-      <h3 id="sentiment-analysis">Sentiment Analysis</h3>
-      <h4 id="emotional-lexicons">Emotional Lexicons</h4>
+        <p>Tokenization</p>
+        <ul>
+          <li>Breaking the documents or sentences into chunks called tokens.</li>
+        </ul>
+        <p>VSM (Vector Space Model): Text Preprocessing</p>
+        <ul>
+          <li>Before TDM, documents from corpus need to be preprocessed</li>
+          <li>Objective: to reduce set of words to those are expected to be most relevant</li>
+          <li>Preprocessing includes
+            <ul>
+              <li>Normalizing text</li>
+              <li>Removing high and low frequency terms</li>
+              <li>Removing stop words</li>
+              <li>Removing root/stem (lemmatization)</li>
+            </ul>
+          </li>
+        </ul>
+        <h5 id="normalizing-the-text">Normalizing the text</h5>
+        <ul>
+          <li>Objective: transform various forms of same word to common, normalized form</li>
+          <li>E.g. Apple, APPLE, apple –&gt; apple</li>
+          <li>How it is done?
+            <ul>
+              <li>Remove punctuation marks (dots, dashes, commas…)</li>
+              <li>Transform all words to lower case</li>
+              <li>Using online dictionary replace synonyms</li>
+            </ul>
+          </li>
+        </ul>
+        <h5 id="removing-high-and-low-frequency-terms">Removing high and low frequency terms</h5>
+        <h5 id="removing-stop-word">Removing stop word</h5>
+        <ul>
+          <li>Stop words are words which do not bear any information/meaning</li>
+          <li>E.g. "this is not a good option" –&gt; "option"
+            "to be or not to be" –&gt; null</li>
+        </ul>
+        <h5 id="lemmatization">Lemmatization</h5>
+        <h3 id="feature-extraction">Feature Extraction</h3>
+        <ul>
+          <li>Binary Extraction</li>
+          <li>Exploring the bags of words</li>
+          <li>TF-IDF vectors</li>
+          <li>N-grams</li>
+        </ul>
+        <h5 id="vector-space-model">Vector Space Model</h5>
+        <ul>
+          <li>Generalization of Bag of Space Model</li>
+          <li>Each document from corpus is represented as multi-dimensional vector</li>
+        </ul>
+        <h5 id="binary-weights">Binary weights</h5>
+        <p>weights take value 0 or 1 to reflect the presence or absence of term in document</p>
+        <h5 id="bag-of-words">Bag of Words</h5>
+        <ul>
+          <li>Consider text as simple set of words</li>
+          <li>Based on following (unrealistic) assumptions
+            <ul>
+              <li>words are mutually independent</li>
+              <li>word order in text is irrelevant</li>
+            </ul>
+          </li>
+        </ul>
+        <h5 id="tf-idf">TF-IDF</h5>
+        <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mo stretchy="false">(</mo><mi>w</mi><mo separator="true">,</mo><mi>d</mi><mo stretchy="false">)</mo><mo>=</mo><mi>T</mi><mi>F</mi><mo stretchy="false">(</mo><mi>w</mi><mo separator="true">,</mo><mi>d</mi><mo stretchy="false">)</mo><mo>×</mo><mi>I</mi><mi>D</mi><mi>F</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">weight(w,d) = TF(w,d)\times IDF(w)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal">e</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">TF</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mclose">)</span></span></span></span></p>
+        <h3 id="sentiment-analysis">Sentiment Analysis</h3>
+        <h4 id="emotional-lexicons">Emotional Lexicons</h4>
+      </article>
     </main>
   </body>

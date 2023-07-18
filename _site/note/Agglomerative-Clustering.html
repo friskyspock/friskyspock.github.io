@@ -11,47 +11,49 @@
       <h1>Aniket's Notes</h1>
     </header>
     <main>
-      <ul>
-        <li>The algorithm starts by declaring each point its own cluster, and then merges the two most similar clusters until some stopping criterion is satisfied.</li>
-        <li>The stopping criterion implemented in <em>scikit-learn</em> is the number of clusters.</li>
-        <li><b>There are several linkage criteria that specify how exactly the "most similar cluster" is measured.</b></li>
-        <li>Four choices are implemented in <em>scikit-learn</em>
-          <ol>
-            <li><em>ward</em>
-              The default choice, ward picks the two clusters to merge such that the variance within all clusters increases the least. tis often leads to clusters that are relatively equally sized.</li>
-            <li><em>average</em>
-              average linkage merges the two clusters that have the smallest average distance between all their points.</li>
-            <li><em>complete</em>
-              complete linkage (maximum linkage) merges the two clusters that have the smallest maximum distance between their points.</li>
-            <li><em>single</em>
-              single uses the minimum of the distances between all observations of the two sets.</li>
-          </ol>
-        </li>
-      </ul>
-      <h2 id="hierarchical-clustering">Hierarchical clustering</h2>
-      <p>Agglomerative clustering produces what is known as hierarchical clustering.</p>
-      <div class="language-python highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.cluster</span> <span class="kn">import</span> <span class="n">AgglomerativeClustering</span>
+      <article>
+        <ul>
+          <li>The algorithm starts by declaring each point its own cluster, and then merges the two most similar clusters until some stopping criterion is satisfied.</li>
+          <li>The stopping criterion implemented in <em>scikit-learn</em> is the number of clusters.</li>
+          <li><b>There are several linkage criteria that specify how exactly the "most similar cluster" is measured.</b></li>
+          <li>Four choices are implemented in <em>scikit-learn</em>
+            <ol>
+              <li><em>ward</em>
+                The default choice, ward picks the two clusters to merge such that the variance within all clusters increases the least. tis often leads to clusters that are relatively equally sized.</li>
+              <li><em>average</em>
+                average linkage merges the two clusters that have the smallest average distance between all their points.</li>
+              <li><em>complete</em>
+                complete linkage (maximum linkage) merges the two clusters that have the smallest maximum distance between their points.</li>
+              <li><em>single</em>
+                single uses the minimum of the distances between all observations of the two sets.</li>
+            </ol>
+          </li>
+        </ul>
+        <h2 id="hierarchical-clustering">Hierarchical clustering</h2>
+        <p>Agglomerative clustering produces what is known as hierarchical clustering.</p>
+        <div class="language-python highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.cluster</span> <span class="kn">import</span> <span class="n">AgglomerativeClustering</span>
 
 <span class="n">hc</span> <span class="o">=</span> <span class="nc">AgglomerativeClustering</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">affinity</span><span class="o">=</span><span class="sh">'</span><span class="s">euclidean</span><span class="sh">'</span><span class="p">,</span> <span class="n">linkage</span><span class="o">=</span><span class="sh">'</span><span class="s">single</span><span class="sh">'</span><span class="p">)</span>
 <span class="n">y_hc</span> <span class="o">=</span> <span class="n">hc</span><span class="p">.</span><span class="nf">fit_predict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </code></pre>
+          </div>
         </div>
-      </div>
-      <h2 id="dendrograms">Dendrograms</h2>
-      <p><b>Dendrogram</b> is a tool to visualize hierarchical clustering that can handle multidimensional datasets.</p>
-      <div class="language-python highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="kn">import</span> <span class="n">scipy.cluster.hierarchy</span> <span class="k">as</span> <span class="n">sch</span>
+        <h2 id="dendrograms">Dendrograms</h2>
+        <p><b>Dendrogram</b> is a tool to visualize hierarchical clustering that can handle multidimensional datasets.</p>
+        <div class="language-python highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kn">import</span> <span class="n">scipy.cluster.hierarchy</span> <span class="k">as</span> <span class="n">sch</span>
 
 <span class="n">dendrogram</span> <span class="o">=</span> <span class="n">sch</span><span class="p">.</span><span class="nf">dendrogram</span><span class="p">(</span><span class="n">sch</span><span class="p">.</span><span class="nf">linkage</span><span class="p">(</span><span class="n">norm_data</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="sh">'</span><span class="s">single</span><span class="sh">'</span><span class="p">))</span>
 </code></pre>
+          </div>
         </div>
-      </div>
-      <p>The dendrogram shows data points on the bottom. Then, a tree is plotted with these points (representing single-point clusters) as the leaves, and a new node parent is added for each two clusters that are joined.
-        The <b>y-axis</b> in the dendrogram specify when in the agglomerative algorithm two clusters get merged. The <b>length</b> of each branch shows how far apart the merged clusters are.</p>
-      <h2 id="drawbacks-of-agglomerative-clustering">Drawbacks of Agglomerative Clustering</h2>
-      <p>Agglomerative clustering still fails at separating complex shapes</p>
+        <p>The dendrogram shows data points on the bottom. Then, a tree is plotted with these points (representing single-point clusters) as the leaves, and a new node parent is added for each two clusters that are joined.
+          The <b>y-axis</b> in the dendrogram specify when in the agglomerative algorithm two clusters get merged. The <b>length</b> of each branch shows how far apart the merged clusters are.</p>
+        <h2 id="drawbacks-of-agglomerative-clustering">Drawbacks of Agglomerative Clustering</h2>
+        <p>Agglomerative clustering still fails at separating complex shapes</p>
+      </article>
     </main>
   </body>
