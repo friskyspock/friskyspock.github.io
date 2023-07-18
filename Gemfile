@@ -14,3 +14,5 @@ gem 'jekyll-sitemap'
 gem 'jekyll-tidy'
 
 gem 'kramdown-math-katex'
+
+gem 'kramdown-mermaid'

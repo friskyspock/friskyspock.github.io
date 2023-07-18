@@ -1,18 +1,22 @@
 {
   "main": {
-    "id": "18a1cc96c9a32162",
+    "id": "e5c773deb1bdbe0c",
     "type": "split",
     "children": [
       {
-        "id": "207e99b47c5a76c4",
+        "id": "35c3e260018d57b0",
         "type": "tabs",
         "children": [
           {
-            "id": "598a5614ce995d32",
+            "id": "5313b17652d44b5e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Data Science/Confidence Interval.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -21,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "faf262a19bf46d4a",
+    "id": "2b8198aefc5a0801",
     "type": "split",
     "children": [
       {
-        "id": "509c1948c35e9bd2",
+        "id": "587facbce02711ae",
         "type": "tabs",
         "children": [
           {
-            "id": "20d50828e542d602",
+            "id": "c790f1d9abf834f4",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,7 +43,7 @@
             }
           },
           {
-            "id": "107ca66a8ead31dc",
+            "id": "5284bf553cec0e07",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,7 +58,7 @@
             }
           },
           {
-            "id": "41738190ced20588",
+            "id": "3abf2755d7cb906c",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -68,19 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "5b995519602b9f9f",
+    "id": "c0e6c5dba94e3ece",
     "type": "split",
     "children": [
       {
-        "id": "1a3696f03d3d3f58",
+        "id": "50c380e5041c8fea",
         "type": "tabs",
         "children": [
           {
-            "id": "4ff79fd4319eb39e",
+            "id": "97c02a52a6c5b7e2",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Data Science/Confidence Interval.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,18 +97,19 @@
             }
           },
           {
-            "id": "e522dec291c6cb36",
+            "id": "57d1ee4f092185c2",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Data Science/Confidence Interval.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "08d20f2e8acb5187",
+            "id": "26e28be27b638eac",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -114,11 +120,13 @@
             }
           },
           {
-            "id": "f2bd8a782c9cea5c",
+            "id": "7d25aa603b1e9168",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Data Science/Confidence Interval.md"
+              }
             }
           }
         ]
@@ -138,9 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "598a5614ce995d32",
+  "active": "5313b17652d44b5e",
   "lastOpenFiles": [
-    "Hello.md",
-    "here.md"
+    "Random Forest.md",
+    "Data Science/Decision Trees.md",
+    "Data Science/Confidence Interval.md",
+    "DBSCAN Clustering.md",
+    "Agglomerative Clustering.md"
   ]
 }

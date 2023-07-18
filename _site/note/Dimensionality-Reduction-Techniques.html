@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aniket's Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <!--sidebar-->
+    <div class="sidebar text-center text-white">
+      <header>
+        <img class="avatar" src="assets/images/avatar.jpg" alt="" />
+        <h2><strong>Aniket Masaye</strong></h2>
+        <h3>Data Scientist</h3>
+      </header>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="resume.html">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a>Notes</a>
+        </li>
+      </ul>
+      <footer>
+        <ul class="icons">
+          <li><span style="color: white;"></span><i href=https://www.linkedin.com/in/aniket-masaye-90b1851b9/ class="fa-brands fa-linkedin"></i></li>
+          <li><span style="color: white;"></span><i href=https://medium.com/@aniketms42 class="fa-brands fa-medium"></i></li>
+          <li><span style="color: white;"></span><i href=https://www.kaggle.com/aniketmasaye class="fa-brands fa-kaggle"></i></li>
+          <li><span style="color: white;"></span><i href=https://github.com/friskyspock class="fa-brands fa-github"></i></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; 2023 by Aniket Masaye</li>
+        </li>
+      </ul>
+    </footer>
+  </div>
+  <!--main body-->
+  <main>
+    <h2 id="dimensionality-reduction-feature-extraction-and-manifold-learning">Dimensionality reduction, Feature Extraction, and manifold Learning</h2>
+    <pre><code class="language-mermaid">flowchart TD
+	id1Principal Component Analysis (PCA) ---
+	id2Non-Negative Matrix Factorization (NMF) ---
+	id3Manifold Learning with t-SNE
+</code></pre>
+    <h3 id="principal-component-analysis-pca">Principal Component Analysis (PCA)</h3>
+    <p><b>Principal componenet analysis</b> is a method that rotates the dataset in a way such that the rotated features are statistically uncorrelated. This rotation is often followed by selecting only a subset of the new features, according to how important they are for explaining the data.
+      We can use <b>PCA</b> for dimensionality reduction by retaining only some of the principal components.
+      <b>PCA</b> is used for feature extraction. The idea behind feature extraction is that it is possible to find a representation of your data that is better suited to analysis than the raw representation you were given.</p>
+    <h3 id="non-negative-matrix-factorization-nmf">Non-Negative Matrix Factorization (NMF)</h3>
+    <p><b>Non-negative matrix factorization</b> aims to extract useful features. It works similarly to PCA and can also be used for dimensionality reduction.
+      In <b>NMF</b>, we want the components and the coefficients to be non-negative. Consequently, this method can only be applied to data where each feature is non-negative, as a non-negative sum of sum of non-negative components cannot become negative.
+      The process of decomposing data into a non-negative weighted sum is particularly helpful for data that is created as the addition (or overlay) of several independent sources, Example: audio track of multiple people speaking, music with many instruments.
+      <b>NMF </b>can identify the original components that make up the combined data.</p>
+    <h3 id="manifold-learning-with-t-sne">Manifold Learning with t-SNE</h3>
+    <p><b>Manifold</b> learning algorithms are mainly aimed at visualization, and so are rarely used to generate more than two new features. 
+      <b>t-SNE</b> compute a new representation of the training data, but don't allow transformations of new data.
+      These algorithms cannot be applied to a test set.
+      The idea behind <b>t-SNE</b> is to find a two-dimensional representation of the data that preserves the distances between pints as best as possible.
+      <b>t-SNE</b> puts more emphasis on points that are close by, preserve the information indicating which points are neighbors to each other.</p>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/2a2129b4ed.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module">
+    import Highway from https://cdn.jsdelivr.net/npm/Highway@0.2.1/+esm
+  </script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

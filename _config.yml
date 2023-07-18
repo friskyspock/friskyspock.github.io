@@ -20,20 +20,14 @@
 
 title: Aniket's Website
 email: aniketms42@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://friskyspock.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: friskyspock
 
 copyright: 
   year: 2023
   msg: Aniket Masaye # This is a mandatory attribute for copyright to be displayed
 
-# Theme level preferences
-# To enable set "enabled : true" else, use "enabled:false"
 preferences:
   search:
     enabled: true
@@ -43,10 +37,6 @@ preferences:
     enabled: true
   backlinks:
     enabled: true
-# To enable a homepage, change the value to true and add content to _includes/Homepage.html
-# If enable : false, notes feed will be as homepage. 
-  homepage: 
-    enabled: true ##If you need a homepage, change this to true and edit _includes/Homepage.html
 
 encoding: utf-8
 
@@ -56,9 +46,8 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap 
   - jekyll-tidy
+  - kramdown-mermaid
 
-## Enable Collections
-## Suggested collects are "notes" "lists" and "blog"
 collections:
     notes:
       output: true
@@ -72,24 +61,17 @@ kramdown:
   math_engine: katex
   smart_quotes: ["apos", "apos", "quot", "quot"]
   syntax_highlighter: rouge
-  
-sass:
-  style: compressed
 
-# defaults:
-#   - scope:
-#       path: ""
-#       type: posts
-#     values:
-#       layout: Post
-#       permalink: /post/:title
-#       content-type: post
-#   - scope:
-#       path: ""
-#       type: notes
-#     values:
-#       layout: Post
-#       content-type: notes
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "_notes/*.md"
+      type: notes
+    values:
+      layout: "note"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

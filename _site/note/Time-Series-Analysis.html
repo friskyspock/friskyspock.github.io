@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aniket's Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <!--sidebar-->
+    <div class="sidebar text-center text-white">
+      <header>
+        <img class="avatar" src="assets/images/avatar.jpg" alt="" />
+        <h2><strong>Aniket Masaye</strong></h2>
+        <h3>Data Scientist</h3>
+      </header>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="resume.html">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a>Notes</a>
+        </li>
+      </ul>
+      <footer>
+        <ul class="icons">
+          <li><span style="color: white;"></span><i href=https://www.linkedin.com/in/aniket-masaye-90b1851b9/ class="fa-brands fa-linkedin"></i></li>
+          <li><span style="color: white;"></span><i href=https://medium.com/@aniketms42 class="fa-brands fa-medium"></i></li>
+          <li><span style="color: white;"></span><i href=https://www.kaggle.com/aniketmasaye class="fa-brands fa-kaggle"></i></li>
+          <li><span style="color: white;"></span><i href=https://github.com/friskyspock class="fa-brands fa-github"></i></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; 2023 by Aniket Masaye</li>
+        </li>
+      </ul>
+    </footer>
+  </div>
+  <!--main body-->
+  <main>
+    <p>Auto-Correlation
+      Correlation between variable and its lagged version</p>
+    <p>Transforming Time Series Data
+      Used to remove noise and improve signal.</p>
+    <ul>
+      <li>Square root transform</li>
+      <li>Log transform</li>
+    </ul>
+    <p>typical plots
+      Time plot
+      Lag plot
+      ACF plot
+      Histogram</p>
+    <h3 id="naïve-method">Naïve Method</h3>
+    <h3 id="simple-average">Simple Average</h3>
+    <h3 id="moving-average-smoothing">Moving Average Smoothing</h3>
+    <ul>
+      <li>Centered moving average</li>
+      <li>Trailing moving average</li>
+      <li>Weighted moving average</li>
+    </ul>
+    <h3 id="exponential-smoothing">Exponential Smoothing</h3>
+    <ol>
+      <li>Simple exponential method
+        <ul>
+          <li>No trend</li>
+          <li>No seasonality</li>
+          <li>Level</li>
+          <li>Noise (cannot be model)</li>
+        </ul>
+      </li>
+      <li>Holt's method
+        <ul>
+          <li>double exponential</li>
+          <li>Trend</li>
+          <li>No seasonality</li>
+        </ul>
+      </li>
+      <li>Winter's method
+        <ul>
+          <li>Trend</li>
+          <li>Seasonality</li>
+          <li>Variants are possible</li>
+        </ul>
+      </li>
+    </ol>
+    <p>ARIMA (Auto Regressive Integrated Moving Average) Model
+      AR, MA, ARMA, ARIMA</p>
+    <p>Autoregression (AR) refers to the use of past values of the time series to predict future values. AR models assume that the value of the time series at a given time point is a function of the values at previous time points.</p>
+    <p>Moving Average (MA) refers to the use of past forecast errors to predict future values. MA models assume that the value of the time series at a given time point is a function of the errors made in the previous forecasts.</p>
+    <p>Integrated (I) refers to the differencing of the time series to make it stationary. Stationarity means that the statistical properties of the time series do not change over time. Differencing involves subtracting each value in the time series from its previous value to remove the trend and make the series stationary.</p>
+    <p>The order of the ARIMA model is denoted by (p, d, q), where p is the order of the autoregressive component, d is the order of differencing, and q is the order of the moving average component.</p>
+    <ol>
+      <li>
+        <p><strong>Identify the order of differencing (d)</strong>: The first step in fitting an ARIMA model is often to apply differencing to the time series until it becomes stationary. The order of differencing required to achieve stationarity can be determined from the ACF plot. If the ACF plot shows a gradual decay without any significant spikes, then the time series may not require any differencing. However, if the ACF plot shows a significant positive spike at lag 1, then the time series may require first-order differencing (d=1). If the ACF plot shows a significant positive spike at lag 2, then the time series may require second-order differencing (d=2), and so on.</p>
+      </li>
+      <li>
+        <p><strong>Identify the order of the autoregressive term (p)</strong>: The order of the autoregressive (AR) term can be determined from the PACF plot. The PACF plot shows the relationship between the series and its lags, but only after removing the effects of any intermediate lags. If the PACF plot shows a significant positive spike at lag 1 and no significant spikes after that, then the AR term may be one (p=1). If there is a significant spike at lag 2 and no significant spikes after that, then the AR term may be two (p=2), and so on.</p>
+      </li>
+      <li>
+        <p><strong>Identify the order of the moving average term (q)</strong>: The order of the moving average (MA) term can also be determined from the ACF plot. If the ACF plot shows a significant spike at lag 1 and no significant spikes after that, then the MA term may be one (q=1). If there is a significant spike at lag 2 and no significant spikes after that, then the MA term may be two (q=2), and so on.</p>
+      </li>
+    </ol>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/2a2129b4ed.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module">
+    import Highway from https://cdn.jsdelivr.net/npm/Highway@0.2.1/+esm
+  </script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

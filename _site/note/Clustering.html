@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aniket's Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <!--sidebar-->
+    <div class="sidebar text-center text-white">
+      <header>
+        <img class="avatar" src="assets/images/avatar.jpg" alt="" />
+        <h2><strong>Aniket Masaye</strong></h2>
+        <h3>Data Scientist</h3>
+      </header>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="resume.html">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a>Notes</a>
+        </li>
+      </ul>
+      <footer>
+        <ul class="icons">
+          <li><span style="color: white;"></span><i href=https://www.linkedin.com/in/aniket-masaye-90b1851b9/ class="fa-brands fa-linkedin"></i></li>
+          <li><span style="color: white;"></span><i href=https://medium.com/@aniketms42 class="fa-brands fa-medium"></i></li>
+          <li><span style="color: white;"></span><i href=https://www.kaggle.com/aniketmasaye class="fa-brands fa-kaggle"></i></li>
+          <li><span style="color: white;"></span><i href=https://github.com/friskyspock class="fa-brands fa-github"></i></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; 2023 by Aniket Masaye</li>
+        </li>
+      </ul>
+    </footer>
+  </div>
+  <!--main body-->
+  <main>
+    <p>graph TD;
+      A(Data Mining) –&gt; B(Supervised Machine Learning);
+      A –&gt; C(Unsupervised);
+      B –&gt; D("Regression, sum, NN, KNN");
+      C –&gt; E("Clustering, PCA, Market basket analysis");</p>
+    <h3 id="data-mining-clustering">Data Mining: Clustering</h3>
+    <p>Cluster Analysis ('Data Segmentation') is an exploratory method for identifying homogenous groups (clusters) of records</p>
+    <ul>
+      <li>Agglomerative/ Hierarchical Clustering</li>
+      <li>K Means Clustering</li>
+      <li>DBSCAN Clustering</li>
+    </ul>
+    <h3 id="agglomerative-clustering">[[Agglomerative Clustering]]</h3>
+    <ul>
+      <li>Agglomerative clustering refers to a collection of clustering algorithms that all build upon the same principles.</li>
+      <li>Agglomerative clustering cannot make predictions for new data points.</li>
+    </ul>
+    <h3 id="k-means-clustering">[[K-Means Clustering]]</h3>
+    <ul>
+      <li>It tries to find cluster centers that are representative of certain regions of the data.</li>
+      <li>It is relatively easy to understand and implement.</li>
+      <li>It runs relatively quickly.</li>
+      <li>k-means scales easily to large datasets.</li>
+    </ul>
+    <h3 id="dbscan-clustering">[[DBSCAN Clustering]]</h3>
+    <ul>
+      <li>It does not require the user to set the number of cluster a priori, it can capture clusters of complex shapes.</li>
+      <li>It can identify points that are not part of any cluster.</li>
+      <li>DBSCAN is somewhat slower than agglomerative clustering and k-means, but still scales to relatively large datasets.</li>
+      <li>DBSCAN works by identifying points that are in crowded/dense regions called core samples/core points.</li>
+      <li>The idea behind DBSCAN is that clusters form dense regions of data, separated by regions that are relatively empty.</li>
+    </ul>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/2a2129b4ed.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module">
+    import Highway from https://cdn.jsdelivr.net/npm/Highway@0.2.1/+esm
+  </script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
