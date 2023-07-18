@@ -22,7 +22,7 @@
     <footer>
       <ul class="icons">
         {% for item in site.data.settings.social %}
-        <li><span style="color: white;"></span><i href={{item.link}} class="fa-brands {{item.icon}}"></i></li>
+        <li><a href={{item.link}} style="color: white;"><i class="fa-brands {{item.icon}}"></i></a></li>
         {% endfor %}
       </ul>
       <ul class="copyright">

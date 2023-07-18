@@ -2,203 +2,203 @@
   <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
       <loc>http://localhost:4000/note/Agglomerative-Clustering</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Clustering</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Confidence-Interval</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/DBSCAN-Clustering</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Decision-Trees</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Dimensionality-Reduction-Techniques</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Ensemble-Methods</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Exploratory-Data-Analysis</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Feature-Engineering</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Feature-Scaling</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Flow-for-Data</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Gradient-Descent-Algorithm</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Inferential-Statistics</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/K-Nearest-Neighbors</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/K-Means-Clustering</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Linear-Regression</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Logistic-Regression</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Machine-learning</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Metadata</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Model-Validation-Techniques</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Naive-Bayes</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Natural-Language-Processing</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Neural-Networks</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/PCA</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Probability-distributions</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Random-Forest</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Recommendation-System</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Regularization-Models</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/SQL</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Statistics-and-Probability</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Supervised-Machine-learning</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Support-Vector-Machines</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Time-Series-Analysis</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Unsupervised-Machine-learning</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/XGBoost</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Linear-Algebra-Applications</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Microsoft-Azure</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Classical-Mechanics</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Differential-Equations</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Electromagnetic-theory</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Electrostatics</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Linear-Algebra</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Magnetostatics</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Mathematical-Methods</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Newtonian-Mechanics</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Physics</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Quantum-Field-Theory</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Quantum-Mechanics</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Statistical-Mechanics</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/note/Thermodynamics</loc>
-      <lastmod>2023-07-19T01:16:24+05:30</lastmod>
+      <lastmod>2023-07-19T01:24:05+05:30</lastmod>
     </url>
     <url>
       <loc>http://localhost:4000/</loc>
