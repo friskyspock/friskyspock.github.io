@@ -22,6 +22,18 @@
 
 - title: Forest Fires
   thumb: forestfires.jpg
-  tags: []
-  link: ""
-  describe: "just"
+  tags: [NN, SVM]
+  link: "https://github.com/friskyspock/forestfire-data-excelr"
+  describe: "Predicting area burnt by forest fires based on environmental factors like wind, temp, rain, etc"
+
+- title: Cats Vs Dogs
+  thumb: catsvsdogs.jpg
+  tags: [CNN]
+  link: "https://github.com/friskyspock/cat-vs-dog-image-classification"
+  describe: Image Classification using CNN
+
+- title: Airlines passengers
+  thumb: airlines.jpg
+  tags: [clustering, DBScan, KMeans, Hierarchical]
+  link: "https://github.com/friskyspock/airlines-data-excelr"
+  describe: Identifying clusters of passengers that have similar characteristics for the purpose of targeting different segments for different types of mileage offers.
