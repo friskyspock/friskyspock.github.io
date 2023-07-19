@@ -2,7 +2,7 @@
 # my projects here
 - title: Stock Market Forecasting
   thumb: stockmarketforecast.jpg
-  tags: [Machine Learning, Django, Chart.js, LSTM, HWES]
+  tags: [ML, Django, Chartjs, LSTM, HWES]
   link: "https://github.com/friskyspock/StockMarketForecast"
   weblink: "http://friskyspock.pythonanywhere.com/"
   describe: Using ensemble model of LSTM and Holts-Winter Exponential Smoothing to obtain future stock price prediction.
@@ -16,7 +16,7 @@
 
 - title: Sentiment Analysis on tweets
   thumb: sentimenttweets.jpg
-  tags: [NLP, Naive Bayes]
+  tags: [NLP, NB]
   link: "https://github.com/friskyspock/elon-musk-tweets-excelr"
   describe: "Sentiment analysis on tweets and replies related to Elon Musk. Also predictive model is made using Naive Bayes"
 
@@ -28,7 +28,7 @@
 
 - title: Cats Vs Dogs
   thumb: catsvsdogs.jpg
-  tags: [CNN]
+  tags: [CNN, NN]
   link: "https://github.com/friskyspock/cat-vs-dog-image-classification"
   describe: Image Classification using Convolutional Neural Networks.
 
@@ -40,7 +40,7 @@
 
 - title: Flower Classification
   thumb: flowerclassification.jpg
-  tags: [CNN]
+  tags: [CNN, NN]
   link: "https://github.com/friskyspock/flower-images-classification"
   describe: Classifying five types of flowers using CNN.
 

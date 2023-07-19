@@ -6,3 +6,16 @@ social:
 - {icon: 'fa-medium', link: "https://medium.com/@aniketms42"}
 - {icon: 'fa-kaggle', link: "https://www.kaggle.com/aniketmasaye"}
 - {icon: 'fa-github', link: "https://github.com/friskyspock"}
+
+tags:
+  - short: NN
+    long: Neural Network
+  - short: NLP
+    long: Natural Language Processing
+  - short: RF
+    long: Random Forest
+  - short: clustering
+    long: Clustering
+  - short: MLR
+    long: MultiLinear Regression
+  
