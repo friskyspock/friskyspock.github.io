@@ -67,3 +67,9 @@
   tags: [MLR]
   link: "https://github.com/friskyspock/toyota-corolla-data-excelr"
   describe: Analyzing best features affecting resell value of Toyota Corolla and making predictions on resell value.
+
+- title: Sentiment Analysis on Amazon Reviews
+  thumb: sentimentamazon.jpg
+  tags: [NLP, NB]
+  link: "https://github.com/friskyspock/amazon-reviews-excelr"
+  describe: Analyzing sentiments of product reviews on Amazon. Made a predictive model using Naive Bayes

@@ -18,7 +18,7 @@ layout: default
     </ul>
 
     <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="all-tab-pane" role="tabpanel" tabindex="0">
+        <div class="tab-pane fade show active mt-3" id="all-tab-pane" role="tabpanel" tabindex="0">
             <div class="row row-cols-1 row-cols-md-4 g-4">
                 {% for item in site.data.portfolio %}
                 <div class="col">
@@ -35,7 +35,7 @@ layout: default
             </div>
         </div>
         {% for foo in site.data.settings.tags %}
-            <div class="tab-pane fade" id="{{foo.short}}-tab-pane" role="tabpanel" tabindex="0">
+            <div class="tab-pane fade mt-3" id="{{foo.short}}-tab-pane" role="tabpanel" tabindex="0">
                 <div class="row row-cols-1 row-cols-md-4 g-4">
                     {% for item in site.data.portfolio %}
                         {% for tag in item.tags %}
