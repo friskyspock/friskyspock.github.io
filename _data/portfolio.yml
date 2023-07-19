@@ -30,10 +30,40 @@
   thumb: catsvsdogs.jpg
   tags: [CNN]
   link: "https://github.com/friskyspock/cat-vs-dog-image-classification"
-  describe: Image Classification using CNN
+  describe: Image Classification using Convolutional Neural Networks.
 
 - title: Airlines passengers
   thumb: airlines.jpg
   tags: [clustering, DBScan, KMeans, Hierarchical]
   link: "https://github.com/friskyspock/airlines-data-excelr"
   describe: Identifying clusters of passengers that have similar characteristics for the purpose of targeting different segments for different types of mileage offers.
+
+- title: Flower Classification
+  thumb: flowerclassification.jpg
+  tags: [CNN]
+  link: "https://github.com/friskyspock/flower-images-classification"
+  describe: Classifying five types of flowers using CNN.
+
+- title: Identifying types of wine
+  thumb: winepca.jpg
+  tags: [PCA, clustering]
+  link: "https://github.com/friskyspock/wine-data-excelr"
+  describe: Using Principle Component Analysis, creating distinct clusters of wine based on their properties.
+
+- title: Classifying Animals in the Zoo
+  thumb: zooanimals.jpg
+  tags: [KMeans]
+  link: "https://github.com/friskyspock/zoo-data-excelr"
+  describe: Classification of zoo animals using K-nearest neighbor algorithm based on physical features of them.
+
+- title: Cloth Manufacturing Company Sales
+  thumb: clothcompany.jpg
+  tags: [DT, RF]
+  link: "https://github.com/friskyspock/company-data-excelr"
+  describe: A cloth manufacturing company is interested to know about the segment or attributes causes high sale.
+
+- title: Car Resell Price
+  thumb: carresell.jpg
+  tags: [MLR]
+  link: "https://github.com/friskyspock/toyota-corolla-data-excelr"
+  describe: Analyzing best features affecting resell value of Toyota Corolla and making predictions on resell value.
