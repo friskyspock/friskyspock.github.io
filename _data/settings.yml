@@ -12,6 +12,8 @@ tags:
     long: Neural Network
   - short: NLP
     long: Natural Language Processing
+  - short: TSF
+    long: Time Series Forecasting
   - short: RF
     long: Random Forest
   - short: clustering

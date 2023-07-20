@@ -2,7 +2,7 @@
 # my projects here
 - title: Stock Market Forecasting
   thumb: stockmarketforecast.jpg
-  tags: [ML, Django, Chartjs, LSTM, HWES]
+  tags: [Django, TSF, NN]
   link: "https://github.com/friskyspock/StockMarketForecast"
   weblink: "http://friskyspock.pythonanywhere.com/"
   describe: Using ensemble model of LSTM and Holts-Winter Exponential Smoothing to obtain future stock price prediction.
@@ -73,3 +73,15 @@
   tags: [NLP, NB]
   link: "https://github.com/friskyspock/amazon-reviews-excelr"
   describe: Analyzing sentiments of product reviews on Amazon. Made a predictive model using Naive Bayes
+
+- title: Time Series Forecasting
+  thumb: cocacolaairline.jpg
+  tags: [TSF]
+  link: "https://github.com/friskyspock/cocacola-and-airlines-data-excelr"
+  describe: Coca-Cola Sale Prices and Airline Passengers Count. Analyzed time series data, forecasting is done using ARIMA model.
+
+- title: Spaceship Titanic - Kaggle
+  thumb: spaceshiptitanic.jpg
+  tags: [NN, XGB]
+  link: "https://github.com/friskyspock/spaceship-titanic"
+  describe: My solution to Spaceship Titanic Problem on Kaggle.
