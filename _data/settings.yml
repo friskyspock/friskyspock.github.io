@@ -2,7 +2,7 @@
 # General site settings
 
 social:
-- {icon: 'fa-linkedin', link: "https://www.linkedin.com/in/aniket-masaye-90b1851b9/"}
+- {icon: 'fa-linkedin', link: "https://www.linkedin.com/in/aniket-masaye/"}
 - {icon: 'fa-medium', link: "https://medium.com/@aniketms42"}
 - {icon: 'fa-kaggle', link: "https://www.kaggle.com/aniketmasaye"}
 - {icon: 'fa-github', link: "https://github.com/friskyspock"}
