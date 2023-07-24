@@ -1,11 +1,12 @@
 ---
 ---
-
+```mermaid
 graph TD;
 A(Data Mining) --> B(Supervised Machine Learning);
 A --> C(Unsupervised);
 B --> D("Regression, sum, NN, KNN");
 C --> E("Clustering, PCA, Market basket analysis");
+```
 
 ### Data Mining: Clustering
 

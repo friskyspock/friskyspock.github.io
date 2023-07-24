@@ -1,6 +1,9 @@
 ---
 ---
 
+# Statistics
+Statistics is the branch of mathematics that is all about the gathering, observing, interpretation, presentation, and organization of data. In simpler words, it is a field to collect and summarize data
+
 Science of data.
 
 #### [[Descriptive Statistics]]
