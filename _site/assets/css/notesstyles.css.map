@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../_sass/notesbase.scss"],"names":[],"mappings":"AAAA;EACI;EACA","sourcesContent":["article {\r\n    padding-left: 25%;\r\n    padding-right: 25%;\r\n}"],"file":"notesstyles.css"}
+{"version":3,"sourceRoot":"","sources":["../../_sass/notesbase.scss"],"names":[],"mappings":"AAAA;EACI;EACA","sourcesContent":["article {\n    padding-left: 25%;\n    padding-right: 25%;\n}"],"file":"notesstyles.css"}

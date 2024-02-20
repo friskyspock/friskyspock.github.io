@@ -2,7 +2,7 @@
 # My resume
 name: Aniket Masaye
 subtitle: Data Science Enthusiast and Physics/Mathematics Graduate
-summary: "As a physics and mathematics graduate with a strong interest in data science, I have completed a variety of online and offline courses to develop my skills in statistical analysis, programming languages such as Python and R, and data visualization tools such as Tableau and Power BI. I am eager to apply my skills to a data science role and continue learning and growing in the field."
+summary: "As a highly skilled data science professional with a background in physics and mathematics, I bring a wealth of expertise in cutting-edge technologies and innovative methodologies. Through hands-on experience and continual learning, I have mastered advanced techniques in AI/ML, including transfer learning with transformer-based models. My proficiency extends to optimizing API operations, ensuring robust data management, and enhancing multimedia experiences through ML techniques. Additionally, With a passion for leveraging data to drive insights and solutions, I am eager to contribute my skills and expertise in Data Scientist field."
 
 contact:
 - title: MyWebsite
@@ -16,20 +16,50 @@ contact:
   icon: "fa-brands fa-github"
 
 education:
-- name: ExcelR Solutions
-  passed: 2023
-  course: Data Science
+# - name: ExcelR Solutions
+#   passed: 2023
+#   course: Data Science
 - name: Indian Institute of Science Education and Research, Thiruvananthapuram
-  passed: 2022
+  passed: 2017 - 2022
   course: Integrated BS-MS
-- name: Jawahar Navodaya Vidyalaya, Ratnagiri
-  passed: 2016
-  course: Class XII and X
+# - name: Jawahar Navodaya Vidyalaya, Ratnagiri
+#   passed: 2016
+#   course: Class XII and X
 
 workexperience:
+- position: Data Scientist
+  org: Interactly Solutions
+  period: Dec 2023 - Now
+  details:
+  - point: Transfer learning with transformer-based models
+    subpoint: Implemented cutting-edge technologies like transfer learning with transformer-based models and utilized OpenAI-Whisper for audio transcription, improving accuracy and accessibility of audio content.
+  - point: Efficient API Operations and Data Validation
+    subpoint: Leveraged FastAPI migration and Pydantic for enhanced performance and robust data validation, ensuring seamless API operations and data integrity.
+  - point: Optimized Data Management
+    subpoint: Optimized data management with AWS RDS and SQLAlchemy, facilitating secure and scalable storage solutions and streamlined database connectivity.
+  - point: Enhanced Multimedia Experiences
+    subpoint: Enhanced multimedia experiences through techniques like interpolated frames with TensorFlow Hub's FILM, improving video playback smoothness, and explored pitch-based audio differentiation methods for normalizing AI audio cloning outputs, elevating audio processing quality.
+  - point: Language Processing Advancements
+    subpoint: Contributed to language processing capabilities by developing a custom Python package for Indian Soundex, enhancing the matching accuracy of similarly pronounced words.
+
+- position: Data Science Intern
+  org: Interactly Solutions
+  period: Aug 2023 - Nov 2023
+  details:
+  - point: AWS S3 and Postman Proficiency
+    subpoint: Leveraged AWS S3 and Postman to enhance understanding of cloud storage and API testing.
+  - point: Flask-Powered Python APIs
+    subpoint: Mastered the creation of Python APIs using Flask, facilitating seamless data communication and integration.
+  - point: Efficient Video Manipulation
+    subpoint: Streamlined processes and boosted efficiency in multimedia projects through automated video manipulation with ffmpeg.
+  - point: In-depth Research on Lipsyncing
+    subpoint: Conducted comprehensive research on lipsyncing in videos, exploring advanced techniques and methodologies.
+  - point: LipGAN Model Application
+    subpoint: Applied the open-source LipGAN model to produce high-quality lipsync videos, merging theory with practical application.
+
 - position: Data Science Intern
   org: AI Variants
-  period: Apri-July 2023
+  period: Apr 2023 - Jul 2023
   details:
   - point: Developed an Ensemble Model
     subpoint: Created a machine learning ensemble model by combining LSTM (Long Short-Term Memory) neural network and Holt-Winters exponential smoothing model. This approach allows for accurate predictions of future stock market prices.
