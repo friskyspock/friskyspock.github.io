@@ -16,3 +16,6 @@ gem 'jekyll-tidy'
 gem 'kramdown-math-katex'
 
 gem 'kramdown-mermaid'
+gem 'csv'
+gem 'base64'
+gem 'bigdecimal'
