@@ -1,3 +1,112 @@
-.portfolio-container {
-    padding: 5%;
+// Portfolio Styles
+.portfolio-tabs {
+    margin: 0 0 2em 0;
+    border: none;
+    
+    .nav-item {
+        margin: 0 0.5em;
+        
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    .nav-link {
+        color: _palette(fg);
+        border: solid 1px _palette(border);
+        background: transparent;
+        border-radius: 0;
+        padding: 0.75em 1.5em;
+        
+        &:hover {
+            background: _palette(highlight);
+            color: _palette(fg-bold);
+        }
+        
+        &.active {
+            background: _palette(highlight);
+            color: _palette(fg-bold);
+            border-color: _palette(highlight);
+        }
+    }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+    margin: 2em 0;
+}
+
+.project-card {
+    background: _palette(bg);
+    border: solid 1px _palette(border);
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    
+    .image {
+        display: block;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+    }
+    
+    header.major {
+        padding: 1.5em;
+        background: _palette(bg);
+        
+        h3 {
+            font-size: 1.25em;
+            margin: 0 0 0.5em 0;
+        }
+        
+        p {
+            margin: 0 0 1em 0;
+            font-size: 0.9em;
+        }
+    }
+    
+    &:hover {
+        .image img {
+            transform: scale(1.1);
+        }
+    }
+    
+    .actions {
+        display: flex;
+        gap: 1em;
+        margin-bottom: 0;
+    }
+}
+
+// Responsive adjustments
+@include breakpoint('<=medium') {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@include breakpoint('<=small') {
+    .portfolio-tabs {
+        .nav-item {
+            margin: 0.25em;
+        }
+        
+        .nav-link {
+            padding: 0.5em 1em;
+            font-size: 0.9em;
+        }
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }

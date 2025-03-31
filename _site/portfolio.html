@@ -44,332 +44,430 @@
   </div>
   <!--main body-->
   <main>
-    <div class="portfolio-container">
-      <h1>Collection of my Projects</h1>
-      <p>Welcome to my portfolio. Here you'll find a selection of my work.
-        Explore my projects to learn more about what I do.</p>
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab">All</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="NN-tab" data-bs-toggle="tab" data-bs-target="#NN-tab-pane" type="button" role="tab">Neural Network</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="NLP-tab" data-bs-toggle="tab" data-bs-target="#NLP-tab-pane" type="button" role="tab">Natural Language Processing</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="TSF-tab" data-bs-toggle="tab" data-bs-target="#TSF-tab-pane" type="button" role="tab">Time Series Forecasting</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="RF-tab" data-bs-toggle="tab" data-bs-target="#RF-tab-pane" type="button" role="tab">Random Forest</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="clustering-tab" data-bs-toggle="tab" data-bs-target="#clustering-tab-pane" type="button" role="tab">Clustering</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="MLR-tab" data-bs-toggle="tab" data-bs-target="#MLR-tab-pane" type="button" role="tab">MultiLinear Regression</button>
-        </li>
-      </ul>
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active mt-3" id="all-tab-pane" role="tabpanel" tabindex="0">
-          <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/stockmarketforecast.jpg" class="card-img-top" alt=Stock Market Forecasting>
-                <div class="card-body">
-                  <h5 class="card-title">Stock Market Forecasting</h5>
-                  <p class="card-text">Using ensemble model of LSTM and Holts-Winter Exponential Smoothing to obtain future stock price prediction.</p>
-                  <a href="https://github.com/friskyspock/StockMarketForecast" class="btn btn-primary">GitHub</a>
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt style2">
+        <a href="index.html" class="logo"><strong>Aniket</strong> <span>Masaye</span></a>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="notes.html">Notes</a></li>
+        </ul>
+      </nav>
+      <!-- Banner -->
+      <section id="banner" class="style2">
+        <div class="inner">
+          <span class="image">
+            <img src="assets/images/banner.jpg" alt="" />
+          </span>
+          <header class="major">
+            <h1>Collection of my Projects</h1>
+          </header>
+          <div class="content">
+            <p>Welcome to my portfolio. Here you'll find a selection of my work.<br />
+              Explore my projects to learn more about what I do.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Main -->
+      <div id="main">
+        <section id="one">
+          <div class="inner">
+            <!-- Project Filters -->
+            <ul class="nav nav-tabs portfolio-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab">All</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="NN-tab" data-bs-toggle="tab" data-bs-target="#NN-tab-pane" type="button" role="tab">Neural Network</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="NLP-tab" data-bs-toggle="tab" data-bs-target="#NLP-tab-pane" type="button" role="tab">Natural Language Processing</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="TSF-tab" data-bs-toggle="tab" data-bs-target="#TSF-tab-pane" type="button" role="tab">Time Series Forecasting</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="RF-tab" data-bs-toggle="tab" data-bs-target="#RF-tab-pane" type="button" role="tab">Random Forest</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="clustering-tab" data-bs-toggle="tab" data-bs-target="#clustering-tab-pane" type="button" role="tab">Clustering</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="MLR-tab" data-bs-toggle="tab" data-bs-target="#MLR-tab-pane" type="button" role="tab">MultiLinear Regression</button>
+              </li>
+            </ul>
+            <!-- Project Grid -->
+            <div class="tab-content" id="myTabContent">
+              <!-- All Projects Tab -->
+              <div class="tab-pane fade show active mt-3" id="all-tab-pane" role="tabpanel" tabindex="0">
+                <div class="projects-grid">
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/stockmarketforecast.jpg" alt="Stock Market Forecasting" />
+                    </span>
+                    <header class="major">
+                      <h3>Stock Market Forecasting</h3>
+                      <p>Using ensemble model of LSTM and Holts-Winter Exponential Smoothing to obtain future stock price prediction.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/StockMarketForecast" class="button">GitHub</a></li>
+                        <li><a href="http://friskyspock.pythonanywhere.com/" class="button primary">Live Demo</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/imagecaptioning.jpg" alt="Image Captioning" />
+                    </span>
+                    <header class="major">
+                      <h3>Image Captioning</h3>
+                      <p>Caption creator using AI.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/sample-image-captioning" class="button">GitHub</a></li>
+                        <li><a href="https://friskyspock-sample-image-captioning-app-ns116q.streamlit.app/" class="button primary">Live Demo</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/sentimenttweets.jpg" alt="Sentiment Analysis on tweets" />
+                    </span>
+                    <header class="major">
+                      <h3>Sentiment Analysis on tweets</h3>
+                      <p>Sentiment analysis on tweets and replies related to Elon Musk. Also predictive model is made using Naive Bayes</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/elon-musk-tweets-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/forestfires.jpg" alt="Forest Fires" />
+                    </span>
+                    <header class="major">
+                      <h3>Forest Fires</h3>
+                      <p>Predicting area burnt by forest fires based on environmental factors like wind, temp, rain, etc</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/forestfire-data-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/catsvsdogs.jpg" alt="Cats Vs Dogs" />
+                    </span>
+                    <header class="major">
+                      <h3>Cats Vs Dogs</h3>
+                      <p>Image Classification using Convolutional Neural Networks.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/cat-vs-dog-image-classification" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/airlines.jpg" alt="Airlines passengers" />
+                    </span>
+                    <header class="major">
+                      <h3>Airlines passengers</h3>
+                      <p>Identifying clusters of passengers that have similar characteristics for the purpose of targeting different segments for different types of mileage offers.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/airlines-data-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/flowerclassification.jpg" alt="Flower Classification" />
+                    </span>
+                    <header class="major">
+                      <h3>Flower Classification</h3>
+                      <p>Classifying five types of flowers using CNN.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/flower-images-classification" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/winepca.jpg" alt="Identifying types of wine" />
+                    </span>
+                    <header class="major">
+                      <h3>Identifying types of wine</h3>
+                      <p>Using Principle Component Analysis, creating distinct clusters of wine based on their properties.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/wine-data-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/zooanimals.jpg" alt="Classifying Animals in the Zoo" />
+                    </span>
+                    <header class="major">
+                      <h3>Classifying Animals in the Zoo</h3>
+                      <p>Classification of zoo animals using K-nearest neighbor algorithm based on physical features of them.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/zoo-data-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/clothcompany.jpg" alt="Cloth Manufacturing Company Sales" />
+                    </span>
+                    <header class="major">
+                      <h3>Cloth Manufacturing Company Sales</h3>
+                      <p>A cloth manufacturing company is interested to know about the segment or attributes causes high sale.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/company-data-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/carresell.jpg" alt="Car Resell Price" />
+                    </span>
+                    <header class="major">
+                      <h3>Car Resell Price</h3>
+                      <p>Analyzing best features affecting resell value of Toyota Corolla and making predictions on resell value.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/toyota-corolla-data-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/sentimentamazon.jpg" alt="Sentiment Analysis on Amazon Reviews" />
+                    </span>
+                    <header class="major">
+                      <h3>Sentiment Analysis on Amazon Reviews</h3>
+                      <p>Analyzing sentiments of product reviews on Amazon. Made a predictive model using Naive Bayes</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/amazon-reviews-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/cocacolaairline.jpg" alt="Time Series Forecasting" />
+                    </span>
+                    <header class="major">
+                      <h3>Time Series Forecasting</h3>
+                      <p>Coca-Cola Sale Prices and Airline Passengers Count. Analyzed time series data, forecasting is done using ARIMA model.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/cocacola-and-airlines-data-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/spaceshiptitanic.jpg" alt="Spaceship Titanic - Kaggle" />
+                    </span>
+                    <header class="major">
+                      <h3>Spaceship Titanic - Kaggle</h3>
+                      <p>My solution to Spaceship Titanic Problem on Kaggle.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/spaceship-titanic" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/imagecaptioning.jpg" class="card-img-top" alt=Image Captioning>
-                <div class="card-body">
-                  <h5 class="card-title">Image Captioning</h5>
-                  <p class="card-text">Caption creator using AI.</p>
-                  <a href="https://github.com/friskyspock/sample-image-captioning" class="btn btn-primary">GitHub</a>
+              <!-- Category Tabs -->
+              <div class="tab-pane fade mt-3" id="NN-tab-pane" role="tabpanel" tabindex="0">
+                <div class="projects-grid">
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/stockmarketforecast.jpg" alt="Stock Market Forecasting" />
+                    </span>
+                    <header class="major">
+                      <h3>Stock Market Forecasting</h3>
+                      <p>Using ensemble model of LSTM and Holts-Winter Exponential Smoothing to obtain future stock price prediction.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/StockMarketForecast" class="button">GitHub</a></li>
+                        <li><a href="http://friskyspock.pythonanywhere.com/" class="button primary">Live Demo</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/forestfires.jpg" alt="Forest Fires" />
+                    </span>
+                    <header class="major">
+                      <h3>Forest Fires</h3>
+                      <p>Predicting area burnt by forest fires based on environmental factors like wind, temp, rain, etc</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/forestfire-data-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/catsvsdogs.jpg" alt="Cats Vs Dogs" />
+                    </span>
+                    <header class="major">
+                      <h3>Cats Vs Dogs</h3>
+                      <p>Image Classification using Convolutional Neural Networks.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/cat-vs-dog-image-classification" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/flowerclassification.jpg" alt="Flower Classification" />
+                    </span>
+                    <header class="major">
+                      <h3>Flower Classification</h3>
+                      <p>Classifying five types of flowers using CNN.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/flower-images-classification" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/spaceshiptitanic.jpg" alt="Spaceship Titanic - Kaggle" />
+                    </span>
+                    <header class="major">
+                      <h3>Spaceship Titanic - Kaggle</h3>
+                      <p>My solution to Spaceship Titanic Problem on Kaggle.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/spaceship-titanic" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/sentimenttweets.jpg" class="card-img-top" alt=Sentiment Analysis on tweets>
-                <div class="card-body">
-                  <h5 class="card-title">Sentiment Analysis on tweets</h5>
-                  <p class="card-text">Sentiment analysis on tweets and replies related to Elon Musk. Also predictive model is made using Naive Bayes</p>
-                  <a href="https://github.com/friskyspock/elon-musk-tweets-excelr" class="btn btn-primary">GitHub</a>
+              <div class="tab-pane fade mt-3" id="NLP-tab-pane" role="tabpanel" tabindex="0">
+                <div class="projects-grid">
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/sentimenttweets.jpg" alt="Sentiment Analysis on tweets" />
+                    </span>
+                    <header class="major">
+                      <h3>Sentiment Analysis on tweets</h3>
+                      <p>Sentiment analysis on tweets and replies related to Elon Musk. Also predictive model is made using Naive Bayes</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/elon-musk-tweets-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/sentimentamazon.jpg" alt="Sentiment Analysis on Amazon Reviews" />
+                    </span>
+                    <header class="major">
+                      <h3>Sentiment Analysis on Amazon Reviews</h3>
+                      <p>Analyzing sentiments of product reviews on Amazon. Made a predictive model using Naive Bayes</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/amazon-reviews-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/forestfires.jpg" class="card-img-top" alt=Forest Fires>
-                <div class="card-body">
-                  <h5 class="card-title">Forest Fires</h5>
-                  <p class="card-text">Predicting area burnt by forest fires based on environmental factors like wind, temp, rain, etc</p>
-                  <a href="https://github.com/friskyspock/forestfire-data-excelr" class="btn btn-primary">GitHub</a>
+              <div class="tab-pane fade mt-3" id="TSF-tab-pane" role="tabpanel" tabindex="0">
+                <div class="projects-grid">
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/stockmarketforecast.jpg" alt="Stock Market Forecasting" />
+                    </span>
+                    <header class="major">
+                      <h3>Stock Market Forecasting</h3>
+                      <p>Using ensemble model of LSTM and Holts-Winter Exponential Smoothing to obtain future stock price prediction.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/StockMarketForecast" class="button">GitHub</a></li>
+                        <li><a href="http://friskyspock.pythonanywhere.com/" class="button primary">Live Demo</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/cocacolaairline.jpg" alt="Time Series Forecasting" />
+                    </span>
+                    <header class="major">
+                      <h3>Time Series Forecasting</h3>
+                      <p>Coca-Cola Sale Prices and Airline Passengers Count. Analyzed time series data, forecasting is done using ARIMA model.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/cocacola-and-airlines-data-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/catsvsdogs.jpg" class="card-img-top" alt=Cats Vs Dogs>
-                <div class="card-body">
-                  <h5 class="card-title">Cats Vs Dogs</h5>
-                  <p class="card-text">Image Classification using Convolutional Neural Networks.</p>
-                  <a href="https://github.com/friskyspock/cat-vs-dog-image-classification" class="btn btn-primary">GitHub</a>
+              <div class="tab-pane fade mt-3" id="RF-tab-pane" role="tabpanel" tabindex="0">
+                <div class="projects-grid">
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/clothcompany.jpg" alt="Cloth Manufacturing Company Sales" />
+                    </span>
+                    <header class="major">
+                      <h3>Cloth Manufacturing Company Sales</h3>
+                      <p>A cloth manufacturing company is interested to know about the segment or attributes causes high sale.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/company-data-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/airlines.jpg" class="card-img-top" alt=Airlines passengers>
-                <div class="card-body">
-                  <h5 class="card-title">Airlines passengers</h5>
-                  <p class="card-text">Identifying clusters of passengers that have similar characteristics for the purpose of targeting different segments for different types of mileage offers.</p>
-                  <a href="https://github.com/friskyspock/airlines-data-excelr" class="btn btn-primary">GitHub</a>
+              <div class="tab-pane fade mt-3" id="clustering-tab-pane" role="tabpanel" tabindex="0">
+                <div class="projects-grid">
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/airlines.jpg" alt="Airlines passengers" />
+                    </span>
+                    <header class="major">
+                      <h3>Airlines passengers</h3>
+                      <p>Identifying clusters of passengers that have similar characteristics for the purpose of targeting different segments for different types of mileage offers.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/airlines-data-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/winepca.jpg" alt="Identifying types of wine" />
+                    </span>
+                    <header class="major">
+                      <h3>Identifying types of wine</h3>
+                      <p>Using Principle Component Analysis, creating distinct clusters of wine based on their properties.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/wine-data-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/flowerclassification.jpg" class="card-img-top" alt=Flower Classification>
-                <div class="card-body">
-                  <h5 class="card-title">Flower Classification</h5>
-                  <p class="card-text">Classifying five types of flowers using CNN.</p>
-                  <a href="https://github.com/friskyspock/flower-images-classification" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/winepca.jpg" class="card-img-top" alt=Identifying types of wine>
-                <div class="card-body">
-                  <h5 class="card-title">Identifying types of wine</h5>
-                  <p class="card-text">Using Principle Component Analysis, creating distinct clusters of wine based on their properties.</p>
-                  <a href="https://github.com/friskyspock/wine-data-excelr" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/zooanimals.jpg" class="card-img-top" alt=Classifying Animals in the Zoo>
-                <div class="card-body">
-                  <h5 class="card-title">Classifying Animals in the Zoo</h5>
-                  <p class="card-text">Classification of zoo animals using K-nearest neighbor algorithm based on physical features of them.</p>
-                  <a href="https://github.com/friskyspock/zoo-data-excelr" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/clothcompany.jpg" class="card-img-top" alt=Cloth Manufacturing Company Sales>
-                <div class="card-body">
-                  <h5 class="card-title">Cloth Manufacturing Company Sales</h5>
-                  <p class="card-text">A cloth manufacturing company is interested to know about the segment or attributes causes high sale.</p>
-                  <a href="https://github.com/friskyspock/company-data-excelr" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/carresell.jpg" class="card-img-top" alt=Car Resell Price>
-                <div class="card-body">
-                  <h5 class="card-title">Car Resell Price</h5>
-                  <p class="card-text">Analyzing best features affecting resell value of Toyota Corolla and making predictions on resell value.</p>
-                  <a href="https://github.com/friskyspock/toyota-corolla-data-excelr" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/sentimentamazon.jpg" class="card-img-top" alt=Sentiment Analysis on Amazon Reviews>
-                <div class="card-body">
-                  <h5 class="card-title">Sentiment Analysis on Amazon Reviews</h5>
-                  <p class="card-text">Analyzing sentiments of product reviews on Amazon. Made a predictive model using Naive Bayes</p>
-                  <a href="https://github.com/friskyspock/amazon-reviews-excelr" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/cocacolaairline.jpg" class="card-img-top" alt=Time Series Forecasting>
-                <div class="card-body">
-                  <h5 class="card-title">Time Series Forecasting</h5>
-                  <p class="card-text">Coca-Cola Sale Prices and Airline Passengers Count. Analyzed time series data, forecasting is done using ARIMA model.</p>
-                  <a href="https://github.com/friskyspock/cocacola-and-airlines-data-excelr" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/spaceshiptitanic.jpg" class="card-img-top" alt=Spaceship Titanic - Kaggle>
-                <div class="card-body">
-                  <h5 class="card-title">Spaceship Titanic - Kaggle</h5>
-                  <p class="card-text">My solution to Spaceship Titanic Problem on Kaggle.</p>
-                  <a href="https://github.com/friskyspock/spaceship-titanic" class="btn btn-primary">GitHub</a>
+              <div class="tab-pane fade mt-3" id="MLR-tab-pane" role="tabpanel" tabindex="0">
+                <div class="projects-grid">
+                  <article class="project-card">
+                    <span class="image">
+                      <img src="/assets/images/thumbs/carresell.jpg" alt="Car Resell Price" />
+                    </span>
+                    <header class="major">
+                      <h3>Car Resell Price</h3>
+                      <p>Analyzing best features affecting resell value of Toyota Corolla and making predictions on resell value.</p>
+                      <ul class="actions">
+                        <li><a href="https://github.com/friskyspock/toyota-corolla-data-excelr" class="button">GitHub</a></li>
+                      </ul>
+                    </header>
+                  </article>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="tab-pane fade mt-3" id="NN-tab-pane" role="tabpanel" tabindex="0">
-          <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/stockmarketforecast.jpg" class="card-img-top" alt=Stock Market Forecasting>
-                <div class="card-body">
-                  <h5 class="card-title">Stock Market Forecasting</h5>
-                  <p class="card-text">Using ensemble model of LSTM and Holts-Winter Exponential Smoothing to obtain future stock price prediction.</p>
-                  <a href="https://github.com/friskyspock/StockMarketForecast" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/forestfires.jpg" class="card-img-top" alt=Forest Fires>
-                <div class="card-body">
-                  <h5 class="card-title">Forest Fires</h5>
-                  <p class="card-text">Predicting area burnt by forest fires based on environmental factors like wind, temp, rain, etc</p>
-                  <a href="https://github.com/friskyspock/forestfire-data-excelr" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/catsvsdogs.jpg" class="card-img-top" alt=Cats Vs Dogs>
-                <div class="card-body">
-                  <h5 class="card-title">Cats Vs Dogs</h5>
-                  <p class="card-text">Image Classification using Convolutional Neural Networks.</p>
-                  <a href="https://github.com/friskyspock/cat-vs-dog-image-classification" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/flowerclassification.jpg" class="card-img-top" alt=Flower Classification>
-                <div class="card-body">
-                  <h5 class="card-title">Flower Classification</h5>
-                  <p class="card-text">Classifying five types of flowers using CNN.</p>
-                  <a href="https://github.com/friskyspock/flower-images-classification" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/spaceshiptitanic.jpg" class="card-img-top" alt=Spaceship Titanic - Kaggle>
-                <div class="card-body">
-                  <h5 class="card-title">Spaceship Titanic - Kaggle</h5>
-                  <p class="card-text">My solution to Spaceship Titanic Problem on Kaggle.</p>
-                  <a href="https://github.com/friskyspock/spaceship-titanic" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade mt-3" id="NLP-tab-pane" role="tabpanel" tabindex="0">
-          <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/sentimenttweets.jpg" class="card-img-top" alt=Sentiment Analysis on tweets>
-                <div class="card-body">
-                  <h5 class="card-title">Sentiment Analysis on tweets</h5>
-                  <p class="card-text">Sentiment analysis on tweets and replies related to Elon Musk. Also predictive model is made using Naive Bayes</p>
-                  <a href="https://github.com/friskyspock/elon-musk-tweets-excelr" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/sentimentamazon.jpg" class="card-img-top" alt=Sentiment Analysis on Amazon Reviews>
-                <div class="card-body">
-                  <h5 class="card-title">Sentiment Analysis on Amazon Reviews</h5>
-                  <p class="card-text">Analyzing sentiments of product reviews on Amazon. Made a predictive model using Naive Bayes</p>
-                  <a href="https://github.com/friskyspock/amazon-reviews-excelr" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade mt-3" id="TSF-tab-pane" role="tabpanel" tabindex="0">
-          <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/stockmarketforecast.jpg" class="card-img-top" alt=Stock Market Forecasting>
-                <div class="card-body">
-                  <h5 class="card-title">Stock Market Forecasting</h5>
-                  <p class="card-text">Using ensemble model of LSTM and Holts-Winter Exponential Smoothing to obtain future stock price prediction.</p>
-                  <a href="https://github.com/friskyspock/StockMarketForecast" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/cocacolaairline.jpg" class="card-img-top" alt=Time Series Forecasting>
-                <div class="card-body">
-                  <h5 class="card-title">Time Series Forecasting</h5>
-                  <p class="card-text">Coca-Cola Sale Prices and Airline Passengers Count. Analyzed time series data, forecasting is done using ARIMA model.</p>
-                  <a href="https://github.com/friskyspock/cocacola-and-airlines-data-excelr" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade mt-3" id="RF-tab-pane" role="tabpanel" tabindex="0">
-          <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/clothcompany.jpg" class="card-img-top" alt=Cloth Manufacturing Company Sales>
-                <div class="card-body">
-                  <h5 class="card-title">Cloth Manufacturing Company Sales</h5>
-                  <p class="card-text">A cloth manufacturing company is interested to know about the segment or attributes causes high sale.</p>
-                  <a href="https://github.com/friskyspock/company-data-excelr" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade mt-3" id="clustering-tab-pane" role="tabpanel" tabindex="0">
-          <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/airlines.jpg" class="card-img-top" alt=Airlines passengers>
-                <div class="card-body">
-                  <h5 class="card-title">Airlines passengers</h5>
-                  <p class="card-text">Identifying clusters of passengers that have similar characteristics for the purpose of targeting different segments for different types of mileage offers.</p>
-                  <a href="https://github.com/friskyspock/airlines-data-excelr" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/winepca.jpg" class="card-img-top" alt=Identifying types of wine>
-                <div class="card-body">
-                  <h5 class="card-title">Identifying types of wine</h5>
-                  <p class="card-text">Using Principle Component Analysis, creating distinct clusters of wine based on their properties.</p>
-                  <a href="https://github.com/friskyspock/wine-data-excelr" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade mt-3" id="MLR-tab-pane" role="tabpanel" tabindex="0">
-          <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="/assets/images/thumbs/carresell.jpg" class="card-img-top" alt=Car Resell Price>
-                <div class="card-body">
-                  <h5 class="card-title">Car Resell Price</h5>
-                  <p class="card-text">Analyzing best features affecting resell value of Toyota Corolla and making predictions on resell value.</p>
-                  <a href="https://github.com/friskyspock/toyota-corolla-data-excelr" class="btn btn-primary">GitHub</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
     </div>
   </main>

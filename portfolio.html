@@ -1,62 +1,115 @@
 ---
 layout: default
 ---
-<div class="portfolio-container">
-    <h1>Collection of my Projects</h1>
-    <p>Welcome to my portfolio. Here you'll find a selection of my work.
-        Explore my projects to learn more about what I do.</p>
-    
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab">All</button>
-        </li>
-        {% for item in site.data.settings.tags %}
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="{{item.short}}-tab" data-bs-toggle="tab" data-bs-target="#{{item.short}}-tab-pane" type="button" role="tab">{{item.long}}</button>
-            </li>
-        {% endfor %}
-    </ul>
 
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active mt-3" id="all-tab-pane" role="tabpanel" tabindex="0">
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-                {% for item in site.data.portfolio %}
-                <div class="col">
-                    <div class="card h-100" style="width: 18rem;">
-                        <img src="/assets/images/thumbs/{{item.thumb}}" class="card-img-top" alt={{item.title}}>
-                        <div class="card-body">
-                            <h5 class="card-title">{{item.title}}</h5>
-                            <p class="card-text">{{item.describe}}</p>
-                            <a href="{{item.link}}" class="btn btn-primary">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt style2">
+        <a href="index.html" class="logo"><strong>Aniket</strong> <span>Masaye</span></a>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="notes.html">Notes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section id="banner" class="style2">
+        <div class="inner">
+            <span class="image">
+                <img src="assets/images/banner.jpg" alt="" />
+            </span>
+            <header class="major">
+                <h1>Collection of my Projects</h1>
+            </header>
+            <div class="content">
+                <p>Welcome to my portfolio. Here you'll find a selection of my work.<br />
+                Explore my projects to learn more about what I do.</p>
             </div>
         </div>
-        {% for foo in site.data.settings.tags %}
-            <div class="tab-pane fade mt-3" id="{{foo.short}}-tab-pane" role="tabpanel" tabindex="0">
-                <div class="row row-cols-1 row-cols-md-4 g-4">
-                    {% for item in site.data.portfolio %}
-                        {% for tag in item.tags %}
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+        <section id="one">
+            <div class="inner">
+                <!-- Project Filters -->
+                <ul class="nav nav-tabs portfolio-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab">All</button>
+                    </li>
+                    {% for item in site.data.settings.tags %}
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="{{item.short}}-tab" data-bs-toggle="tab" data-bs-target="#{{item.short}}-tab-pane" type="button" role="tab">{{item.long}}</button>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <!-- Project Grid -->
+                <div class="tab-content" id="myTabContent">
+                    <!-- All Projects Tab -->
+                    <div class="tab-pane fade show active mt-3" id="all-tab-pane" role="tabpanel" tabindex="0">
+                        <div class="projects-grid">
+                            {% for item in site.data.portfolio %}
+                            <article class="project-card">
+                                <span class="image">
+                                    <img src="/assets/images/thumbs/{{item.thumb}}" alt="{{item.title}}" />
+                                </span>
+                                <header class="major">
+                                    <h3>{{item.title}}</h3>
+                                    <p>{{item.describe}}</p>
+                                    <ul class="actions">
+                                        <li><a href="{{item.link}}" class="button">GitHub</a></li>
+                                        {% if item.weblink %}
+                                        <li><a href="{{item.weblink}}" class="button primary">Live Demo</a></li>
+                                        {% endif %}
+                                    </ul>
+                                </header>
+                            </article>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Category Tabs -->
+                    {% for foo in site.data.settings.tags %}
+                    <div class="tab-pane fade mt-3" id="{{foo.short}}-tab-pane" role="tabpanel" tabindex="0">
+                        <div class="projects-grid">
+                            {% for item in site.data.portfolio %}
+                            {% for tag in item.tags %}
                             {% if tag==foo.short %}
-                            <div class="col">
-                                <div class="card h-100" style="width: 18rem;">
-                                    <img src="/assets/images/thumbs/{{item.thumb}}" class="card-img-top" alt={{item.title}}>
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{item.title}}</h5>
-                                        <p class="card-text">{{item.describe}}</p>
-                                        <a href="{{item.link}}" class="btn btn-primary">GitHub</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <article class="project-card">
+                                <span class="image">
+                                    <img src="/assets/images/thumbs/{{item.thumb}}" alt="{{item.title}}" />
+                                </span>
+                                <header class="major">
+                                    <h3>{{item.title}}</h3>
+                                    <p>{{item.describe}}</p>
+                                    <ul class="actions">
+                                        <li><a href="{{item.link}}" class="button">GitHub</a></li>
+                                        {% if item.weblink %}
+                                        <li><a href="{{item.weblink}}" class="button primary">Live Demo</a></li>
+                                        {% endif %}
+                                    </ul>
+                                </header>
+                            </article>
                             {% endif %}
-                        {% endfor %}
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                    </div>
                     {% endfor %}
                 </div>
             </div>
-        {% endfor %}
+        </section>
     </div>
-    
-
 </div>
