@@ -1,26 +1,40 @@
 .resume-container {
     display: flex;
-    padding: 2em 0;
-    gap: 2em;
+    padding: 3em 0;
+    gap: 4em;
 }
 
 .left-side {
-    flex: 75%;
+    flex: 70%;
+    background: _palette(bg-alt);
+    padding: 3em;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px _palette(border);
 }
 
 .right-side {
-    flex: 25%;
+    flex: 30%;
+    background: _palette(bg-alt);
+    padding: 3em;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px _palette(border);
 }
 
 .badge {
     display: inline-block;
-    padding: 0.25em 0.5em;
+    padding: 0.35em 0.75em;
     font-size: 0.8em;
-    font-weight: normal;
-    border: 1px solid _palette(fg-light);
+    font-weight: 500;
+    background: _palette(highlight);
     border-radius: 4px;
     margin: 0.2em;
-    color: _palette(fg-light);
+    color: _palette(fg-bold);
+    transition: all 0.2s ease;
+    
+    &:hover {
+        background: darken(_palette(highlight), 10%);
+        transform: translateY(-2px);
+    }
 }
 
 .contact {
@@ -28,28 +42,128 @@
 }
 
 .bold-text {
-    font-weight: 600;
-    margin: 1em 0 0.2em 0;
+    font-weight: 700;
+    margin: 1.5em 0 0.5em 0;
+    color: _palette(fg-bold);
+    font-size: 1.1em;
 }
 
 .sub-text {
     font-size: 0.9em;
-    color: _palette(fg-light);
-    margin-bottom: 0.5em;
+    color: _palette(accent1);
+    margin-bottom: 0.75em;
+    font-style: italic;
 }
 
 .norm-text {
+    margin-bottom: 0.75em;
+    line-height: 1.8;
+    color: _palette(fg);
+}
+
+// Add styling for headers
+h1 {
+    font-size: 2.5em;
     margin-bottom: 0.5em;
-    line-height: 1.5;
+    color: _palette(fg-bold);
+    position: relative;
+    
+    &:after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: _palette(accent1);
+        margin-top: 0.5em;
+    }
+}
+
+h2 {
+    font-size: 1.75em;
+    margin: 2em 0 1em 0;
+    color: _palette(fg-bold);
+    position: relative;
+    padding-bottom: 0.5em;
+    
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: _palette(accent2);
+    }
+}
+
+// Contact list styling
+.contact {
+    margin-bottom: 2em;
+    list-style: none;
+    padding: 0;
+    
+    li {
+        margin-bottom: 1em;
+        
+        a {
+            display: inline-flex;
+            align-items: center;
+            color: _palette(fg);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            
+            &:hover {
+                color: _palette(accent1);
+                transform: translateX(5px);
+            }
+            
+            &:before {
+                margin-right: 0.75em;
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+
+// Download button styling
+button[onclick="makepdf()"] {
+    margin: 2em 0;
+}
+
+// List styling
+ul {
+    li {
+        margin-bottom: 0.75em;
+        
+        b {
+            color: _palette(fg-bold);
+        }
+    }
 }
 
 @include breakpoint('<=medium') {
     .resume-container {
         flex-direction: column;
+        gap: 2em;
     }
     
     .left-side,
     .right-side {
         flex: 100%;
+    }
+}
+
+@include breakpoint('<=small') {
+    .left-side,
+    .right-side {
+        padding: 2em;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
     }
 }
