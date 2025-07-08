@@ -48,13 +48,13 @@ title: Portfolio
                                 <header class="major">
                                     <h3>{{item.title}}</h3>
                                     <p>{{item.describe}}</p>
-                                    <ul class="actions">
-                                        <li><a href="{{item.link}}" class="button">GitHub</a></li>
-                                        {% if item.weblink %}
-                                        <li><a href="{{item.weblink}}" class="button primary">Live Demo</a></li>
-                                        {% endif %}
-                                    </ul>
                                 </header>
+                                <ul class="actions">
+                                    <li><a href="{{item.link}}" class="button">GitHub</a></li>
+                                    {% if item.weblink %}
+                                    <li><a href="{{item.weblink}}" class="button primary">Live Demo</a></li>
+                                    {% endif %}
+                                </ul>
                             </article>
                             {% endfor %}
                         </div>
@@ -74,13 +74,13 @@ title: Portfolio
                                 <header class="major">
                                     <h3>{{item.title}}</h3>
                                     <p>{{item.describe}}</p>
-                                    <ul class="actions">
-                                        <li><a href="{{item.link}}" class="button">GitHub</a></li>
-                                        {% if item.weblink %}
-                                        <li><a href="{{item.weblink}}" class="button primary">Live Demo</a></li>
-                                        {% endif %}
-                                    </ul>
                                 </header>
+                                <ul class="actions">
+                                    <li><a href="{{item.link}}" class="button">GitHub</a></li>
+                                    {% if item.weblink %}
+                                    <li><a href="{{item.weblink}}" class="button primary">Live Demo</a></li>
+                                    {% endif %}
+                                </ul>
                             </article>
                             {% endif %}
                             {% endfor %}
@@ -92,3 +92,46 @@ title: Portfolio
             </div>
         </section>
     </div>
+
+    <!-- Tab functionality JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all tab buttons and panes
+        const tabButtons = document.querySelectorAll('.portfolio-tabs .nav-link');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+        
+        // Add click event to each tab button
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all buttons and panes
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanes.forEach(pane => {
+                    pane.classList.remove('show', 'active');
+                    pane.style.display = 'none';
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Show corresponding tab pane
+                const targetId = this.getAttribute('data-bs-target');
+                const targetPane = document.querySelector(targetId);
+                if (targetPane) {
+                    targetPane.classList.add('show', 'active');
+                    targetPane.style.display = 'block';
+                }
+            });
+        });
+        
+        // Show the first tab by default
+        if (tabPanes.length > 0) {
+            tabPanes[0].style.display = 'block';
+            // Hide other tabs
+            for (let i = 1; i < tabPanes.length; i++) {
+                tabPanes[i].style.display = 'none';
+            }
+        }
+    });
+    </script>

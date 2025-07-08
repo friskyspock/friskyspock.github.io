@@ -49,8 +49,12 @@ theme: null
 plugins:
   - jekyll-feed
   - jekyll-sitemap 
-  - jekyll-tidy
+  # - jekyll-tidy
   - kramdown-mermaid
+
+sass:
+  sass_dir: assets/sass
+  style: compressed
 
 collections:
     notes:

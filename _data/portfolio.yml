@@ -1,87 +1,87 @@
 #-------------
 # my projects here
 - title: Stock Market Forecasting
-  thumb: stockmarketforecast.jpg
+  thumb: stockmarketforecast.png
   tags: [Django, TSF, NN]
   link: "https://github.com/friskyspock/StockMarketForecast"
   weblink: "http://friskyspock.pythonanywhere.com/"
   describe: Using ensemble model of LSTM and Holts-Winter Exponential Smoothing to obtain future stock price prediction.
 
 - title: Image Captioning
-  thumb: imagecaptioning.jpg
+  thumb: imagecaptioning.png
   tags: [AI]
   link: "https://github.com/friskyspock/sample-image-captioning"
   weblink: "https://friskyspock-sample-image-captioning-app-ns116q.streamlit.app/"
   describe: Caption creator using AI.
 
-- title: Sentiment Analysis on tweets
-  thumb: sentimenttweets.jpg
+- title: Sentiment Analysis on Tweets
+  thumb: sentimenttweets.png
   tags: [NLP, NB]
   link: "https://github.com/friskyspock/elon-musk-tweets-excelr"
   describe: "Sentiment analysis on tweets and replies related to Elon Musk. Also predictive model is made using Naive Bayes"
 
 - title: Forest Fires
-  thumb: forestfires.jpg
+  thumb: forestfires.png
   tags: [NN, SVM]
   link: "https://github.com/friskyspock/forestfire-data-excelr"
   describe: "Predicting area burnt by forest fires based on environmental factors like wind, temp, rain, etc"
 
 - title: Cats Vs Dogs
-  thumb: catsvsdogs.jpg
+  thumb: catsvsdogs.png
   tags: [CNN, NN]
   link: "https://github.com/friskyspock/cat-vs-dog-image-classification"
   describe: Image Classification using Convolutional Neural Networks.
 
-- title: Airlines passengers
-  thumb: airlines.jpg
+- title: Airlines Passengers
+  thumb: airlines.png
   tags: [clustering, DBScan, KMeans, Hierarchical]
   link: "https://github.com/friskyspock/airlines-data-excelr"
   describe: Identifying clusters of passengers that have similar characteristics for the purpose of targeting different segments for different types of mileage offers.
 
 - title: Flower Classification
-  thumb: flowerclassification.jpg
+  thumb: flowerclassification.png
   tags: [CNN, NN]
   link: "https://github.com/friskyspock/flower-images-classification"
   describe: Classifying five types of flowers using CNN.
 
-- title: Identifying types of wine
-  thumb: winepca.jpg
+- title: Identifying Wine Types
+  thumb: winepca.png
   tags: [PCA, clustering]
   link: "https://github.com/friskyspock/wine-data-excelr"
   describe: Using Principle Component Analysis, creating distinct clusters of wine based on their properties.
 
-- title: Classifying Animals in the Zoo
-  thumb: zooanimals.jpg
+- title: Classifying Animals
+  thumb: zooanimals.png
   tags: [KMeans]
   link: "https://github.com/friskyspock/zoo-data-excelr"
   describe: Classification of zoo animals using K-nearest neighbor algorithm based on physical features of them.
 
-- title: Cloth Manufacturing Company Sales
-  thumb: clothcompany.jpg
+- title: Company Sales
+  thumb: clothcompany.png
   tags: [DT, RF]
   link: "https://github.com/friskyspock/company-data-excelr"
   describe: A cloth manufacturing company is interested to know about the segment or attributes causes high sale.
 
 - title: Car Resell Price
-  thumb: carresell.jpg
+  thumb: carresell.png
   tags: [MLR]
   link: "https://github.com/friskyspock/toyota-corolla-data-excelr"
   describe: Analyzing best features affecting resell value of Toyota Corolla and making predictions on resell value.
 
-- title: Sentiment Analysis on Amazon Reviews
-  thumb: sentimentamazon.jpg
+- title: Sentiment Analysis on Reviews
+  thumb: sentimentamazon.png
   tags: [NLP, NB]
   link: "https://github.com/friskyspock/amazon-reviews-excelr"
   describe: Analyzing sentiments of product reviews on Amazon. Made a predictive model using Naive Bayes
 
 - title: Time Series Forecasting
-  thumb: cocacolaairline.jpg
+  thumb: cocacolaairline.png
   tags: [TSF]
   link: "https://github.com/friskyspock/cocacola-and-airlines-data-excelr"
   describe: Coca-Cola Sale Prices and Airline Passengers Count. Analyzed time series data, forecasting is done using ARIMA model.
 
 - title: Spaceship Titanic - Kaggle
-  thumb: spaceshiptitanic.jpg
+  thumb: spaceshiptitanic.png
   tags: [NN, XGB]
   link: "https://github.com/friskyspock/spaceship-titanic"
   describe: My solution to Spaceship Titanic Problem on Kaggle.
