@@ -7,7 +7,7 @@ title: Resume
 <section id="banner" class="style2">
     <div class="inner">
         <span class="image">
-            <img src="assets/images/pic07.jpg" alt="" />
+            <img src="images/pic01.jpg" alt="" />
         </span>
         <header class="major">
             <h1>Resume</h1>
@@ -24,7 +24,7 @@ title: Resume
         <div class="inner">
             <div id="toprint" class="resume-container">
                     <div class="left-side">
-                        <h1>{{site.data.resume.name}}</h1>
+                        <h1>Summary</h1>
                         <p>{{site.data.resume.summary}}</p>
                         <hr class="border border-2 border-black">
                         
@@ -34,13 +34,30 @@ title: Resume
 
                         <h2>Work Experience</h2>
                         {% for item in site.data.resume.workexperience %}
-                        <p class="bold-text">{{item.position}} - {{item.org}}</p>
-                        <p class="sub-text">{{item.period}}</p>
-                        <ul>
-                            {% for subitem in item.details %}
-                            <li class="norm-text"><b>{{subitem.point}}</b> {{subitem.subpoint}}</li>
+                        <div class="work-header">
+                            <p class="bold-text">{{item.position}} - {{item.org}}</p>
+                            <p class="sub-text">{{item.period}}</p>
+                        </div>
+                        {% if item.products %}
+                            {% for product in item.products %}
+                            <h3>{{product.product}}</h3>
+                            <p class="sub-text">{{product.description}}</p>
+                            {% if product.url and product.url != "" %}
+                            <p><a href="{{product.url}}" target="_blank">{{product.url}}</a></p>
+                            {% endif %}
+                            <ul>
+                                {% for subitem in product.details %}
+                                <li class="norm-text"><b>{{subitem.point}}</b> {{subitem.subpoint}}</li>
+                                {% endfor %}
+                            </ul>
                             {% endfor %}
-                        </ul>
+                        {% else %}
+                            <ul>
+                                {% for subitem in item.details %}
+                                <li class="norm-text"><b>{{subitem.point}}</b> {{subitem.subpoint}}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                         {% endfor %}
 
                         <h2>Projects</h2>
@@ -52,32 +69,104 @@ title: Resume
                     </div>
 
                     <div class="right-side">
-                        <ul class="contact alt">
-                        {% for item in site.data.resume.contact %}
-                        <li><a href="{{item.link}}" class="icon {{item.icon}}">{{item.title}}</a></li>
-                        {% endfor %}
-                        </ul>
-
-                        <h2>Education</h2>
-                        {% for item in site.data.resume.education %}
-                        <p class="bold-text">{{item.course}}</p>
-                        <p class="norm-text">{{item.name}}</p>
-                        <p class="sub-text">{{item.passed}}</p>
-                        {% endfor %}
-
-                        <h2>Skills</h2>
-                        {% for item in site.data.resume.skills %}
-                        <p class="bold-text">{{item.category}}</p>
-                        <ul>
-                            {% for subitem in item.subcategories %}
-                            <li>{{subitem.subcategory}}</li>
-                            <p>{% for cat in subitem.skill %}<span class="badge">{{cat}}</span>{% endfor %}</p>
+                        <div class="contact-section">
+                            <ul class="contact alt">
+                            {% for item in site.data.resume.contact %}
+                            <li><a href="{{item.link}}" class="icon {{item.icon}}">{{item.title}}</a></li>
                             {% endfor %}
-                        </ul>
-                        {% endfor %}
+                            </ul>
+                        </div>
+
+                        <div class="education-section">
+                            <h2>Education</h2>
+                            {% for item in site.data.resume.education %}
+                            <p class="bold-text">{{item.course}}</p>
+                            <p class="norm-text">{{item.name}}</p>
+                            <p class="sub-text">{{item.passed}}</p>
+                            {% if item.details %}
+                            <ul>
+                                {% for detail in item.details %}
+                                <li>{{detail}}</li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+
+                        <div class="skills-section">
+                            <h2>Skills</h2>
+                            {% for item in site.data.resume.skills %}
+                            <p class="bold-text">{{item.category}}</p>
+                            {% for subitem in item.subcategories %}
+                            <div class="skill-group">
+                                <p class="sub-text">{{subitem.subcategory}}</p>
+                                <div class="badges-container">
+                                    {% for cat in subitem.skill %}
+                                    <span class="badge">{{cat}}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                        
+                        {% if site.data.resume.certifications %}
+                        <div class="certifications-section">
+                            <h2>Certifications</h2>
+                            {% for cert in site.data.resume.certifications %}
+                            <p class="bold-text">{{cert.org}}</p>
+                            <ul>
+                                {% for title in cert.titles %}
+                                <li>{{title}}</li>
+                                {% endfor %}
+                            </ul>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        
+                        {% if site.data.resume.achievements %}
+                        <div class="achievements-section">
+                            <h2>Achievements</h2>
+                            <ul>
+                                {% for achievement in site.data.resume.achievements %}
+                                <li><strong>{{achievement.title}}</strong> ({{achievement.year}})</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </section>
     </div>
 </div>
+
+<script>
+// Force Font Awesome 6 to load icons
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if Font Awesome is loaded
+    var testIcon = document.createElement('i');
+    testIcon.className = 'fa-solid fa-check';
+    testIcon.style.position = 'absolute';
+    testIcon.style.visibility = 'hidden';
+    document.body.appendChild(testIcon);
+    
+    window.setTimeout(function() {
+        var width = window.getComputedStyle(testIcon, ':before').getPropertyValue('content');
+        if (!width || width === 'none') {
+            // Font Awesome didn't load, try to reload
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css';
+            document.head.appendChild(link);
+        }
+        document.body.removeChild(testIcon);
+    }, 100);
+});
+
+// PDF generation function
+function makepdf() {
+    // Simple approach: use browser's print functionality
+    window.print();
+}
+</script>

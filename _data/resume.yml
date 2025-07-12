@@ -1,129 +1,206 @@
 #---------------
 # My resume
 name: Aniket Masaye
-subtitle: Data Science Enthusiast and Physics/Mathematics Graduate
-summary: "As a highly skilled data science professional with a background in physics and mathematics, I bring a wealth of expertise in cutting-edge technologies and innovative methodologies. Through hands-on experience and continual learning, I have mastered advanced techniques in AI/ML, including transfer learning with transformer-based models. My proficiency extends to optimizing API operations, ensuring robust data management, and enhancing multimedia experiences through ML techniques. Additionally, With a passion for leveraging data to drive insights and solutions, I am eager to contribute my skills and expertise in Data Scientist field."
+subtitle: AI Developer and Data Scientist
+summary: "AI Developer and Data Scientist with a strong background in Physics and Mathematics. Expertise in building scalable ML and AI systems and optimizing API operations. Proven track record of improving multimedia experiences with ML techniques, deploying financial models, and improving hiring processes with AI driven automation. Passionate about solving complex data challenges and driving business impact."
 
 contact:
 - title: MyWebsite
   link: "https://friskyspock.github.io"
   icon: "fa-solid fa-globe"
 - title: LinkedIn
-  link: "https://www.linkedin.com/in/aniket-masaye-90b1851b9/"
+  link: "https://www.linkedin.com/in/aniket-masaye"
   icon: "fa-brands fa-linkedin"
 - title: GitHub
   link: "https://github.com/friskyspock"
   icon: "fa-brands fa-github"
+- title: Email
+  link: "mailto:aniketms42@gmail.com"
+  icon: "fa-solid fa-envelope"
+- title: Phone
+  link: "tel:+918983853081"
+  icon: "fa-solid fa-phone"
 
 education:
-# - name: ExcelR Solutions
-#   passed: 2023
-#   course: Data Science
 - name: Indian Institute of Science Education and Research, Thiruvananthapuram
-  passed: 2017 - 2022
-  course: Integrated BS-MS
-# - name: Jawahar Navodaya Vidyalaya, Ratnagiri
-#   passed: 2016
-#   course: Class XII and X
+  passed: June 2017 - July 2022
+  course: Integrated BS-MS in Physics
+  details:
+  - GPA - 8.0/10.0
+  - "Thesis: Search for mono-leptonic decay of the Z → NR NR in U (1) leptophobic mode. Built a Boosted Decision Trees model to separate signal and background for this subatomic process."
+  - "Coursework: Statistical Mechanics, Real Analysis, Statistics and Probability, Mathematical methods and Programming Languages."
 
 workexperience:
-- position: Data Scientist
-  org: Interactly Solutions
-  period: Dec 2023 - Now
+- position: AI Engineer
+  org: Slated Tech LLC - New York, US (Remote)
+  period: June 2025 - Present
   details:
-  - point: Transfer learning with transformer-based models
-    subpoint: Implemented cutting-edge technologies like transfer learning with transformer-based models and utilized OpenAI-Whisper for audio transcription, improving accuracy and accessibility of audio content.
-  - point: Efficient API Operations and Data Validation
-    subpoint: Leveraged FastAPI migration and Pydantic for enhanced performance and robust data validation, ensuring seamless API operations and data integrity.
-  - point: Optimized Data Management
-    subpoint: Optimized data management with AWS RDS and SQLAlchemy, facilitating secure and scalable storage solutions and streamlined database connectivity.
-  - point: Enhanced Multimedia Experiences
-    subpoint: Enhanced multimedia experiences through techniques like interpolated frames with TensorFlow Hub's FILM, improving video playback smoothness, and explored pitch-based audio differentiation methods for normalizing AI audio cloning outputs, elevating audio processing quality.
-  - point: Language Processing Advancements
-    subpoint: Contributed to language processing capabilities by developing a custom Python package for Indian Soundex, enhancing the matching accuracy of similarly pronounced words.
+  - point: AI-powered review analysis system
+    subpoint: Architected AI-powered review analysis system using LLMs and MongoDB to automatically categorize and summarize customer/employee reviews from financial platforms, reducing manual analysis time by 90% while generating actionable insights for publicly traded companies
+  - point: Enterprise financial document pipeline
+    subpoint: Built enterprise financial document pipeline processing 10,000+ investor presentations with parallel processing and robust error handling, improving document retrieval efficiency by 75% for investment analysis workflows
+
+- position: Data Scientist
+  org: Interactly Solutions - Hyderabad, IN
+  period: Dec 2023 - June 2025
+  products:
+  - product: Analytos.ai
+    description: AI-powered system for automated HTS code classification
+    url: 
+    details:
+    - point: AI-powered HTS classification
+      subpoint: Developed AI-powered HTS classification system using FastAPI, MongoDB fuzzy search, and Pinecone vector search for semantic similarity of product descriptions.
+    - point: Hybrid HTS search strategy
+      subpoint: Implemented a hybrid HTS search strategy combining hierarchical vector search and fuzzy text search with confidence scoring and fallback mechanisms.
+    - point: Invoice processing pipeline
+      subpoint: Built invoice processing pipeline to extract product details and classify them with corresponding HTS codes, integrating LangChain and OpenAI models for LLM validation.
+    - point: Real-time WebSocket interface
+      subpoint: Engineered real-time WebSocket chat interface for dynamic HTS code lookup and queries.
+    - point: Monitoring and observability
+      subpoint: Designed and maintained Prometheus metrics & Grafana dashboards to monitor request rates, tool usage, token consumption, and error metrics.
+    - point: Automated data pipelines
+      subpoint: Automated HTS data ingestion pipelines using Python scripts for uploading structured data to MongoDB and Pinecone vector database.
+    - point: System reliability
+      subpoint: Ensured system observability and reliability with structured logging, health checks, retry logic, and rate limiting safeguards.
+    - point: Docker deployment
+      subpoint: Deployed system using Docker & Docker Compose, enabling modular containerized environments for application, monitoring, and visualization components.
+  - product: Interviewproo.ai
+    description: AI-Powered Interview Preparation Tool
+    url: 
+    details:
+    - point: Mock interview system
+      subpoint: Built an intelligent mock interview system with FastAPI and LangChain, capable of generating personalized questions based on resumes and job descriptions.
+    - point: LLM-driven evaluation
+      subpoint: Designed LLM-driven agents for interactive dialogue flow and dynamic evaluation of user responses.
+    - point: Performance analytics
+      subpoint: Integrated analytics layer to quantify candidate performance using NLP techniques and keyword matching.
+    - point: Modular architecture
+      subpoint: Structured reusable modules for logging, model configuration, and NLP processing to improve scalability and maintainability.
+  - product: Recruter.ai
+    description: AI-First Recruitment Assistant Platform
+    url: 
+    details:
+    - point: RAG-based AI Agent
+      subpoint: Developed a RAG-based AI Agent to query structured candidate data and rank applicants based on job descriptions, significantly improving hiring accuracy and decision-making.
+    - point: AI-powered scoring system
+      subpoint: Engineered an AI-powered scoring system for virtual interviews using LLMs to evaluate candidates on communication skills, grammar, and articulation in real-time.
+    - point: Cheating detection system
+      subpoint: Implemented a cheating detection system using facial recognition and iris tracking to enable real-time fraud detection, effectively reducing cheating incidents during interviews.
+    - point: Automated virtual interviewer
+      subpoint: Designed and deployed an automated virtual interviewer that simulates real-time technical job interviews through FastAPI, LangChain, Whisper, and ElevenLabs integrations.
+    - point: Service layer architecture
+      subpoint: Built modular service layers to manage LLM calls, Redis queues, and Sheets-based reporting pipelines, ensuring scalable and observable interview processes.
+  - product: Personaliz.ai
+    description: AI driven platform for personalized audio, video, and speech services
+    url: 
+    details:
+    - point: Audio enhancements
+      subpoint: Developed audio pitch normalization and voice cloning enhancements using custom preprocessing and pitch-shifting techniques to ensure consistent AI-generated voice output.
+    - point: Speaker similarity analysis
+      subpoint: Developed a speaker similarity analysis module using MFCCs and statistical voice profiling to identify voice match percentage across datasets.
+    - point: Whisper integration
+      subpoint: Integrated OpenAI Whisper models with transfer learning for real-time speech-to-text transcription API featuring word-level timestamps, boosting transcription accuracy across noisy datasets.
+    - point: Video creation automation
+      subpoint: Implemented VTT subtitle generation and video image overlay endpoints to automate personalized video creation workflows for e-commerce and content platforms.
+    - point: API modernization
+      subpoint: Refactored the API backend using FastAPI with modern pydantic models, improving request validation, modularity, and API throughput.
+    - point: Database optimization
+      subpoint: Optimized AWS RDS connections using SQLAlchemy pooling strategies, enhancing scalability and reliability in concurrent database operations.
+    - point: FILM implementation
+      subpoint: Implemented FILM (Feature-wise Linear Modulation) via TensorFlow Hub to generate smooth intermediate video frames for low-FPS content, reducing visual jitter.
+    - point: Bulk processing workflows
+      subpoint: Created bulk CSV processing workflows to generate personalized audio/video content at scale, supporting marketing and user engagement campaigns.
 
 - position: Data Science Intern
-  org: Interactly Solutions
+  org: Interactly Solutions - Hyderabad, IN
   period: Aug 2023 - Nov 2023
   details:
-  - point: AWS S3 and Postman Proficiency
-    subpoint: Leveraged AWS S3 and Postman to enhance understanding of cloud storage and API testing.
-  - point: Flask-Powered Python APIs
-    subpoint: Mastered the creation of Python APIs using Flask, facilitating seamless data communication and integration.
-  - point: Efficient Video Manipulation
-    subpoint: Streamlined processes and boosted efficiency in multimedia projects through automated video manipulation with ffmpeg.
-  - point: In-depth Research on Lipsyncing
-    subpoint: Conducted comprehensive research on lipsyncing in videos, exploring advanced techniques and methodologies.
-  - point: LipGAN Model Application
-    subpoint: Applied the open-source LipGAN model to produce high-quality lipsync videos, merging theory with practical application.
+  - point: Video automation
+    subpoint: Automated video manipulation workflows using FFmpeg, improving processing speed by 30%.
+  - point: Lip-syncing research
+    subpoint: Conducted advanced research on lip-syncing techniques and implemented LipGAN to generate high-quality lip-sync videos.
+  - point: Video processing pipeline
+    subpoint: Designed an automated video processing pipeline leveraging AWS S3 for storage and Postman for API testing, reducing manual intervention.
 
 - position: Data Science Intern
-  org: AI Variants
-  period: Apr 2023 - Jul 2023
+  org: AI Variant - Pune, IN
+  period: Feb 2023 - Aug 2023
   details:
-  - point: Developed an Ensemble Model
-    subpoint: Created a machine learning ensemble model by combining LSTM (Long Short-Term Memory) neural network and Holt-Winters exponential smoothing model. This approach allows for accurate predictions of future stock market prices.
-  - point: Django Web Application
-    subpoint: Built a web application using the Django framework to deploy and showcase the ensemble model. The web application provides an interactive platform for users to explore and interact with the stock market price predictions.
-  - point: Website Availability
-    subpoint: Hosted the Django web application on PythonAnywhere and made it publicly accessible. The website allows users to access the predictions and interact with the features provided.
-  - point: Continuous Learning
-    subpoint: Acquired knowledge in machine learning techniques, time series forecasting, web development, and deployment through this project. Demonstrated a commitment to continuous learning and the ability to apply new skills effectively.
+  - point: Financial ML models
+    subpoint: Developed and deployed advanced machine learning models for financial predictions, significantly improving the accuracy of stock market forecasts.
+  - point: AI/ML integration
+    subpoint: Led the integration of AI/ML algorithms into financial data systems, optimizing asset management processes and enhancing data-driven decision-making capabilities.
+  - point: Django deployment
+    subpoint: Developed and hosted Django web application to deploy and showcase the ensemble model (with LSTM and Holt-Winters method), offering users an interactive platform.
 
 projects:
-- title: Sentiment Analysis on tweets
+- title: Stock Market HFT
   org:
-  period: March 2023
-  details: I conducted sentiment analysis on tweets and replies related to Elon Musk. By mining data from Twitter, I developed a Naive Bayes model to predict the sentiment of future tweets.
-- title: Image Caption Generator
+  period: Feb 2025 - Present
+  details: Designing and Developing a sub-second level prediction algorithm for stocks. Also using time-based transformers to help in long term predictions. Tools Used - C++, Transformers, Statistics
+- title: Counting Bird Calls from Forest Recordings
   org:
-  period: Feb 2023
-  details: I developed an image caption generator using a pre-trained model from Transformers. This application generates multiple captions for any given image, providing descriptive and contextual information. The app has been deployed on Streamlit, allowing users to easily utilize this image captioning functionality.
-- title: Food Delivery App Data Analysis
-  org: Hicounselor.com
-  period: Jan 2023
-  details: I worked on real world dataset of Zomato app. I used Python & SQL for preprocessing & Statistical Analysis and derived useful insights.
+  period: 
+  details: Trained a model using PyTorch to count bird calls in forest recordings, achieving a 90% accuracy rate in audio recognition. Tools Used - Deep Learning, TorchAudio
+- title: Sentiment Analysis on Tweets
+  org:
+  period: 
+  details: Developed a Naive Bayes model to predict the sentiment of tweets related to Elon Musk, enhancing social media analytics capabilities. Tools Used - NLP, Naive-Bayes Classifier
 
 skills:
-- category: Machine Learning
+- category: Programming Languages
   subcategories:
-  - subcategory: Algorithms
+  - subcategory: Languages
     skill:
-    - Classification
-    - Regression
-    - Clustering
-    - Ensemble Methods
-    - Time Series Forecasting
-    - Naive Bayes
-    - Natural Language Processing
-  - subcategory: Neural Networks
+    - Python
+    - C++
+    - Java
+    - JavaScript
+    - SQL
+- category: Databases
+  subcategories:
+  - subcategory: Database Systems
     skill:
-    - CNN
-    - LSTM
-  - subcategory: Tools & Libraries
+    - MySQL
+    - PostgreSQL
+    - MongoDB
+    - OracleDB
+- category: ML/AI Frameworks
+  subcategories:
+  - subcategory: Frameworks & Libraries
     skill:
     - TensorFlow
-    - Keras
-    - Scikit-learn
+    - PyTorch
+    - Scikit-Learn
+    - Llama-Index
+    - LangChain
+    - LangGraph
+- category: Data Processing & Visualization
+  subcategories:
+  - subcategory: Libraries
+    skill:
     - Pandas
     - NumPy
-  - subcategory: Programming Languages
-    skill: 
-    - Python
-    - R
-    - SQL
-- category: Data Analysis
+    - MatPlotLib
+- category: Cloud & API Development
   subcategories:
-  - subcategory: Statistical Analysis
-    skill: 
-    - Hypothesis testing
-  - subcategory: Data Visualization
-    skill: 
-    - chart.js
-    - seaborn & matplotlib
-    - plotly
-  - subcategory: Exploratory Data Analysis
-  - subcategory: Data Cleaning
+  - subcategory: Cloud Services
+    skill:
+    - AWS (S3, RDS, EC2, SageMaker)
+    - Azure OpenAI
+  - subcategory: API Frameworks
+    skill:
+    - FastAPI
+    - Flask
+- category: AI Specialties
+  subcategories:
+  - subcategory: Techniques
+    skill:
+    - Transfer Learning
+    - Transformer Models
+    - NLP
+    - Time-Series Analysis
+    - Financial Forecasting
 
 certifications:
 - org: 365datascience
@@ -147,3 +224,4 @@ achievements:
   year: 2022
 - title: IIT-JEE Advance 
   year: 2017
+

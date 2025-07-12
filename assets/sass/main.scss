@@ -1,5 +1,6 @@
 ---
 ---
+@use 'sass:math';
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
@@ -78,3 +79,4 @@
 
 // Custom Pages.
 	@import '../../_sass/portfolio';
+	@import '../../_sass/resume';

@@ -1,109 +1,215 @@
+// Resume page styling with improved typography and consistency
+
+// Ensure the contact section maintains proper alignment
+#contact .inner {
+    width: calc(100% - 6em) !important;
+    max-width: 65em !important;
+    margin: 0 auto !important;
+    
+    @include breakpoint('<=small') {
+        width: calc(100% - 3em) !important;
+    }
+}
+
 .resume-container {
     display: flex;
     padding: 3em 0;
-    gap: 4em;
+    gap: 3em;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .left-side {
     flex: 70%;
     background: _palette(bg-alt);
-    padding: 3em;
-    border-radius: 4px;
-    box-shadow: 0 0 0 1px _palette(border);
+    padding: 3.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .right-side {
     flex: 30%;
-    background: _palette(bg-alt);
-    padding: 3em;
-    border-radius: 4px;
-    box-shadow: 0 0 0 1px _palette(border);
+    padding: 0;
 }
 
-.badge {
-    display: inline-block;
-    padding: 0.35em 0.75em;
-    font-size: 0.8em;
-    font-weight: 500;
-    background: _palette(highlight);
-    border-radius: 4px;
-    margin: 0.2em;
-    color: _palette(fg-bold);
-    transition: all 0.2s ease;
+.right-side > div {
+    background: _palette(bg-alt);
+    padding: 2.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2em;
     
-    &:hover {
-        background: darken(_palette(highlight), 10%);
-        transform: translateY(-2px);
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 
-.contact {
-    margin-bottom: 2em;
-}
-
-.bold-text {
-    font-weight: 700;
-    margin: 1.5em 0 0.5em 0;
-    color: _palette(fg-bold);
-    font-size: 1.1em;
-}
-
-.sub-text {
-    font-size: 0.9em;
-    color: _palette(accent1);
-    margin-bottom: 0.75em;
-    font-style: italic;
-}
-
-.norm-text {
-    margin-bottom: 0.75em;
-    line-height: 1.8;
-    color: _palette(fg);
-}
-
-// Add styling for headers
+// Typography hierarchy
 h1 {
     font-size: 2.5em;
-    margin-bottom: 0.5em;
+    font-weight: 800;
+    margin-bottom: 0.3em;
     color: _palette(fg-bold);
-    position: relative;
-    
-    &:after {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 4px;
-        background: _palette(accent1);
-        margin-top: 0.5em;
-    }
+    letter-spacing: -0.02em;
+    line-height: 1.2;
 }
 
 h2 {
-    font-size: 1.75em;
-    margin: 2em 0 1em 0;
-    color: _palette(fg-bold);
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 2.5em 0 1.2em 0;
+    color: _palette(accent1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     position: relative;
-    padding-bottom: 0.5em;
+    
+    &:first-of-type {
+        margin-top: 1.5em;
+    }
     
     &:after {
         content: '';
         position: absolute;
-        bottom: 0;
+        bottom: -8px;
         left: 0;
-        width: 40px;
-        height: 2px;
-        background: _palette(accent2);
+        width: 50px;
+        height: 3px;
+        background: _palette(accent1);
     }
 }
 
-// Contact list styling
+h3 {
+    font-size: 1.05em;
+    font-weight: 600;
+    margin: 1.5em 0 0.3em 0;
+    color: _palette(fg-bold);
+    
+    // Product names in work experience
+    & + .sub-text {
+        margin-top: 0;
+        margin-bottom: 0.8em;
+        font-size: 0.85em;
+        font-weight: 400;
+        font-style: italic;
+        color: _palette(fg);
+    }
+}
+
+// Summary paragraph
+.left-side > p:first-of-type {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: _palette(fg);
+    margin-bottom: 1.5em;
+    font-weight: 400;
+}
+
+// Work experience header
+.work-header {
+    margin: 2em 0 1.5em 0;
+    
+    &:first-of-type {
+        margin-top: 0;
+    }
+    
+    .bold-text {
+        margin: 0 0 0.2em 0;
+    }
+    
+    .sub-text {
+        margin: 0 0 1em 0;
+    }
+}
+
+// Work experience and project titles
+.bold-text {
+    font-weight: 700;
+    margin: 1.8em 0 0.3em 0;
+    color: _palette(fg-bold);
+    font-size: 1.35em;
+    letter-spacing: -0.01em;
+}
+
+// Dates and subtitles
+.sub-text {
+    font-size: 1.05em;
+    color: _palette(accent2);
+    margin-bottom: 0.8em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+// Regular text
+.norm-text {
+    margin-bottom: 0.75em;
+    line-height: 1.7;
+    color: _palette(fg);
+    font-weight: 400;
+}
+
+// List items styling - only within resume container
+.resume-container {
+    ul {
+        margin: 0.5em 0 1.5em 0;
+        padding-left: 1.5em;
+        list-style: none; // Remove default bullets
+        
+        li {
+            margin-bottom: 0.8em;
+            line-height: 1.6;
+            color: _palette(fg);
+            position: relative;
+            
+            b {
+                font-weight: 600;
+                color: _palette(fg-bold);
+            }
+            
+            &:before {
+                content: '▸';
+                position: absolute;
+                left: -1.2em;
+                color: _palette(accent1);
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+// Skills section
+.badge {
+    display: inline-block;
+    padding: 0.4em 0.9em;
+    font-size: 0.85em;
+    font-weight: 500;
+    background: transparent;
+    border: 2px solid _palette(accent1);
+    border-radius: 20px;
+    margin: 0.3em 0.3em 0.3em 0;
+    color: _palette(accent1);
+    transition: all 0.2s ease;
+    
+    &:hover {
+        background: _palette(accent1);
+        color: _palette(bg);
+        transform: translateY(-2px);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+}
+
+// Contact list
 .contact {
     margin-bottom: 2em;
     list-style: none;
     padding: 0;
     
+    &.alt {
+        margin-bottom: 2.5em;
+    }
+    
     li {
-        margin-bottom: 1em;
+        margin-bottom: 1.2em;
         
         a {
             display: inline-flex;
@@ -111,33 +217,99 @@ h2 {
             color: _palette(fg);
             text-decoration: none;
             transition: all 0.2s ease;
+            font-weight: 500;
+            font-size: 0.95em;
+            font-family: inherit !important;
+            letter-spacing: normal !important;
             
             &:hover {
                 color: _palette(accent1);
-                transform: translateX(5px);
+                transform: translateX(3px);
             }
             
             &:before {
-                margin-right: 0.75em;
-                font-size: 1.2em;
+                margin-right: 0.8em;
+                font-size: 1.1em;
+                color: _palette(accent1);
             }
         }
     }
 }
 
-// Download button styling
+// Education section
+.right-side {
+    h2 {
+        font-size: 1.3em;
+        margin: 0 0 1em 0;
+        
+        &:after {
+            width: 40px;
+        }
+    }
+    
+    .bold-text {
+        font-size: 1.05em;
+        margin: 1.2em 0 0.2em 0;
+    }
+    
+    .norm-text {
+        font-size: 0.95em;
+        margin-bottom: 0.3em;
+    }
+    
+    .sub-text {
+        font-size: 0.85em;
+        margin-bottom: 1.5em;
+    }
+    
+    // Education details list
+    ul:not(.contact) {
+        padding-left: 0;
+        list-style: none;
+        margin-top: 0.5em;
+        
+        li {
+            font-size: 0.9em;
+            margin-bottom: 0.5em;
+            padding-left: 1.2em;
+            
+            &:before {
+                content: '•';
+                left: 0;
+            }
+        }
+    }
+}
+
+// Download button
 button[onclick="makepdf()"] {
+    margin: 1.5em 0 2em 0;
+    font-weight: 600;
+    padding: 0.8em 2em;
+    font-size: 0.95em;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Horizontal rule
+hr {
+    border: 0;
+    border-top: 2px solid _palette(border);
     margin: 2em 0;
 }
 
-// List styling
-ul {
-    li {
-        margin-bottom: 0.75em;
-        
-        b {
-            color: _palette(fg-bold);
-        }
+// Responsive design
+@include breakpoint('<=large') {
+    .resume-container {
+        padding: 2em 0;
+    }
+    
+    .left-side,
+    .right-side > div {
+        padding: 2.5em;
     }
 }
 
@@ -151,19 +323,164 @@ ul {
     .right-side {
         flex: 100%;
     }
+    
+    h1 {
+        font-size: 2.2em;
+    }
+    
+    h2 {
+        font-size: 1.4em;
+    }
 }
 
 @include breakpoint('<=small') {
     .left-side,
-    .right-side {
+    .right-side > div {
         padding: 2em;
     }
     
     h1 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
     
     h2 {
-        font-size: 1.5em;
+        font-size: 1.3em;
+    }
+    
+    h3 {
+        font-size: 1.1em;
+    }
+    
+    .bold-text {
+        font-size: 1.05em;
+    }
+    
+    .badge {
+        font-size: 0.8em;
+        padding: 0.3em 0.7em;
+    }
+}
+
+// Skill groups
+.skill-group {
+    margin-bottom: 1.2em;
+    
+    .sub-text {
+        margin-bottom: 0.5em;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        letter-spacing: 0.05em;
+    }
+}
+
+.badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+    margin-bottom: 0.5em;
+}
+
+// Achievements section
+.achievements-section {
+    ul {
+        padding-left: 0;
+        
+        li {
+            strong {
+                font-weight: 600;
+                color: _palette(fg-bold);
+            }
+        }
+    }
+}
+
+// Section spacing
+.contact-section,
+.education-section,
+.skills-section,
+.certifications-section,
+.achievements-section {
+    &:not(:last-child) {
+        padding-bottom: 1.5em;
+        border-bottom: 1px solid _palette(border);
+        margin-bottom: 1.5em;
+    }
+}
+
+// Print styles
+@media print {
+    // Hide navigation and other non-resume elements
+    #header,
+    #menu,
+    #banner,
+    #contact,
+    #footer,
+    button[onclick="makepdf()"],
+    [data-html2canvas-ignore="true"] {
+        display: none !important;
+    }
+    
+    // Adjust layout for print
+    #main {
+        padding: 0 !important;
+    }
+    
+    #main section#one .inner {
+        padding: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    .resume-container {
+        gap: 1.5em;
+        padding: 0;
+        color: #000;
+        background: #fff;
+    }
+    
+    .left-side,
+    .right-side > div {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        background: #fff;
+        color: #000;
+    }
+    
+    // Adjust text colors for print
+    h1, h2, h3, h4, h5, h6,
+    .bold-text,
+    .sub-text,
+    .norm-text,
+    p, li, a {
+        color: #000 !important;
+    }
+    
+    h2 {
+        color: #333 !important;
+    }
+    
+    .sub-text {
+        color: #666 !important;
+    }
+    
+    // Fix badge styling for print
+    .badge {
+        border-color: #333;
+        color: #333;
+    }
+    
+    // Ensure links are visible
+    a {
+        text-decoration: underline;
+    }
+    
+    // Page break control
+    .left-side {
+        page-break-inside: avoid;
+    }
+    
+    .right-side > div {
+        page-break-inside: avoid;
     }
 }
