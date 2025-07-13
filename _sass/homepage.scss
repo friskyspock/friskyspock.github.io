@@ -1,0 +1,170 @@
+// Homepage specific animations and styles
+
+// Waving hand animation
+.wave {
+    display: inline-block;
+    animation: wave-animation 2.5s infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+// Typing animation styles
+.typing-container {
+    min-height: 2em; // Prevent layout shift
+    margin-bottom: 0.5em; // Reduced margin to bring button closer
+    display: block; // Ensure it takes full width
+}
+
+.typing-text {
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: _palette(fg);
+}
+
+.cursor {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: _palette(accent1);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+// Banner improvements
+#banner.major {
+    .inner {
+        header.major {
+            h1 {
+                font-size: 3.5em;
+                margin-bottom: 0.5em;
+                
+                @include breakpoint('<=medium') {
+                    font-size: 2.5em;
+                }
+                
+                @include breakpoint('<=small') {
+                    font-size: 2em;
+                }
+            }
+        }
+        
+        .content {
+            p {
+                font-size: 1.25em;
+                margin-bottom: 2em;
+                
+                @include breakpoint('<=small') {
+                    font-size: 1em;
+                }
+            }
+            
+            // Ensure button stays in fixed position
+            .actions {
+                margin-top: 2.5em;
+                clear: both;
+                display: block;
+            }
+        }
+    }
+}
+
+// Smooth entrance animation for banner content
+#banner.major .inner {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Scroll down arrow
+.scroll-down {
+    position: absolute;
+    bottom: 1em;
+    right: 2em;
+    z-index: 2;
+    
+    a {
+        display: block;
+        width: 30px;
+        height: 50px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        border-radius: 20px;
+        position: relative;
+        
+        &:before {
+            display: none;
+        }
+        
+        span {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            margin-left: -3px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 100%;
+            animation: scroll-down 2s infinite;
+        }
+        
+        &:hover {
+            border-color: _palette(accent1);
+            
+            span {
+                background-color: _palette(accent1);
+            }
+        }
+    }
+}
+
+@keyframes scroll-down {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+// Ensure banner has relative positioning for absolute child
+#banner.major {
+    position: relative;
+    
+    @include breakpoint('<=small') {
+        .scroll-down {
+            bottom: 0.5em;
+            right: 1em;
+        }
+    }
+}

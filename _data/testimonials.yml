@@ -1,0 +1,120 @@
+# Testimonials Data
+# This file contains testimonials from clients, colleagues, and collaborators
+
+testimonials:
+  - name: "Sarah Chen"
+    role: "CTO"
+    company: "TechVentures Inc."
+    image: "testimonial1.jpg"
+    rating: 5
+    date: "December 2024"
+    project: "AI-Powered Analytics Dashboard"
+    testimonial: "Aniket transformed our data analytics capabilities with his innovative ML solutions. His ability to understand complex business requirements and translate them into scalable AI systems is exceptional. The predictive models he built increased our forecast accuracy by 40%."
+    highlight: "increased our forecast accuracy by 40%"
+    tags:
+      - "Machine Learning"
+      - "Data Analytics"
+      - "Python"
+    linkedin: "https://linkedin.com/in/sarahchen"
+    
+  - name: "Michael Rodriguez"
+    role: "Product Manager"
+    company: "FinTech Solutions"
+    image: "testimonial2.jpg"
+    rating: 5
+    date: "November 2024"
+    project: "Real-time Fraud Detection System"
+    testimonial: "Working with Aniket was a game-changer for our fraud detection capabilities. He built a real-time ML pipeline that processes millions of transactions daily with 99.8% accuracy. His expertise in both ML and software engineering made the integration seamless."
+    highlight: "99.8% accuracy in fraud detection"
+    tags:
+      - "Deep Learning"
+      - "Real-time Systems"
+      - "AWS"
+    linkedin: "https://linkedin.com/in/michaelrodriguez"
+    
+  - name: "Dr. Emily Watson"
+    role: "Research Director"
+    company: "AI Research Lab"
+    image: "testimonial3.jpg"
+    rating: 5
+    date: "October 2024"
+    project: "NLP Research Collaboration"
+    testimonial: "Aniket's contributions to our NLP research project were invaluable. His deep understanding of transformer models and ability to implement cutting-edge papers quickly accelerated our research timeline by months. A true AI practitioner who bridges theory and practice."
+    highlight: "accelerated our research timeline by months"
+    tags:
+      - "NLP"
+      - "Research"
+      - "Transformers"
+    linkedin: "https://linkedin.com/in/emilywatson"
+    
+  - name: "James Park"
+    role: "Founder & CEO"
+    company: "StartupX"
+    image: "testimonial4.jpg"
+    rating: 5
+    date: "September 2024"
+    project: "MVP Development - AI Assistant"
+    testimonial: "As a startup founder, I needed someone who could wear multiple hats. Aniket not only built our AI backend but also helped shape our product strategy. His ability to work independently and deliver quality code under tight deadlines was crucial for our launch."
+    highlight: "crucial for our successful launch"
+    tags:
+      - "LangChain"
+      - "FastAPI"
+      - "Startup"
+    
+  - name: "Lisa Thompson"
+    role: "Data Science Manager"
+    company: "E-commerce Giant"
+    image: "testimonial5.jpg"
+    rating: 5
+    date: "August 2024"
+    project: "Recommendation Engine Optimization"
+    testimonial: "Aniket's optimization of our recommendation engine resulted in a 25% increase in click-through rates. His approach to A/B testing and iterative improvement showed maturity beyond his years. He's a data scientist who truly understands business impact."
+    highlight: "25% increase in click-through rates"
+    tags:
+      - "Recommendation Systems"
+      - "A/B Testing"
+      - "Business Impact"
+    linkedin: "https://linkedin.com/in/lisathompson"
+    
+  - name: "Robert Kim"
+    role: "Engineering Lead"
+    company: "CloudTech Systems"
+    image: "testimonial6.jpg"
+    rating: 5
+    date: "July 2024"
+    project: "ML Infrastructure Setup"
+    testimonial: "Aniket helped us build a robust ML infrastructure from scratch. His knowledge of MLOps best practices and cloud deployments saved us from many potential pitfalls. The monitoring and CI/CD pipelines he set up continue to serve us well."
+    highlight: "built robust ML infrastructure from scratch"
+    tags:
+      - "MLOps"
+      - "Cloud Infrastructure"
+      - "DevOps"
+
+recommendations:
+  - name: "Prof. Alan Sterling"
+    role: "Professor of Computer Science"
+    institution: "Tech University"
+    relationship: "Academic Advisor"
+    date: "June 2024"
+    recommendation: "I've had the pleasure of mentoring many students, but Aniket stands out for his exceptional ability to grasp complex ML concepts and apply them practically. His research work on neural architectures showed remarkable insight and innovation."
+    
+  - name: "Jennifer Lee"
+    role: "Senior Data Scientist"
+    company: "Tech Corp"
+    relationship: "Former Colleague"
+    date: "May 2024"
+    recommendation: "Aniket was a joy to work with. His positive attitude and willingness to tackle challenging problems made him a valuable team member. He consistently delivered high-quality solutions and helped junior team members grow."
+    
+  - name: "David Chang"
+    role: "Open Source Maintainer"
+    project: "ML-Tools Project"
+    relationship: "Open Source Collaborator"
+    date: "April 2024"
+    recommendation: "Aniket's contributions to our open-source ML toolkit were exceptional. His code was clean, well-documented, and he actively engaged with the community. His PRs often included performance improvements we hadn't even considered."
+
+statistics:
+  total_projects: 50
+  satisfied_clients: 48
+  success_rate: 96
+  average_rating: 4.9
+  repeat_clients: 75

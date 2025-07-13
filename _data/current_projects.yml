@@ -1,0 +1,100 @@
+# Current Projects Data
+# This file contains information about projects currently in progress
+
+projects:
+  - title: "Stock Market HFT Algorithm"
+    status: "In Development"
+    priority: "high"
+    description: "Building a sub-second level prediction algorithm for high-frequency trading using C++ and time-based transformers for long-term predictions."
+    progress: 65
+    technologies:
+      - C++
+      - Python
+      - Transformers
+      - Statistical Models
+    milestones:
+      - task: "Data pipeline implementation"
+        completed: true
+      - task: "Basic prediction model"
+        completed: true
+      - task: "Backtesting framework"
+        completed: false
+      - task: "Real-time integration"
+        completed: false
+    expected_completion: "March 2025"
+    github_link: ""
+    
+  - title: "AI-Powered Resume Parser"
+    status: "Research Phase"
+    priority: "medium"
+    description: "Developing an intelligent system to parse and understand resumes using NLP techniques and LLMs for better candidate matching."
+    progress: 25
+    technologies:
+      - Python
+      - LangChain
+      - OpenAI API
+      - FastAPI
+    milestones:
+      - task: "Literature review"
+        completed: true
+      - task: "Data collection"
+        completed: false
+      - task: "Model architecture design"
+        completed: false
+      - task: "API development"
+        completed: false
+    expected_completion: "April 2025"
+    github_link: ""
+    
+  - title: "Personal Knowledge Graph"
+    status: "Planning"
+    priority: "low"
+    description: "Creating a personal knowledge management system using graph databases to connect and visualize interconnected ideas and learnings."
+    progress: 10
+    technologies:
+      - Neo4j
+      - React
+      - D3.js
+      - Python
+    milestones:
+      - task: "System architecture"
+        completed: false
+      - task: "Database schema design"
+        completed: false
+      - task: "Frontend development"
+        completed: false
+      - task: "Data import tools"
+        completed: false
+    expected_completion: "May 2025"
+    github_link: ""
+
+learning:
+  - topic: "Rust Programming"
+    description: "Deep diving into systems programming with Rust for high-performance computing applications."
+    resources:
+      - "The Rust Programming Language Book"
+      - "Rust by Example"
+    progress: 40
+    
+  - topic: "Quantum Computing Fundamentals"
+    description: "Understanding quantum algorithms and their potential applications in machine learning."
+    resources:
+      - "Qiskit Textbook"
+      - "Quantum Computing: An Applied Approach"
+    progress: 20
+    
+  - topic: "Advanced RAG Techniques"
+    description: "Exploring advanced retrieval-augmented generation methods for improved LLM applications."
+    resources:
+      - "LangChain Documentation"
+      - "Recent papers on ArXiv"
+    progress: 60
+
+experiments:
+  - name: "Multi-Modal Learning"
+    description: "Experimenting with combining vision and language models for enhanced AI applications."
+    status: "Ongoing"
+    
+  - name: "Edge AI Deployment"
+    description: "Testing deployment strategies for ML models on edge devices with limited resources."
+    status: "Planning"

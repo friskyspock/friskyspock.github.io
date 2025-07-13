@@ -1,0 +1,158 @@
+# Off-Screen Life Data
+# This file contains information about hobbies, interests, and creative pursuits
+
+intro: "When I'm not training neural networks or debugging code, you'll find me with a paintbrush in hand. Art has always been my creative outlet - a way to express ideas that algorithms can't capture and to find balance in a world of logic and data."
+
+paintings:
+  - title: "Sunset Over Mountains"
+    image: "painting1.jpg"
+    medium: "Acrylic on Canvas"
+    size: "24\" x 18\""
+    year: 2024
+    description: "Inspired by a hiking trip, this piece captures the serene moment when the sun dips below mountain peaks, painting the sky in vibrant oranges and purples."
+    tags:
+      - "Landscape"
+      - "Nature"
+      - "Acrylic"
+    available: true
+    
+  - title: "Abstract Mind"
+    image: "painting2.jpg"
+    medium: "Oil on Canvas"
+    size: "30\" x 30\""
+    year: 2024
+    description: "An exploration of consciousness and neural pathways, blending my fascination with AI and artistic expression. The interweaving patterns represent the complexity of thought."
+    tags:
+      - "Abstract"
+      - "Conceptual"
+      - "Oil"
+    featured: true
+    
+  - title: "City Lights"
+    image: "painting3.jpg"
+    medium: "Watercolor"
+    size: "16\" x 20\""
+    year: 2023
+    description: "A rainy evening in the city, where lights blur and reflect on wet streets. This piece experiments with watercolor's fluid nature to create atmospheric effects."
+    tags:
+      - "Urban"
+      - "Watercolor"
+      - "Impressionist"
+    sold: true
+    
+  - title: "Digital Dreams"
+    image: "painting4.jpg"
+    medium: "Mixed Media"
+    size: "20\" x 26\""
+    year: 2024
+    description: "Combining traditional painting with digital elements, this piece bridges my two worlds - technology and art. QR codes and binary patterns merge with organic forms."
+    tags:
+      - "Mixed Media"
+      - "Contemporary"
+      - "Tech Art"
+    available: true
+    
+  - title: "Ocean Serenity"
+    image: "painting5.jpg"
+    medium: "Acrylic on Canvas"
+    size: "36\" x 24\""
+    year: 2023
+    description: "The calming rhythm of waves has always fascinated me. This large canvas attempts to capture both the power and tranquility of the ocean."
+    tags:
+      - "Seascape"
+      - "Nature"
+      - "Large Format"
+    available: true
+    
+  - title: "Portrait of Thoughts"
+    image: "painting6.jpg"
+    medium: "Charcoal and Graphite"
+    size: "18\" x 24\""
+    year: 2024
+    description: "A self-portrait that goes beyond physical features to represent the constant flow of ideas, equations, and creative thoughts that occupy my mind."
+    tags:
+      - "Portrait"
+      - "Black & White"
+      - "Conceptual"
+    
+  - title: "Fibonacci in Nature"
+    image: "painting7.jpg"
+    medium: "Digital Art Print"
+    size: "20\" x 20\""
+    year: 2023
+    description: "Where mathematics meets art - exploring the golden ratio and Fibonacci sequences found in natural forms. Created digitally but printed on canvas."
+    tags:
+      - "Digital Art"
+      - "Mathematical"
+      - "Nature"
+    prints_available: true
+    
+  - title: "Monsoon Memories"
+    image: "painting8.jpg"
+    medium: "Watercolor"
+    size: "14\" x 18\""
+    year: 2023
+    description: "Growing up in India, monsoons hold special memories. This piece captures the first rain of the season - the smell of earth and the joy it brings."
+    tags:
+      - "Watercolor"
+      - "Cultural"
+      - "Landscape"
+
+other_interests:
+  - name: "Photography"
+    description: "Capturing moments through a different lens - mainly street photography and nature shots"
+    icon: "fa-camera"
+    
+  - name: "Hiking & Trekking"
+    description: "Exploring trails and mountains - my best ideas often come during long hikes"
+    icon: "fa-mountain"
+    
+  - name: "Reading"
+    description: "Science fiction, philosophy, and biographies of innovators fuel my imagination"
+    icon: "fa-book"
+    
+  - name: "Music"
+    description: "From classical Indian ragas to lo-fi beats - music is my coding companion"
+    icon: "fa-music"
+    
+  - name: "Cooking"
+    description: "Experimenting with fusion recipes - algorithms in the kitchen!"
+    icon: "fa-utensils"
+    
+  - name: "Board Games"
+    description: "Strategy games and chess - training ground for problem-solving"
+    icon: "fa-chess"
+
+art_philosophy: "I believe art and technology aren't opposites but complementary forces. While code allows me to build functional solutions, art lets me explore abstract ideas and emotions. Both require creativity, patience, and a willingness to iterate until you achieve your vision."
+
+exhibitions:
+  - name: "Tech Meets Art"
+    venue: "Local Gallery Space"
+    date: "March 2024"
+    description: "Group exhibition featuring artists from tech backgrounds"
+    
+  - name: "Digital Natives"
+    venue: "Online Virtual Gallery"
+    date: "December 2023"
+    description: "Virtual exhibition exploring the intersection of traditional and digital art"
+
+art_process:
+  - step: "Inspiration"
+    description: "Ideas come from everywhere - a debugging session, a sunset, or a mathematical concept"
+    
+  - step: "Sketching"
+    description: "Quick sketches to capture the essence before it fades"
+    
+  - step: "Experimentation"
+    description: "Trying different mediums and techniques - much like testing different algorithms"
+    
+  - step: "Creation"
+    description: "The focused flow state where time disappears - similar to coding"
+    
+  - step: "Reflection"
+    description: "Stepping back to assess and iterate - art is never truly finished"
+
+quotes:
+  - "Every painting is an algorithm of colors and emotions"
+  - "In art, bugs become features"
+  - "The canvas is my second monitor"

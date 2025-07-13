@@ -1,0 +1,159 @@
+---
+layout: default
+title: Testimonials
+---
+
+<!-- Banner -->
+<section id="banner" class="style2">
+    <div class="inner">
+        <span class="image">
+            <img src="images/banners/pic05.jpg" alt="" />
+        </span>
+        <header class="major">
+            <h1>Testimonials</h1>
+        </header>
+        <div class="content">
+            <p>Words from those I've worked with</p>
+        </div>
+    </div>
+</section>
+
+<!-- Main -->
+<div id="main">
+    <section id="one">
+        <div class="inner">
+            <!-- Statistics Overview -->
+            <div class="testimonial-stats">
+                <div class="stat-item">
+                    <span class="stat-number">{{ site.data.testimonials.statistics.total_projects }}+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">{{ site.data.testimonials.statistics.success_rate }}%</span>
+                    <span class="stat-label">Success Rate</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">{{ site.data.testimonials.statistics.average_rating }}/5</span>
+                    <span class="stat-label">Average Rating</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">{{ site.data.testimonials.statistics.repeat_clients }}%</span>
+                    <span class="stat-label">Repeat Clients</span>
+                </div>
+            </div>
+            
+            <!-- Client Testimonials -->
+            <header class="major">
+                <h2>Client Testimonials</h2>
+                <p>Feedback from clients and collaborators on various projects</p>
+            </header>
+            
+            <div class="testimonials-grid">
+                {% for testimonial in site.data.testimonials.testimonials %}
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="client-info">
+                            <div class="client-image">
+                                <img src="images/testimonials/{{ testimonial.image | default: 'default-avatar.jpg' }}" alt="{{ testimonial.name }}" />
+                            </div>
+                            <div class="client-details">
+                                <h3>{{ testimonial.name }}</h3>
+                                <p class="client-role">{{ testimonial.role }}</p>
+                                <p class="client-company">{{ testimonial.company }}</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-meta">
+                            <div class="rating">
+                                {% for i in (1..5) %}
+                                    {% if i <= testimonial.rating %}
+                                    <i class="fas fa-star"></i>
+                                    {% else %}
+                                    <i class="far fa-star"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <span class="date">{{ testimonial.date }}</span>
+                        </div>
+                    </div>
+                    
+                    {% if testimonial.project %}
+                    <div class="project-name">
+                        <i class="fas fa-briefcase"></i> {{ testimonial.project }}
+                    </div>
+                    {% endif %}
+                    
+                    <div class="testimonial-content">
+                        <blockquote>
+                            <p>{{ testimonial.testimonial }}</p>
+                        </blockquote>
+                        {% if testimonial.highlight %}
+                        <div class="highlight-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <span>{{ testimonial.highlight }}</span>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    {% if testimonial.tags %}
+                    <div class="project-tags">
+                        {% for tag in testimonial.tags %}
+                        <span class="tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    
+                    {% if testimonial.linkedin %}
+                    <div class="testimonial-footer">
+                        <a href="{{ testimonial.linkedin }}" target="_blank" class="linkedin-link">
+                            <i class="fab fa-linkedin"></i> View Profile
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Recommendations -->
+            <header class="major">
+                <h2>Professional Recommendations</h2>
+                <p>Endorsements from mentors, colleagues, and collaborators</p>
+            </header>
+            
+            <div class="recommendations-list">
+                {% for rec in site.data.testimonials.recommendations %}
+                <div class="recommendation-card">
+                    <div class="rec-header">
+                        <div class="rec-author">
+                            <h3>{{ rec.name }}</h3>
+                            <p class="rec-role">{{ rec.role }}</p>
+                            <p class="rec-org">
+                                {% if rec.institution %}{{ rec.institution }}{% endif %}
+                                {% if rec.company %}{{ rec.company }}{% endif %}
+                                {% if rec.project %}{{ rec.project }}{% endif %}
+                            </p>
+                        </div>
+                        <div class="rec-meta">
+                            <span class="relationship">{{ rec.relationship }}</span>
+                            <span class="rec-date">{{ rec.date }}</span>
+                        </div>
+                    </div>
+                    <div class="rec-content">
+                        <p>{{ rec.recommendation }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="testimonial-cta">
+                <h3>Let's Build Something Amazing Together</h3>
+                <p>Join the growing list of satisfied clients and collaborators</p>
+                <ul class="actions">
+                    <li><a href="#contact" class="button primary large">Start a Project</a></li>
+                    <li><a href="portfolio.html" class="button large">View My Work</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>

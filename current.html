@@ -1,0 +1,127 @@
+---
+layout: default
+title: Currently Working On
+---
+
+<!-- Banner -->
+<section id="banner" class="style2">
+    <div class="inner">
+        <span class="image">
+            <img src="images/banners/pic03.jpg" alt="" />
+        </span>
+        <header class="major">
+            <h1>Currently Working On</h1>
+        </header>
+        <div class="content">
+            <p>Exploring new problems, one model at a time</p>
+        </div>
+    </div>
+</section>
+
+<!-- Main -->
+<div id="main">
+    <section id="one">
+        <div class="inner">
+            <!-- Active Projects Section -->
+            <header class="major">
+                <h2>Active Projects</h2>
+            </header>
+            
+            <div class="projects-grid current-projects">
+                {% for project in site.data.current_projects.projects %}
+                <div class="project-card {{ project.priority }}-priority">
+                    <div class="project-header">
+                        <h3>{{ project.title }}</h3>
+                        <span class="status-badge {{ project.status | slugify }}">{{ project.status }}</span>
+                    </div>
+                    
+                    <p class="project-description">{{ project.description }}</p>
+                    
+                    <div class="progress-section">
+                        <div class="progress-label">
+                            <span>Progress</span>
+                            <span>{{ project.progress }}%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: {{ project.progress }}%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-stack">
+                        {% for tech in project.technologies %}
+                        <span class="tech-badge">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="milestones">
+                        <h4>Milestones</h4>
+                        <ul class="milestone-list">
+                            {% for milestone in project.milestones %}
+                            <li class="{% if milestone.completed %}completed{% endif %}">
+                                <span class="milestone-icon">{% if milestone.completed %}✓{% else %}○{% endif %}</span>
+                                {{ milestone.task }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    
+                    <div class="project-footer">
+                        <span class="completion-date">Expected: {{ project.expected_completion }}</span>
+                        {% if project.github_link and project.github_link != "" %}
+                        <a href="{{ project.github_link }}" class="icon fa-github" target="_blank">View on GitHub</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Learning Section -->
+            <header class="major">
+                <h2>Currently Learning</h2>
+            </header>
+            
+            <div class="learning-grid">
+                {% for item in site.data.current_projects.learning %}
+                <div class="learning-card">
+                    <h3>{{ item.topic }}</h3>
+                    <p>{{ item.description }}</p>
+                    
+                    <div class="progress-section">
+                        <div class="progress-label">
+                            <span>Progress</span>
+                            <span>{{ item.progress }}%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: {{ item.progress }}%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            {% for resource in item.resources %}
+                            <li>{{ resource }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Experiments Section -->
+            <header class="major">
+                <h2>Experiments & Ideas</h2>
+            </header>
+            
+            <div class="experiments-grid">
+                {% for experiment in site.data.current_projects.experiments %}
+                <div class="experiment-card">
+                    <h3>{{ experiment.name }}</h3>
+                    <p>{{ experiment.description }}</p>
+                    <span class="experiment-status">{{ experiment.status }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>

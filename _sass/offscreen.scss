@@ -1,0 +1,555 @@
+// Off-Screen Life page styles
+
+.offscreen-intro {
+    font-size: 1.15em;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 4em;
+    padding: 2.5em;
+    background: _palette(bg-alt);
+    border-radius: 8px;
+    position: relative;
+    
+    &:before {
+        content: '🎨';
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2.5em;
+        background: _palette(bg);
+        padding: 0 0.5em;
+    }
+}
+
+// Gallery Filters
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 3em;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.6em 1.5em;
+    background: transparent;
+    border: 2px solid _palette(border);
+    color: _palette(fg);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    
+    &:hover {
+        border-color: _palette(accent1);
+        color: _palette(accent1);
+        transform: translateY(-2px);
+    }
+    
+    &.active {
+        background: _palette(accent1);
+        border-color: _palette(accent1);
+        color: _palette(bg);
+    }
+}
+
+// Paintings Grid
+.paintings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+    margin-bottom: 4em;
+}
+
+.painting-card {
+    background: _palette(bg-alt);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+}
+
+.painting-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    &:hover img {
+        transform: scale(1.1);
+    }
+}
+
+.painting-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    
+    .painting-image:hover & {
+        opacity: 1;
+    }
+}
+
+.overlay-content {
+    text-align: center;
+    color: #fff;
+    
+    h3 {
+        margin: 0 0 0.5em 0;
+        color: #fff;
+    }
+    
+    p {
+        margin: 0 0 1em 0;
+        opacity: 0.8;
+    }
+    
+    .view-details {
+        display: inline-block;
+        padding: 0.5em 1.5em;
+        border: 2px solid _palette(accent1);
+        color: _palette(accent1);
+        border-radius: 20px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            background: _palette(accent1);
+            color: _palette(bg);
+        }
+    }
+}
+
+.featured-badge,
+.sold-badge {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    padding: 0.3em 0.8em;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.featured-badge {
+    background: #f39c12;
+    color: #fff;
+}
+
+.sold-badge {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.painting-info {
+    padding: 1.5em;
+    
+    h4 {
+        margin: 0 0 0.5em 0;
+        color: _palette(fg-bold);
+        font-size: 1.2em;
+    }
+}
+
+.painting-meta {
+    font-size: 0.85em;
+    color: _palette(accent1);
+    margin: 0 0 0.8em 0;
+}
+
+.painting-description {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1em;
+}
+
+.painting-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 1em;
+    
+    .tag {
+        font-size: 0.75em;
+        padding: 0.2em 0.6em;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+.availability {
+    font-size: 0.85em;
+    padding: 0.3em 0.8em;
+    border-radius: 15px;
+    display: inline-block;
+    
+    &.available {
+        background: rgba(46, 204, 113, 0.2);
+        color: #2ecc71;
+    }
+    
+    &.prints {
+        background: rgba(52, 152, 219, 0.2);
+        color: #3498db;
+    }
+}
+
+// Art Philosophy Section
+.art-philosophy {
+    margin: 4em 0;
+    text-align: center;
+}
+
+.philosophy-quote {
+    background: _palette(bg-alt);
+    border-left: 4px solid _palette(accent1);
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 800px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    position: relative;
+    
+    &:before {
+        content: '"';
+        position: absolute;
+        top: -20px;
+        left: 20px;
+        font-size: 4em;
+        color: _palette(accent1);
+        opacity: 0.3;
+    }
+}
+
+// Creative Process Timeline
+.process-timeline {
+    margin: 3em 0;
+    
+    h3 {
+        text-align: center;
+        margin-bottom: 2em;
+        color: _palette(fg-bold);
+    }
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    
+    &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background: _palette(border);
+    }
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3em;
+    position: relative;
+    
+    &:nth-child(odd) {
+        flex-direction: row-reverse;
+        
+        .timeline-content {
+            text-align: right;
+            margin-right: 3em;
+        }
+    }
+    
+    &:nth-child(even) {
+        .timeline-content {
+            margin-left: 3em;
+        }
+    }
+}
+
+.timeline-marker {
+    width: 40px;
+    height: 40px;
+    background: _palette(accent1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: _palette(bg);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-content {
+    flex: 1;
+    
+    h4 {
+        margin: 0 0 0.5em 0;
+        color: _palette(fg-bold);
+    }
+    
+    p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.95em;
+    }
+}
+
+// Other Interests
+.other-interests {
+    margin: 4em 0;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.interest-card {
+    text-align: center;
+    padding: 2em;
+    background: _palette(bg-alt);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        
+        .interest-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+    }
+}
+
+.interest-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1em;
+    background: _palette(accent1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    
+    i {
+        font-size: 1.5em;
+        color: _palette(bg);
+    }
+}
+
+// Exhibitions
+.exhibitions {
+    margin: 4em 0;
+}
+
+.exhibitions-list {
+    display: grid;
+    gap: 1.5em;
+}
+
+.exhibition-item {
+    padding: 1.5em;
+    background: _palette(bg-alt);
+    border-radius: 8px;
+    border-left: 3px solid _palette(accent2);
+    
+    h3 {
+        margin: 0 0 0.5em 0;
+        color: _palette(fg-bold);
+    }
+    
+    .exhibition-venue {
+        font-size: 0.9em;
+        color: _palette(accent2);
+        margin: 0 0 0.5em 0;
+    }
+    
+    p:last-child {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+// Creative Quotes
+.creative-quotes {
+    margin: 4em 0;
+    text-align: center;
+}
+
+.quotes-slider {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quote-item {
+    padding: 2em;
+    background: _palette(bg-alt);
+    border-radius: 8px;
+    margin-bottom: 1em;
+    position: relative;
+    
+    i {
+        color: _palette(accent1);
+        opacity: 0.3;
+        
+        &.fa-quote-left {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.5em;
+        }
+        
+        &.fa-quote-right {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 1.5em;
+        }
+    }
+    
+    p {
+        font-size: 1.2em;
+        font-style: italic;
+        margin: 0;
+        padding: 0 2em;
+        color: _palette(fg);
+    }
+}
+
+// CTA Section
+.offscreen-cta {
+    text-align: center;
+    padding: 3em;
+    background: _palette(bg-alt);
+    border-radius: 8px;
+    margin-top: 4em;
+    
+    h3 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    
+    p {
+        font-size: 1.1em;
+        margin-bottom: 2em;
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+// Modal
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #f1f1f1;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    &:hover {
+        color: _palette(accent1);
+    }
+}
+
+// Responsive
+@include breakpoint('<=medium') {
+    .timeline {
+        &:before {
+            left: 30px;
+        }
+    }
+    
+    .timeline-item {
+        flex-direction: column !important;
+        
+        .timeline-content {
+            margin: 1em 0 0 60px !important;
+            text-align: left !important;
+        }
+    }
+    
+    .timeline-marker {
+        left: 30px;
+        transform: translateX(-50%);
+    }
+    
+    .paintings-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@include breakpoint('<=small') {
+    .gallery-filters {
+        flex-direction: column;
+        align-items: center;
+        
+        .filter-btn {
+            width: 200px;
+        }
+    }
+    
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .offscreen-cta {
+        padding: 2em 1.5em;
+        
+        h3 {
+            font-size: 1.5em;
+        }
+    }
+}

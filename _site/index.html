@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
-		<link rel="stylesheet" href="/assets/sass/main.css?v=1752355621" />
+		<link rel="stylesheet" href="/assets/sass/main.css?v=1752365683" />
 		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -32,7 +32,10 @@
 							<li><a href="/index.html">Home</a></li>
 							<li><a href="/resume.html">Resume</a></li>
 							<li><a href="/portfolio.html">Portfolio</a></li>
-							<li><a href="/notes.html">Notes</a></li>
+							<li><a href="/current.html">Currently Working On</a></li>
+							<li><a href="/toolkit.html">My Toolkit</a></li>
+							<li><a href="/testimonials.html">Testimonials</a></li>
+							<li><a href="/offscreen.html">Off-Screen Life</a></li>
 						</ul>
 						<ul class="actions stacked">
 							<li><a href="#" class="button primary fit">Get Started</a></li>
@@ -46,13 +49,18 @@
 <section id="banner" class="major">
 	<div class="inner">
 		<header class="major">
-			<h1>Hi all, I'm Aniket</h1>
+			<h1>Hi, I'm Aniket <span class="wave">👋</span></h1>
 		</header>
 		<div class="content">
-			<p>Crafting Code, Art, and Everything Between.</p>
-			<ul class="actions">
-				<li><a href="#one" class="button next scrolly">Explore My Work</a></li>
-			</ul>
+			<p class="typing-container">
+				<span class="typing-text"></span>
+				<span class="cursor">|</span>
+			</p>
+		</div>
+		<div class="scroll-down">
+			<a href="#one" class="scrolly">
+				<span></span>
+			</a>
 		</div>
 	</div>
 </section>
@@ -64,7 +72,7 @@
 		<section id="one" class="tiles">
 			<article>
 				<span class="image">
-					<img src="images/pic01.jpg" alt="" />
+					<img src="images/banners/pic01.jpg" alt="" />
 				</span>
 				<header class="major">
 					<h3><a href="resume.html" class="link">My Resume</a></h3>
@@ -73,7 +81,7 @@
 			</article>
 			<article>
 				<span class="image">
-					<img src="images/pic02.jpg" alt="" />
+					<img src="images/banners/pic02.jpg" alt="" />
 				</span>
 				<header class="major">
 					<h3><a href="portfolio.html" class="link">My Portfolio</a></h3>
@@ -82,37 +90,37 @@
 			</article>
 			<article>
 				<span class="image">
-					<img src="images/pic03.jpg" alt="" />
+					<img src="images/banners/pic03.jpg" alt="" />
 				</span>
 				<header class="major">
-					<h3><a href="landing.html" class="link">Currently Working On</a></h3>
+					<h3><a href="current.html" class="link">Currently Working On</a></h3>
 					<p>Exploring new problems, one model at a time.</p>
 				</header>
 			</article>
 			<article>
 				<span class="image">
-					<img src="images/pic04.jpg" alt="" />
+					<img src="images/banners/pic04.jpg" alt="" />
 				</span>
 				<header class="major">
-					<h3><a href="landing.html" class="link">My Toolkit</a></h3>
+					<h3><a href="toolkit.html" class="link">My Toolkit</a></h3>
 					<p>My stack of go-to tools & technologies.</p>
 				</header>
 			</article>
 			<article>
 				<span class="image">
-					<img src="images/pic05.jpg" alt="" />
+					<img src="images/banners/pic05.jpg" alt="" />
 				</span>
 				<header class="major">
-					<h3><a href="landing.html" class="link">Testimonials</a></h3>
+					<h3><a href="testimonials.html" class="link">Testimonials</a></h3>
 					<p>Words from those I've worked with.</p>
 				</header>
 			</article>
 			<article>
 				<span class="image">
-					<img src="images/pic06.jpg" alt="" />
+					<img src="images/banners/pic06.jpg" alt="" />
 				</span>
 				<header class="major">
-					<h3><a href="landing.html" class="link">Off-Screen Life</a></h3>
+					<h3><a href="offscreen.html" class="link">Off-Screen Life</a></h3>
 					<p>Gaming, art, and sports — the creative pulse behind the code.</p>
 				</header>
 			</article>
@@ -133,12 +141,71 @@
 
 </div>
 
+<script>
+// Typing animation
+document.addEventListener('DOMContentLoaded', function() {
+    const phrases = [
+        "AI Developer & Data Scientist",
+        "Building Intelligent Solutions",
+        "Transforming Data into Insights",
+        "Machine Learning Enthusiast",
+        "Crafting Code, Art, and Everything Between"
+    ];
+    
+    let currentPhrase = 0;
+    let currentChar = 0;
+    let isDeleting = false;
+    const typingSpeed = 100;
+    const deletingSpeed = 50;
+    const pauseEnd = 2000;
+    const pauseDelete = 1000;
+    
+    const typingText = document.querySelector('.typing-text');
+    const cursor = document.querySelector('.cursor');
+    
+    function type() {
+        const phrase = phrases[currentPhrase];
+        
+        if (isDeleting) {
+            typingText.textContent = phrase.substring(0, currentChar - 1);
+            currentChar--;
+            
+            if (currentChar === 0) {
+                isDeleting = false;
+                currentPhrase = (currentPhrase + 1) % phrases.length;
+                setTimeout(type, 500);
+                return;
+            }
+        } else {
+            typingText.textContent = phrase.substring(0, currentChar + 1);
+            currentChar++;
+            
+            if (currentChar === phrase.length) {
+                isDeleting = true;
+                setTimeout(type, pauseEnd);
+                return;
+            }
+        }
+        
+        setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
+    }
+    
+    // Start typing animation
+    setTimeout(type, 1000);
+    
+    // Blinking cursor
+    setInterval(() => {
+        cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+    }, 500);
+});
+</script>
+
 
         <!-- Contact -->
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form method="post" action="https://formspree.io/f/">
+								<form method="post" action="https://formspree.io/f/xkgwgvve">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>

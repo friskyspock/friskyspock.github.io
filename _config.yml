@@ -23,8 +23,9 @@ email: aniketms42@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://friskyspock.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: friskyspock
+formspree_id: "xkgwgvve" # Replace with your actual Formspree form ID
 
-exclude: ['_includes/notes_graph.json']
+# exclude: []
 
 copyright: 
   year: 2023
@@ -32,15 +33,7 @@ copyright:
 
 relative_permalinks: false
 
-preferences:
-  search:
-    enabled: true
-  wiki_style_link: 
-    enabled: true
-  pagepreview: 
-    enabled: true
-  backlinks:
-    enabled: true
+# preferences:
 
 encoding: utf-8
 
@@ -56,10 +49,7 @@ sass:
   sass_dir: assets/sass
   style: compressed
 
-collections:
-    notes:
-      output: true
-      permalink: /note/:title
+# collections:
 
 markdown: kramdown
 
@@ -67,7 +57,7 @@ kramdown:
   input: GFM
   hard_wrap: false
   math_engine: katex
-  smart_quotes: ["apos", "apos", "quot", "quot"]
+  smart_quotes: "apos,apos,quot,quot"
   syntax_highlighter: rouge
 
 defaults:
@@ -75,11 +65,6 @@ defaults:
       path: "**/*"
     values:
       layout: "default"
-  - scope:
-      path: "_notes/**/*.md"
-      type: notes
-    values:
-      layout: "note"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

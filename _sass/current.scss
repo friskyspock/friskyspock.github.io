@@ -1,0 +1,304 @@
+// Currently Working On page styles
+
+.current-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2em;
+    margin-bottom: 4em;
+}
+
+.project-card {
+    background: _palette(bg-alt);
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid _palette(border);
+    
+    &.high-priority {
+        border-left-color: #e74c3c;
+    }
+    
+    &.medium-priority {
+        border-left-color: #f39c12;
+    }
+    
+    &.low-priority {
+        border-left-color: #3498db;
+    }
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1em;
+    
+    h3 {
+        margin: 0;
+        flex: 1;
+        color: _palette(fg-bold);
+    }
+}
+
+.status-badge {
+    font-size: 0.8em;
+    padding: 0.3em 0.8em;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    
+    &.in-development {
+        background: rgba(52, 152, 219, 0.2);
+        color: #3498db;
+    }
+    
+    &.research-phase {
+        background: rgba(241, 196, 15, 0.2);
+        color: #f1c40f;
+    }
+    
+    &.planning {
+        background: rgba(155, 89, 182, 0.2);
+        color: #9b59b6;
+    }
+}
+
+.project-description {
+    margin-bottom: 1.5em;
+    color: _palette(fg);
+    line-height: 1.6;
+}
+
+.progress-section {
+    margin-bottom: 1.5em;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+    color: _palette(fg);
+}
+
+.progress-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: _palette(accent1);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.tech-badge {
+    font-size: 0.8em;
+    padding: 0.3em 0.8em;
+    background: rgba(155, 241, 255, 0.1);
+    color: _palette(accent1);
+    border-radius: 4px;
+    border: 1px solid rgba(155, 241, 255, 0.3);
+}
+
+.milestones {
+    margin-bottom: 1.5em;
+    
+    h4 {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.8em;
+        color: _palette(fg);
+    }
+}
+
+.milestone-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5em;
+        font-size: 0.9em;
+        color: _palette(fg);
+        
+        &.completed {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: line-through;
+        }
+        
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.milestone-icon {
+    margin-right: 0.8em;
+    font-weight: bold;
+    color: _palette(accent1);
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1em;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    
+    .completion-date {
+        font-size: 0.85em;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    
+    a {
+        font-size: 0.9em;
+        color: _palette(accent1);
+        
+        &:hover {
+            color: _palette(fg-bold);
+        }
+    }
+}
+
+// Learning Section
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+    margin-bottom: 4em;
+}
+
+.learning-card {
+    background: _palette(bg-alt);
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+    h3 {
+        margin: 0 0 0.5em 0;
+        color: _palette(fg-bold);
+    }
+    
+    p {
+        margin-bottom: 1.5em;
+        color: _palette(fg);
+        line-height: 1.6;
+    }
+    
+    .resources {
+        h4 {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5em;
+            color: _palette(fg);
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+            li {
+                font-size: 0.9em;
+                color: rgba(255, 255, 255, 0.7);
+                margin-bottom: 0.3em;
+                padding-left: 1.2em;
+                position: relative;
+                
+                &:before {
+                    content: '→';
+                    position: absolute;
+                    left: 0;
+                    color: _palette(accent1);
+                }
+            }
+        }
+    }
+}
+
+// Experiments Section
+.experiments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5em;
+}
+
+.experiment-card {
+    background: _palette(bg-alt);
+    padding: 1.5em;
+    border-radius: 8px;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    
+    h3 {
+        margin: 0 0 0.5em 0;
+        color: _palette(fg-bold);
+        font-size: 1.1em;
+    }
+    
+    p {
+        margin-bottom: 1em;
+        color: _palette(fg);
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+}
+
+.experiment-status {
+    font-size: 0.8em;
+    color: _palette(accent1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+// Responsive
+@include breakpoint('<=medium') {
+    .current-projects {
+        grid-template-columns: 1fr;
+    }
+    
+    .learning-grid,
+    .experiments-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include breakpoint('<=small') {
+    .project-card,
+    .learning-card,
+    .experiment-card {
+        padding: 1.5em;
+    }
+    
+    .project-header {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    
+    .project-footer {
+        flex-direction: column;
+        gap: 0.8em;
+        align-items: flex-start;
+    }
+}
