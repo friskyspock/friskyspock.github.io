@@ -1,341 +1,354 @@
-// My Toolkit page styles
+// My Toolkit page styles - Clean Minimal Design
 
-.toolkit-intro {
-    font-size: 1.1em;
-    line-height: 1.7;
-    margin-bottom: 3em;
-    padding: 2em;
-    background: _palette(bg-alt);
-    border-radius: 8px;
-    text-align: center;
-}
-
-.toolkit-category {
-    margin-bottom: 4em;
+// Section Structure
+.toolkit-section {
+    margin-bottom: 5em;
     
     &:last-child {
         margin-bottom: 0;
     }
 }
 
-.tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2em;
+.section-header {
+    text-align: center;
     margin-bottom: 3em;
-}
-
-.tool-card {
-    background: _palette(bg-alt);
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    position: relative;
     
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-}
-
-.tool-header {
-    margin-bottom: 1.5em;
-    
-    h3 {
-        margin: 0 0 0.8em 0;
-        color: _palette(fg-bold);
-        font-size: 1.4em;
-    }
-}
-
-.proficiency-meter {
-    position: relative;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.proficiency-fill {
-    height: 100%;
-    background: linear-gradient(90deg, _palette(accent1), _palette(accent2));
-    border-radius: 5px;
-    transition: width 1s ease;
-    position: relative;
-    
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(
-            45deg,
-            rgba(255,255,255,0.2) 25%,
-            transparent 25%,
-            transparent 50%,
-            rgba(255,255,255,0.2) 50%,
-            rgba(255,255,255,0.2) 75%,
-            transparent 75%,
-            transparent
-        );
-        background-size: 20px 20px;
-        animation: move-stripes 1s linear infinite;
-    }
-}
-
-@keyframes move-stripes {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 20px 0;
-    }
-}
-
-.proficiency-label {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.8em;
-    font-weight: bold;
-    color: _palette(fg-bold);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-
-.tool-meta {
-    display: flex;
-    gap: 1em;
-    margin-bottom: 1.5em;
-    font-size: 0.9em;
-    color: rgba(255, 255, 255, 0.7);
-    
-    span {
-        display: flex;
-        align-items: center;
-        gap: 0.4em;
-    }
-    
-    .daily-use {
-        color: #f39c12;
-    }
-}
-
-.use-cases,
-.libraries,
-.services,
-.extensions {
-    margin-bottom: 1.5em;
-    
-    h4 {
-        font-size: 0.9em;
+    h2 {
+        font-size: 1.1em;
+        font-weight: 600;
+        letter-spacing: 0.15em;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin-bottom: 0.8em;
-        color: _palette(fg);
-    }
-    
-    ul {
-        list-style: none;
-        padding: 0;
+        color: rgba(255, 255, 255, 0.7);
         margin: 0;
+        width: auto !important;
         
-        li {
-            font-size: 0.9em;
-            margin-bottom: 0.4em;
-            padding-left: 1.5em;
-            position: relative;
-            color: rgba(255, 255, 255, 0.8);
-            
-            &:before {
-                content: '▪';
-                position: absolute;
-                left: 0;
-                color: _palette(accent1);
-            }
+        &:after {
+            display: none !important;
+        }
+        
+        i {
+            margin-right: 0.5em;
+            font-size: 1.1em;
+            color: _palette(accent1);
         }
     }
 }
 
-.library-tags,
-.service-tags,
-.extension-tags {
+// Tools Grid - 3 columns
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin-bottom: 4em;
+}
+
+// Tool Card - Clean minimal design
+.tool-card {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 2em;
+    transition: all 0.2s ease;
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
-}
-
-.library-tag,
-.service-tag,
-.extension-tag {
-    font-size: 0.8em;
-    padding: 0.3em 0.8em;
-    background: rgba(155, 241, 255, 0.1);
-    color: _palette(accent1);
-    border-radius: 15px;
-    border: 1px solid rgba(155, 241, 255, 0.3);
-}
-
-.tool-footer {
-    margin-top: 1.5em;
-    padding-top: 1em;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-direction: column;
     
-    .projects-info {
-        font-size: 0.85em;
-        color: rgba(255, 255, 255, 0.7);
-        font-style: italic;
+    &:hover {
+        border-color: rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.02);
     }
 }
 
-.certification {
-    margin-top: 1em;
-    font-size: 0.85em;
-    color: #f39c12;
+// Tool Header with inline logo
+.tool-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    margin-bottom: 1em;
     
     i {
-        margin-right: 0.5em;
+        font-size: 1.4em;
+        color: _palette(accent1);
+        
+        &.fa-python { color: #3776AB; }
+        &.fa-js { color: #F7DF1E; }
+        &.fa-google { color: #4285F4; }
+        &.fa-html5 { color: #E34C26; }
+        &.fa-docker { color: #2496ED; }
+        &.fa-git-alt { color: #F05032; }
+        &.fa-pepper-hot { color: #FF6B6B; }
+    }
+    
+    h3 {
+        font-size: 1.2em;
+        font-weight: 600;
+        margin: 0;
+        color: _palette(fg-bold);
+        letter-spacing: -0.01em;
+    }
+}
+
+// Proficiency Bar
+.proficiency-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 1.2em;
+    position: relative;
+    
+    .proficiency-fill {
+        display: block;
+        height: 100%;
+        background: linear-gradient(90deg, _palette(accent1), _palette(accent2));
+        border-radius: 3px;
+        transition: width 1s ease;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(255,255,255,0.2) 50%,
+                transparent 100%
+            );
+            animation: shimmer 2s infinite;
+        }
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+// Strength Points
+.strength-points {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5em 0;
+    text-align: left;
+    font-size: 0.85em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    flex-grow: 1;
+    
+    li {
+        position: relative;
+        padding-left: 1.2em;
+        margin-bottom: 0.4em;
+        
+        &:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: _palette(accent1);
+            font-weight: bold;
+        }
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Tags styling
+.tool-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6em;
+    justify-content: center;
+}
+
+.tag {
+    font-size: 0.75em;
+    padding: 0.4em 0.9em;
+    border-radius: 4px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: all 0.2s ease;
+    
+    // Primary tags - blue
+    &.tag-primary {
+        background: rgba(111, 195, 223, 0.15);
+        color: #6fc3df;
+        border: 1px solid rgba(111, 195, 223, 0.3);
+    }
+    
+    // Secondary tags - light gray
+    &.tag-secondary {
+        background: rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    
+    // Accent tags - green
+    &.tag-accent {
+        background: rgba(135, 197, 164, 0.15);
+        color: #87c5a4;
+        border: 1px solid rgba(135, 197, 164, 0.3);
     }
 }
 
 // Productivity Tools Section
 .productivity-section {
-    margin-top: 4em;
+    margin-top: 5em;
 }
 
 .productivity-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
     gap: 1.5em;
 }
 
 .productivity-card {
-    background: _palette(bg-alt);
-    padding: 1.5em;
-    border-radius: 8px;
     text-align: center;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
+    padding: 1.5em 1em;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.2s ease;
     
     &:hover {
-        border-color: _palette(accent1);
-        transform: translateY(-2px);
+        border-color: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.02);
     }
     
-    h4 {
-        margin: 0 0 0.5em 0;
-        color: _palette(fg-bold);
-        font-size: 1.1em;
-    }
-    
-    p {
-        margin: 0;
-        font-size: 0.9em;
-        color: rgba(255, 255, 255, 0.7);
-    }
-}
-
-// Learning Resources Section
-.learning-section {
-    margin-top: 4em;
-}
-
-.resources-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2em;
-}
-
-.resource-card {
-    background: _palette(bg-alt);
-    padding: 2em;
-    border-radius: 8px;
-    border-top: 3px solid _palette(accent1);
-    
-    h3 {
-        margin: 0 0 1em 0;
-        color: _palette(fg-bold);
-    }
-    
-    p {
-        margin: 0.5em 0;
-        font-size: 0.95em;
+    .productivity-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        margin-bottom: 0.5em;
         
-        &.courses-stat {
+        i {
             font-size: 1.2em;
-            font-weight: 600;
             color: _palette(accent1);
         }
         
-        &.usage {
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        &.focus {
-            color: rgba(255, 255, 255, 0.7);
+        h4 {
+            font-size: 0.9em;
+            font-weight: 600;
+            margin: 0;
+            color: _palette(fg-bold);
         }
     }
     
-    .channels {
-        margin-top: 1.5em;
-        
-        h4 {
-            font-size: 0.9em;
-            margin-bottom: 0.5em;
-            color: _palette(fg);
-        }
-        
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            
-            li {
-                font-size: 0.9em;
-                padding: 0.3em 0;
-                color: rgba(255, 255, 255, 0.7);
-                
-                &:before {
-                    content: '▸ ';
-                    color: _palette(accent1);
-                }
-            }
-        }
+    p {
+        font-size: 0.75em;
+        color: rgba(255, 255, 255, 0.6);
+        margin: 0;
+        line-height: 1.4;
     }
 }
 
-// Responsive
-@include breakpoint('<=medium') {
+// Responsive Design
+@include breakpoint('<=large') {
     .tools-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em;
     }
     
     .productivity-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@include breakpoint('<=medium') {
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     
-    .resources-grid {
-        grid-template-columns: 1fr;
+    .productivity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .section-header {
+        margin-bottom: 2em;
     }
 }
 
 @include breakpoint('<=small') {
-    .tool-card,
-    .productivity-card,
-    .resource-card {
-        padding: 1.5em;
+    .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2em;
     }
     
-    .toolkit-intro {
-        padding: 1.5em;
-        font-size: 1em;
+    .productivity-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
     }
     
-    .tool-header h3 {
-        font-size: 1.2em;
+    .tool-card {
+        padding: 1.8em 1.5em;
     }
+    
+    .tool-header {
+        i {
+            font-size: 1.2em;
+        }
+        
+        h3 {
+            font-size: 1em;
+        }
+    }
+    
+    .strength-points {
+        font-size: 0.8em;
+    }
+    
+    .productivity-card {
+        padding: 1.2em 0.8em;
+        
+        i {
+            font-size: 1.5em;
+        }
+        
+        h4 {
+            font-size: 0.85em;
+        }
+        
+        p {
+            font-size: 0.7em;
+        }
+    }
+    
+    .toolkit-section {
+        margin-bottom: 3em;
+    }
+}
+
+// Remove all old styles not needed
+.toolkit-intro,
+.proficiency-meter,
+.proficiency-fill,
+.proficiency-label,
+.tool-meta,
+.use-cases,
+.libraries,
+.services,
+.extensions,
+.library-tags,
+.service-tags,
+.extension-tags,
+.library-tag,
+.service-tag,
+.extension-tag,
+.tool-footer,
+.certification,
+.learning-section,
+.resources-grid,
+.resource-card,
+.channels {
+    display: none !important;
 }

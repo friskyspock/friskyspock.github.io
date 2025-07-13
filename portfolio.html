@@ -4,17 +4,16 @@ title: Portfolio
 ---
 
     <!-- Banner -->
-    <section id="banner" class="style2">
+    <section id="banner" class="style2 portfolio-banner">
         <div class="inner">
             <span class="image">
                 <img src="assets/images/banner.jpg" alt="" />
             </span>
             <header class="major">
-                <h1>Collection of my Projects</h1>
+                <h1>My Projects</h1>
             </header>
             <div class="content">
-                <p>Welcome to my portfolio. Here you'll find a selection of my work.<br />
-                Explore my projects to learn more about what I do.</p>
+                <p>A collection of my work in Machine Learning, Natural Language Processing, and Data Science</p>
             </div>
         </div>
     </section>
@@ -23,17 +22,25 @@ title: Portfolio
     <div id="main">
         <section id="one">
             <div class="inner">
-                <!-- Project Filters -->
-                <ul class="nav nav-tabs portfolio-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab">All</button>
-                    </li>
-                    {% for item in site.data.settings.tags %}
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="{{item.short}}-tab" data-bs-toggle="tab" data-bs-target="#{{item.short}}-tab-pane" type="button" role="tab">{{item.long}}</button>
-                    </li>
-                    {% endfor %}
-                </ul>
+                <!-- Project Filters Dropdown -->
+                <div class="portfolio-filter-container">
+                    <div class="filter-dropdown">
+                        <button class="dropdown-toggle" id="filterDropdown">
+                            <span class="dropdown-label">All Projects</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu" id="filterMenu">
+                            <li>
+                                <a href="#" class="dropdown-item active" data-filter="all" data-target="#all-tab-pane">All Projects</a>
+                            </li>
+                            {% for item in site.data.settings.tags %}
+                            <li>
+                                <a href="#" class="dropdown-item" data-filter="{{item.short}}" data-target="#{{item.short}}-tab-pane">{{item.long}}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
 
                 <!-- Project Grid -->
                 <div class="tab-content" id="myTabContent">
@@ -42,19 +49,20 @@ title: Portfolio
                         <div class="projects-grid">
                             {% for item in site.data.portfolio %}
                             <article class="project-card">
-                                <span class="image">
+                                <div class="project-image">
                                     <img src="/images/thumbs/{{item.thumb}}" alt="{{item.title}}" />
-                                </span>
-                                <header class="major">
+                                </div>
+                                <div class="project-content">
                                     <h3>{{item.title}}</h3>
                                     <p>{{item.describe}}</p>
-                                </header>
-                                <ul class="actions">
-                                    <li><a href="{{item.link}}" class="button">GitHub</a></li>
-                                    {% if item.weblink %}
-                                    <li><a href="{{item.weblink}}" class="button primary">Live Demo</a></li>
-                                    {% endif %}
-                                </ul>
+                                    <div class="project-actions">
+                                        {% if item.weblink %}
+                                        <a href="{{item.weblink}}" class="button-minimal">View Demo</a>
+                                        {% else %}
+                                        <a href="{{item.link}}" class="button-minimal">View Project</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </article>
                             {% endfor %}
                         </div>
@@ -68,19 +76,20 @@ title: Portfolio
                             {% for tag in item.tags %}
                             {% if tag==foo.short %}
                             <article class="project-card">
-                                <span class="image">
+                                <div class="project-image">
                                     <img src="/images/thumbs/{{item.thumb}}" alt="{{item.title}}" />
-                                </span>
-                                <header class="major">
+                                </div>
+                                <div class="project-content">
                                     <h3>{{item.title}}</h3>
                                     <p>{{item.describe}}</p>
-                                </header>
-                                <ul class="actions">
-                                    <li><a href="{{item.link}}" class="button">GitHub</a></li>
-                                    {% if item.weblink %}
-                                    <li><a href="{{item.weblink}}" class="button primary">Live Demo</a></li>
-                                    {% endif %}
-                                </ul>
+                                    <div class="project-actions">
+                                        {% if item.weblink %}
+                                        <a href="{{item.weblink}}" class="button-minimal">View Demo</a>
+                                        {% else %}
+                                        <a href="{{item.link}}" class="button-minimal">View Project</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </article>
                             {% endif %}
                             {% endfor %}
@@ -93,30 +102,53 @@ title: Portfolio
         </section>
     </div>
 
-    <!-- Tab functionality JavaScript -->
+    <!-- Dropdown functionality JavaScript -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Get all tab buttons and panes
-        const tabButtons = document.querySelectorAll('.portfolio-tabs .nav-link');
+        const dropdownToggle = document.getElementById('filterDropdown');
+        const dropdownMenu = document.getElementById('filterMenu');
+        const dropdownLabel = document.querySelector('.dropdown-label');
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
         const tabPanes = document.querySelectorAll('.tab-pane');
         
-        // Add click event to each tab button
-        tabButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
+        // Toggle dropdown
+        dropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            dropdownMenu.classList.toggle('show');
+            dropdownToggle.classList.toggle('active');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.remove('show');
+                dropdownToggle.classList.remove('active');
+            }
+        });
+        
+        // Handle filter selection
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // Remove active class from all buttons and panes
-                tabButtons.forEach(btn => btn.classList.remove('active'));
+                // Update active state
+                dropdownItems.forEach(di => di.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update dropdown label
+                dropdownLabel.textContent = this.textContent;
+                
+                // Hide dropdown
+                dropdownMenu.classList.remove('show');
+                dropdownToggle.classList.remove('active');
+                
+                // Show corresponding tab pane
                 tabPanes.forEach(pane => {
                     pane.classList.remove('show', 'active');
                     pane.style.display = 'none';
                 });
                 
-                // Add active class to clicked button
-                this.classList.add('active');
-                
-                // Show corresponding tab pane
-                const targetId = this.getAttribute('data-bs-target');
+                const targetId = this.getAttribute('data-target');
                 const targetPane = document.querySelector(targetId);
                 if (targetPane) {
                     targetPane.classList.add('show', 'active');

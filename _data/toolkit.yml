@@ -1,332 +1,188 @@
-# My Toolkit Data
+# My Toolkit Data - With Logos and Proficiency
 # This file contains information about tools, technologies, and platforms I use
 
 categories:
-  - name: "Programming Languages"
-    icon: "fa-code"
-    description: "Core languages I use for different types of projects"
+  - name: "Machine Learning & LLM Frameworks"
+    icon: "fa-brain"
     tools:
       - name: "Python"
+        logo: "fab fa-python"
         proficiency: 95
-        experience: "5+ years"
-        use_cases:
-          - "Machine Learning & AI"
-          - "Data Analysis"
-          - "Backend Development"
-          - "Automation Scripts"
-        favorite_libraries:
-          - "PyTorch"
-          - "TensorFlow"
-          - "Pandas"
-          - "FastAPI"
-        
-      - name: "C++"
-        proficiency: 75
-        experience: "3 years"
-        use_cases:
-          - "High-Performance Computing"
-          - "System Programming"
-          - "Competitive Programming"
-        favorite_libraries:
-          - "STL"
-          - "Boost"
-          - "Eigen"
-          
-      - name: "JavaScript/TypeScript"
-        proficiency: 70
-        experience: "3 years"
-        use_cases:
-          - "Frontend Development"
-          - "Full-stack Applications"
-          - "Data Visualization"
-        favorite_libraries:
-          - "React"
-          - "D3.js"
-          - "Node.js"
-          
-      - name: "SQL"
-        proficiency: 85
-        experience: "4 years"
-        use_cases:
-          - "Database Management"
-          - "Data Analysis"
-          - "ETL Pipelines"
-        favorite_libraries:
-          - "PostgreSQL"
-          - "MySQL"
-          - "SQLite"
+        strengths:
+          - "Clean syntax and vast ML ecosystem"
+          - "Used across all production AI systems"
+          - "Strong community and library support"
+        tags:
+          - { name: "NumPy", type: "primary" }
+          - { name: "Pandas", type: "primary" }
+          - { name: "Scikit-learn", type: "primary" }
+          - { name: "Matplotlib", type: "secondary" }
 
-  - name: "AI/ML Frameworks"
-    icon: "fa-brain"
-    description: "Frameworks and libraries for building intelligent systems"
-    tools:
       - name: "PyTorch"
-        proficiency: 90
-        experience: "4 years"
-        use_cases:
-          - "Deep Learning Research"
-          - "Computer Vision"
-          - "NLP Models"
-        projects: "Used in 15+ projects"
-        
-      - name: "LangChain"
+        logo: "fas fa-fire"
         proficiency: 85
-        experience: "1.5 years"
-        use_cases:
-          - "LLM Applications"
-          - "RAG Systems"
-          - "Agent Development"
-        projects: "Core framework for AI agents"
-        
-      - name: "Scikit-learn"
-        proficiency: 90
-        experience: "5 years"
-        use_cases:
-          - "Classical ML"
-          - "Feature Engineering"
-          - "Model Evaluation"
-        projects: "Foundation for ML pipelines"
-        
-      - name: "Hugging Face"
-        proficiency: 80
-        experience: "2 years"
-        use_cases:
-          - "Pre-trained Models"
-          - "NLP Tasks"
-          - "Model Deployment"
-        projects: "Transformer models"
+        strengths:
+          - "Dynamic computation graphs"
+          - "Used for deep learning models & audio processing"
+          - "Intuitive debugging"
+        tags:
+          - { name: "TorchAudio", type: "primary" }
+          - { name: "Neural Networks", type: "primary" }
+          - { name: "CUDA", type: "secondary" }
 
-  - name: "Development Tools"
-    icon: "fa-tools"
-    description: "Essential tools for efficient development"
-    tools:
-      - name: "VS Code"
-        proficiency: 95
-        experience: "5 years"
-        use_cases:
-          - "Primary IDE"
-          - "Remote Development"
-          - "Debugging"
-        extensions:
-          - "Python"
-          - "Copilot"
-          - "GitLens"
-          
-      - name: "Git & GitHub"
+      - name: "LangChain"
+        logo: "fas fa-link"
         proficiency: 90
-        experience: "5 years"
-        use_cases:
-          - "Version Control"
-          - "Collaboration"
-          - "CI/CD"
-        workflow: "Git Flow"
-        
-      - name: "Docker"
-        proficiency: 80
-        experience: "3 years"
-        use_cases:
-          - "Containerization"
-          - "Microservices"
-          - "Deployment"
-        orchestration: "Docker Compose"
-        
-      - name: "Jupyter/Colab"
-        proficiency: 95
-        experience: "5 years"
-        use_cases:
-          - "Data Exploration"
-          - "Prototyping"
-          - "Visualization"
-        preference: "JupyterLab"
+        strengths:
+          - "LLM-based agents and chat systems"
+          - "RAG implementation experience"
+          - "Production-grade orchestration"
+        tags:
+          - { name: "Agents", type: "primary" }
+          - { name: "LLMs", type: "primary" }
+          - { name: "RAG", type: "secondary" }
+          - { name: "LangGraph", type: "accent" }
 
-  - name: "Cloud & Infrastructure"
+      - name: "TensorFlow"
+        logo: "fab fa-tensorflow"
+        proficiency: 75
+        strengths:
+          - "Used FILM interpolation from TF Hub"
+          - "Strong support for production deployment"
+          - "Good ecosystem for research"
+        tags:
+          - { name: "TF Hub", type: "primary" }
+          - { name: "FILM", type: "primary" }
+
+  - name: "Cloud Infrastructure & Vector Search"
     icon: "fa-cloud"
-    description: "Cloud platforms and infrastructure tools"
     tools:
       - name: "AWS"
-        proficiency: 75
-        experience: "3 years"
-        services:
-          - "EC2"
-          - "S3"
-          - "RDS"
-          - "SageMaker"
-          - "Lambda"
-        certification: "AWS Cloud Practitioner (planned)"
-        
-      - name: "Google Cloud"
-        proficiency: 70
-        experience: "2 years"
-        services:
-          - "Compute Engine"
-          - "Cloud Storage"
-          - "Vertex AI"
-          - "BigQuery"
-        projects: "ML model deployments"
-        
-      - name: "Azure"
-        proficiency: 65
-        experience: "1.5 years"
-        services:
-          - "Azure OpenAI"
-          - "Cognitive Services"
-          - "App Service"
-        focus: "AI Services"
-
-  - name: "Data Tools"
-    icon: "fa-database"
-    description: "Tools for data processing and analysis"
-    tools:
-      - name: "Pandas"
-        proficiency: 95
-        experience: "5 years"
-        use_cases:
-          - "Data Manipulation"
-          - "Time Series Analysis"
-          - "ETL Processes"
-        daily_use: true
-        
-      - name: "Apache Spark"
-        proficiency: 70
-        experience: "2 years"
-        use_cases:
-          - "Big Data Processing"
-          - "Distributed Computing"
-          - "ML at Scale"
-        preference: "PySpark"
-        
-      - name: "PostgreSQL"
+        logo: "fab fa-aws"
         proficiency: 85
-        experience: "4 years"
-        use_cases:
-          - "Relational Database"
-          - "Complex Queries"
-          - "Data Warehousing"
-        features: "Window functions, CTEs"
-        
+        strengths:
+          - "Deployed scalable models and APIs"
+          - "Used S3, RDS, EC2 for video/audio processing"
+          - "Experience with SageMaker and server scaling"
+        tags:
+          - { name: "S3", type: "primary" }
+          - { name: "RDS", type: "primary" }
+          - { name: "EC2", type: "secondary" }
+          - { name: "SageMaker", type: "accent" }
+
       - name: "MongoDB"
-        proficiency: 80
-        experience: "3 years"
-        use_cases:
-          - "NoSQL Storage"
-          - "Document Database"
-          - "Real-time Applications"
-        integration: "PyMongo"
-
-  - name: "Visualization & Analytics"
-    icon: "fa-chart-line"
-    description: "Tools for creating insights and visualizations"
-    tools:
-      - name: "Matplotlib/Seaborn"
-        proficiency: 90
-        experience: "5 years"
-        use_cases:
-          - "Statistical Plots"
-          - "Publication Graphics"
-          - "Data Exploration"
-        style: "Publication-ready"
-        
-      - name: "Plotly/Dash"
+        logo: "fas fa-database"
         proficiency: 85
-        experience: "3 years"
-        use_cases:
-          - "Interactive Dashboards"
-          - "Web Applications"
-          - "3D Visualizations"
-        deployment: "Dash apps"
-        
-      - name: "Tableau"
-        proficiency: 70
-        experience: "2 years"
-        use_cases:
-          - "Business Intelligence"
-          - "Executive Dashboards"
-          - "Data Stories"
-        certification: "Desktop Specialist"
-        
-      - name: "D3.js"
-        proficiency: 65
-        experience: "1.5 years"
-        use_cases:
-          - "Custom Visualizations"
-          - "Network Graphs"
-          - "Interactive Charts"
-        projects: "Knowledge graphs"
+        strengths:
+          - "Used fuzzy search in HTS pipeline"
+          - "Fast document ingestion and querying"
+          - "Combined with LangChain and vector DBs"
+        tags:
+          - { name: "NoSQL", type: "primary" }
+          - { name: "Fuzzy Search", type: "primary" }
+          - { name: "Structured Logging", type: "secondary" }
 
-  - name: "API & Backend"
-    icon: "fa-server"
-    description: "Tools for building robust backend systems"
+      - name: "Pinecone"
+        logo: "fas fa-vector-square"
+        proficiency: 80
+        strengths:
+          - "Vector search for semantic similarity"
+          - "Used in HTS classification systems"
+          - "Integrated fallback mechanisms"
+        tags:
+          - { name: "Semantic Search", type: "primary" }
+          - { name: "Vector DB", type: "primary" }
+
+  - name: "Backend & API Engineering"
+    icon: "fa-cogs"
     tools:
       - name: "FastAPI"
-        proficiency: 90
-        experience: "3 years"
-        use_cases:
-          - "REST APIs"
-          - "Microservices"
-          - "ML Model Serving"
-        features: "Async, Auto-docs"
-        
+        logo: "fas fa-bolt"
+        proficiency: 95
+        strengths:
+          - "Built multiple LLM-powered tools"
+          - "Auto-docs and pydantic-based validation"
+          - "Asynchronous and fast"
+        tags:
+          - { name: "REST APIs", type: "primary" }
+          - { name: "Async", type: "primary" }
+          - { name: "Pydantic", type: "secondary" }
+
       - name: "Flask"
-        proficiency: 85
-        experience: "4 years"
-        use_cases:
-          - "Web Applications"
-          - "Prototypes"
-          - "Simple APIs"
-        extensions: "Flask-RESTful"
-        
-      - name: "Redis"
-        proficiency: 75
-        experience: "2 years"
-        use_cases:
-          - "Caching"
-          - "Message Queue"
-          - "Session Storage"
-        patterns: "Pub/Sub, Cache-aside"
-        
-      - name: "Celery"
+        logo: "fas fa-pepper-hot"
         proficiency: 70
-        experience: "2 years"
-        use_cases:
-          - "Task Queue"
-          - "Async Processing"
-          - "Scheduled Jobs"
-        broker: "Redis/RabbitMQ"
+        strengths:
+          - "Early web deployment experience"
+          - "Used in ML model hosting"
+          - "Lightweight and extensible"
+        tags:
+          - { name: "Web Hosting", type: "primary" }
+          - { name: "Microservices", type: "secondary" }
+
+      - name: "Docker"
+        logo: "fab fa-docker"
+        proficiency: 75
+        strengths:
+          - "Used to containerize HTS and Interview systems"
+          - "Modular and reproducible environments"
+          - "Deployed with Docker Compose"
+        tags:
+          - { name: "Microservices", type: "primary" }
+          - { name: "Containerization", type: "primary" }
+
+  - name: "AI Deployment & Speech Tech"
+    icon: "fa-robot"
+    tools:
+      - name: "Whisper (OpenAI)"
+        logo: "fas fa-volume-up"
+        proficiency: 80
+        strengths:
+          - "Speech-to-text transcription with word-level timestamps"
+          - "Used in virtual interview tools"
+          - "Integrated with FastAPI and LangChain"
+        tags:
+          - { name: "Speech Recognition", type: "primary" }
+          - { name: "Transcription", type: "primary" }
+
+      - name: "ElevenLabs"
+        logo: "fas fa-microphone"
+        proficiency: 70
+        strengths:
+          - "AI voice generation and cloning"
+          - "Used for personalized audio content"
+          - "Enhanced audio realism"
+        tags:
+          - { name: "Voice Cloning", type: "primary" }
+          - { name: "TTS", type: "primary" }
+
+      - name: "Prometheus & Grafana"
+        logo: "fas fa-chart-line"
+        proficiency: 70
+        strengths:
+          - "System observability and error tracking"
+          - "Used for HTS system monitoring"
+          - "Token and usage metrics"
+        tags:
+          - { name: "Monitoring", type: "primary" }
+          - { name: "Dashboards", type: "secondary" }
 
 productivity_tools:
   - name: "Notion"
-    use: "Project Management & Notes"
+    logo: "fas fa-sticky-note"
+    description: "All-in-one workspace"
     
-  - name: "Obsidian"
-    use: "Knowledge Management"
+  - name: "VS Code"
+    logo: "fas fa-code"
+    description: "Primary IDE"
     
-  - name: "Excalidraw"
-    use: "Technical Diagrams"
+  - name: "Git & GitHub"
+    logo: "fab fa-git-alt"
+    description: "Version control"
     
   - name: "Postman"
-    use: "API Testing"
+    logo: "fas fa-paper-plane"
+    description: "API testing"
     
   - name: "tmux"
-    use: "Terminal Multiplexer"
-    
-  - name: "Oh My Zsh"
-    use: "Shell Enhancement"
-
-learning_resources:
-  - platform: "Coursera"
-    courses_completed: 15
-    focus: "ML & Deep Learning"
-    
-  - platform: "Fast.ai"
-    courses_completed: 3
-    focus: "Practical Deep Learning"
-    
-  - platform: "ArXiv"
-    usage: "Daily paper reading"
-    focus: "Latest ML research"
-    
-  - platform: "YouTube"
-    channels:
-      - "Two Minute Papers"
-      - "Yannic Kilcher"
-      - "3Blue1Brown"
+    logo: "fas fa-terminal"
+    description: "Terminal multiplexer"

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://friskyspock.github.io/current.html</loc>
+<loc>http://localhost:4000/current.html</loc>
 </url>
 <url>
-<loc>https://friskyspock.github.io/</loc>
+<loc>http://localhost:4000/</loc>
 </url>
 <url>
-<loc>https://friskyspock.github.io/offscreen.html</loc>
+<loc>http://localhost:4000/offscreen.html</loc>
 </url>
 <url>
-<loc>https://friskyspock.github.io/portfolio.html</loc>
+<loc>http://localhost:4000/portfolio.html</loc>
 </url>
 <url>
-<loc>https://friskyspock.github.io/resume.html</loc>
+<loc>http://localhost:4000/resume.html</loc>
 </url>
 <url>
-<loc>https://friskyspock.github.io/testimonials.html</loc>
+<loc>http://localhost:4000/testimonials.html</loc>
 </url>
 <url>
-<loc>https://friskyspock.github.io/toolkit.html</loc>
+<loc>http://localhost:4000/toolkit.html</loc>
 </url>
 </urlset>

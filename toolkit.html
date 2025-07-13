@@ -22,92 +22,39 @@ title: My Toolkit
 <div id="main">
     <section id="one">
         <div class="inner">
-            <!-- Introduction -->
-            <div class="toolkit-intro">
-                <p>This is my evolving toolkit - a collection of languages, frameworks, and tools that I use to build solutions. Each tool has been battle-tested through real projects and continuous learning.</p>
-            </div>
-            
             <!-- Tool Categories -->
             {% for category in site.data.toolkit.categories %}
-            <section class="toolkit-category">
-                <header class="major">
+            <section class="toolkit-section">
+                <header class="section-header">
                     <h2><i class="{{ category.icon }}"></i> {{ category.name }}</h2>
-                    <p>{{ category.description }}</p>
                 </header>
                 
                 <div class="tools-grid">
                     {% for tool in category.tools %}
                     <div class="tool-card">
                         <div class="tool-header">
+                            <i class="{{ tool.logo }}"></i>
                             <h3>{{ tool.name }}</h3>
-                            <div class="proficiency-meter">
-                                <div class="proficiency-fill" style="width: {{ tool.proficiency }}%"></div>
-                                <span class="proficiency-label">{{ tool.proficiency }}%</span>
-                            </div>
                         </div>
                         
-                        <div class="tool-meta">
-                            <span class="experience"><i class="fa fa-clock"></i> {{ tool.experience }}</span>
-                            {% if tool.daily_use %}
-                            <span class="daily-use"><i class="fa fa-star"></i> Daily Use</span>
-                            {% endif %}
+                        <!-- Proficiency Meter -->
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: {{ tool.proficiency }}%;"></div>
                         </div>
                         
-                        {% if tool.use_cases %}
-                        <div class="use-cases">
-                            <h4>Use Cases</h4>
-                            <ul>
-                                {% for use_case in tool.use_cases %}
-                                <li>{{ use_case }}</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        {% endif %}
+                        <!-- Strength Points -->
+                        <ul class="strength-points">
+                            {% for strength in tool.strengths %}
+                            <li>{{ strength }}</li>
+                            {% endfor %}
+                        </ul>
                         
-                        {% if tool.favorite_libraries %}
-                        <div class="libraries">
-                            <h4>Key Libraries</h4>
-                            <div class="library-tags">
-                                {% for lib in tool.favorite_libraries %}
-                                <span class="library-tag">{{ lib }}</span>
-                                {% endfor %}
-                            </div>
+                        <!-- Tags -->
+                        <div class="tool-tags">
+                            {% for tag in tool.tags %}
+                            <span class="tag tag-{{ tag.type }}">{{ tag.name }}</span>
+                            {% endfor %}
                         </div>
-                        {% endif %}
-                        
-                        {% if tool.services %}
-                        <div class="services">
-                            <h4>Services Used</h4>
-                            <div class="service-tags">
-                                {% for service in tool.services %}
-                                <span class="service-tag">{{ service }}</span>
-                                {% endfor %}
-                            </div>
-                        </div>
-                        {% endif %}
-                        
-                        {% if tool.extensions %}
-                        <div class="extensions">
-                            <h4>Extensions</h4>
-                            <div class="extension-tags">
-                                {% for ext in tool.extensions %}
-                                <span class="extension-tag">{{ ext }}</span>
-                                {% endfor %}
-                            </div>
-                        </div>
-                        {% endif %}
-                        
-                        {% if tool.projects %}
-                        <div class="tool-footer">
-                            <span class="projects-info">{{ tool.projects }}</span>
-                        </div>
-                        {% endif %}
-                        
-                        {% if tool.certification %}
-                        <div class="certification">
-                            <i class="fa fa-certificate"></i> {{ tool.certification }}
-                        </div>
-                        {% endif %}
                     </div>
                     {% endfor %}
                 </div>
@@ -115,51 +62,19 @@ title: My Toolkit
             {% endfor %}
             
             <!-- Productivity Tools -->
-            <section class="productivity-section">
-                <header class="major">
-                    <h2><i class="fa-solid fa-rocket"></i> Productivity Tools</h2>
-                    <p>Tools that enhance my workflow and productivity</p>
+            <section class="toolkit-section productivity-section">
+                <header class="section-header">
+                    <h2><i class="fa-solid fa-rocket"></i> PRODUCTIVITY TOOLS</h2>
                 </header>
                 
                 <div class="productivity-grid">
                     {% for tool in site.data.toolkit.productivity_tools %}
                     <div class="productivity-card">
-                        <h4>{{ tool.name }}</h4>
-                        <p>{{ tool.use }}</p>
-                    </div>
-                    {% endfor %}
-                </div>
-            </section>
-            
-            <!-- Learning Resources -->
-            <section class="learning-section">
-                <header class="major">
-                    <h2><i class="fa-solid fa-graduation-cap"></i> Learning Resources</h2>
-                    <p>Platforms and resources for continuous learning</p>
-                </header>
-                
-                <div class="resources-grid">
-                    {% for resource in site.data.toolkit.learning_resources %}
-                    <div class="resource-card">
-                        <h3>{{ resource.platform }}</h3>
-                        {% if resource.courses_completed %}
-                        <p class="courses-stat">{{ resource.courses_completed }} courses completed</p>
-                        {% endif %}
-                        {% if resource.usage %}
-                        <p class="usage">{{ resource.usage }}</p>
-                        {% endif %}
-                        <p class="focus">Focus: {{ resource.focus }}</p>
-                        
-                        {% if resource.channels %}
-                        <div class="channels">
-                            <h4>Favorite Channels</h4>
-                            <ul>
-                                {% for channel in resource.channels %}
-                                <li>{{ channel }}</li>
-                                {% endfor %}
-                            </ul>
+                        <div class="productivity-header">
+                            <i class="{{ tool.logo }}"></i>
+                            <h4>{{ tool.name }}</h4>
                         </div>
-                        {% endif %}
+                        <p>{{ tool.description }}</p>
                     </div>
                     {% endfor %}
                 </div>
@@ -167,3 +82,35 @@ title: My Toolkit
         </div>
     </section>
 </div>
+
+<style>
+/* Proficiency Bar Styles */
+.proficiency-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1.2em;
+    position: relative;
+}
+
+.proficiency-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #6fc3df, #8d82c4) !important;
+    border-radius: 3px;
+    transition: width 1s ease;
+    z-index: 1;
+    min-width: 1px;
+}
+
+.proficiency-fill[style*="width"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+</style>
+

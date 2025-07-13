@@ -34,10 +34,12 @@
 
 .cursor {
     display: inline-block;
-    font-weight: 300;
-    font-size: 1.2em;
+    font-weight: 400;
+    font-size: 1em;
     color: _palette(accent1);
     animation: blink 1s infinite;
+    vertical-align: baseline;
+    margin-left: 2px;
 }
 
 @keyframes blink {
@@ -102,8 +104,9 @@
 // Scroll down arrow
 .scroll-down {
     position: absolute;
-    bottom: 1em;
-    right: 2em;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 2;
     
     a {
@@ -163,8 +166,7 @@
     
     @include breakpoint('<=small') {
         .scroll-down {
-            bottom: 0.5em;
-            right: 1em;
+            bottom: 1em;
         }
     }
 }

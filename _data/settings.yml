@@ -20,4 +20,22 @@ tags:
     long: Clustering
   - short: MLR
     long: MultiLinear Regression
+  - short: CNN
+    long: Convolutional Neural Network
+  - short: SVM
+    long: Support Vector Machine
+  - short: NB
+    long: Naive Bayes
+  - short: Hierarchical
+    long: Hierarchical Clustering
+  - short: DBScan
+    long: DBSCAN
+  - short: KMeans
+    long: K-Means
+  - short: PCA
+    long: Principal Component Analysis
+  - short: AI
+    long: Artificial Intelligence
+  - short: Django
+    long: Django Web Framework
   
