@@ -23,7 +23,7 @@ email: aniketms42@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://friskyspock.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: friskyspock
-formspree_id: "xkgwgvve" # Replace with your actual Formspree form ID
+formspree_id: "mqalzanr" # Replace with your actual Formspree form ID
 
 # exclude: []
 
